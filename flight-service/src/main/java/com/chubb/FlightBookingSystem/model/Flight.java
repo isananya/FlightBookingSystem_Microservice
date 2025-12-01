@@ -6,8 +6,14 @@ import java.time.LocalTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Flight {
 	
 	@Id
@@ -25,52 +31,4 @@ public class Flight {
 	private LocalTime arrivalTime;
 	
 	private Duration duration;
-
-	public String getFlightNumber() {
-		return flightNumber;
-	}
-
-	public void setFlightNumber(String flightNumber) {
-		this.flightNumber = flightNumber;
-	}
-
-	public String getSourceAirport() {
-		return sourceAirport;
-	}
-
-	public void setSourceAirport(String sourceAirport) {
-		this.sourceAirport = sourceAirport;
-	}
-
-	public String getDestinationAirport() {
-		return destinationAirport;
-	}
-
-	public void setDestinationAirport(String destinationAirport) {
-		this.destinationAirport = destinationAirport;
-	}
-
-	public LocalTime getDepartureTime() {
-		return departureTime;
-	}
-
-	public void setDepartureTime(LocalTime departureTime) {
-		this.departureTime = departureTime;
-	}
-
-	public LocalTime getArrivalTime() {
-		return arrivalTime;
-	}
-
-	public void setArrivalTime(LocalTime arrivalTime) {
-		this.arrivalTime = arrivalTime;
-	}
-
-	public Duration getDuration() {
-		return duration;
-	}
-
-	public void setDuration(Duration duration) {
-		this.duration = duration;
-	}
 }

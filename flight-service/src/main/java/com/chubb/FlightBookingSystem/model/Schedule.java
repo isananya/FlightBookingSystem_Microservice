@@ -24,8 +24,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Schedule {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -60,8 +66,6 @@ public class Schedule {
         COMPLETED
     }
 	
-	public Schedule() {}
-
 	public Schedule(ScheduleRequestDTO dto, Flight flight) {
 	    this.flight = flight; 
 	    this.airlineName = dto.getAirlineName();
@@ -70,77 +74,4 @@ public class Schedule {
 	    this.totalSeats = dto.getTotalSeats();
 	    this.availableSeats = dto.getAvailableSeats();
 	}
-
-	public Set<String> getBookedSeats() {
-		return bookedSeats;
-	}
-
-	public void setBookedSeats(Set<String> bookedSeats) {
-		this.bookedSeats = bookedSeats;
-	}
-
-	public Flight getFlight() {
-		return flight;
-	}
-
-	public void setFlight(Flight flight) {
-		this.flight = flight;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getAirlineName() {
-		return airlineName;
-	}
-
-	public void setAirlineName(String airlineName) {
-		this.airlineName = airlineName;
-	}
-
-	public LocalDate getDepartureDate() {
-		return departureDate;
-	}
-
-	public void setDepartureDate(LocalDate departureDate) {
-		this.departureDate = departureDate;
-	}
-
-	public float getBasePrice() {
-		return basePrice;
-	}
-
-	public void setBasePrice(float basePrice) {
-		this.basePrice = basePrice;
-	}
-
-	public int getTotalSeats() {
-		return totalSeats;
-	}
-
-	public void setTotalSeats(int totalSeats) {
-		this.totalSeats = totalSeats;
-	}
-
-	public int getAvailableSeats() {
-		return availableSeats;
-	}
-
-	public void setAvailableSeats(int availableSeats) {
-		this.availableSeats = availableSeats;
-	}
-	
-	public FlightStatus getFlightStatus() {
-		return flightStatus;
-	}
-
-	public void setFlightStatus(FlightStatus flightStatus) {
-		this.flightStatus = flightStatus;
-	}
-	
 }
