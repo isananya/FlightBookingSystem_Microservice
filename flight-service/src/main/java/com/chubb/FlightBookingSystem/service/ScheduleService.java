@@ -4,12 +4,16 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.chubb.FlightBookingSystem.dto.FlightDTO;
 import com.chubb.FlightBookingSystem.dto.FlightSearchRequestDTO;
+import com.chubb.FlightBookingSystem.dto.ScheduleDTO;
 import com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO;
 import com.chubb.FlightBookingSystem.dto.ScheduleResponseDTO;
 import com.chubb.FlightBookingSystem.exceptions.FlightNotFoundException;
@@ -105,4 +109,50 @@ public class ScheduleService {
         
         return results;
 	}
+	
+	public ScheduleDTO getScheduleById(int id) {
+        Schedule schedule = scheduleRepository.findById(id);
+        return new ScheduleDTO(schedule);
+    }
+	
+	public FlightDTO getFlightById(String id) {
+        Flight flight = flightRepository.findByFlightNumber(id);
+        return new FlightDTO(flight);
+    }
+
+    public int isSeatBooked(int scheduleId, String seatNumber) {
+        return scheduleRepository.isSeatBooked(scheduleId, seatNumber);
+    }
+
+    public void decrementSeats(int scheduleId, int count) {
+        Schedule schedule = scheduleRepository.findById(scheduleId);
+        schedule.setAvailableSeats(schedule.getAvailableSeats() - count);
+        scheduleRepository.save(schedule);
+    }
+    
+    public void addSeats(int scheduleId, Set<String> seats) {
+        Schedule schedule = scheduleRepository.findById(scheduleId);
+        Set<String> bookedSeats = schedule.getBookedSeats();
+        for(String s:seats) {
+        	bookedSeats.add(s);
+        }
+        schedule.setBookedSeats(bookedSeats);
+        scheduleRepository.save(schedule);
+    }
+    
+    public void removeSeat(int scheduleId, String seat) {
+	    Schedule schedule = scheduleRepository.findById(scheduleId);
+	    Set<String> bookedSeats = schedule.getBookedSeats();
+	    bookedSeats.remove(seat);
+	    schedule.setBookedSeats(bookedSeats);
+	    scheduleRepository.save(schedule);
+    }
+
+    public boolean existsById(int scheduleId) {
+        return scheduleRepository.existsById(scheduleId);
+    }
+    
+    public float getPrice(int scheduleId) {
+    	return scheduleRepository.getPrice(scheduleId);
+    }
 }

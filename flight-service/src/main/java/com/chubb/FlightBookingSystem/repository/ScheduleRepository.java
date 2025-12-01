@@ -32,9 +32,13 @@ public interface ScheduleRepository extends JpaRepository<Schedule, Integer> {
 			@Param("date") LocalDate travelDate,
 			@Param("passengerCount") int passengerCount
 	);
+	
 	@Query("SELECT count(s) FROM Schedule s WHERE s.id = :scheduleId AND :seatNumber MEMBER OF s.bookedSeats")
     int isSeatBooked(
     		@Param("scheduleId") int scheduleId, 
     		@Param("seatNumber") String seatNumber
     );
+	
+	@Query("SELECT s.basePrice FROM Schedule s WHERE s.id = :scheduleId")
+	float getPrice(@Param("scheduleId") int scheduleId);
 }

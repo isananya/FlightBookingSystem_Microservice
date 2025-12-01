@@ -9,6 +9,7 @@ import java.util.Set;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import com.chubb.FlightBookingSystem.dto.ScheduleDTO;
 import com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -42,7 +43,7 @@ public class Schedule {
 	private int availableSeats;
 	
 	@ElementCollection
-	private Set<String> bookedSeats=new HashSet<>();;
+	private Set<String> bookedSeats=new HashSet<>();
 	
 	@Enumerated(EnumType.STRING)
     private FlightStatus flightStatus = FlightStatus.SCHEDULED;
@@ -69,8 +70,6 @@ public class Schedule {
 	    this.totalSeats = dto.getTotalSeats();
 	    this.availableSeats = dto.getAvailableSeats();
 	}
-
-	
 
 	public Set<String> getBookedSeats() {
 		return bookedSeats;

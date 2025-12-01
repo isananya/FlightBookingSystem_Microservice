@@ -8,4 +8,5 @@ import com.chubb.FlightBookingSystem.model.Flight;
 @Repository
 public interface FlightRepository extends JpaRepository<Flight, String>{
 	boolean existsByFlightNumber(String flightNumber);
+	Flight findByFlightNumber(String flightNumber);
 }
