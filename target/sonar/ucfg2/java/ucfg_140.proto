@@ -1,0 +1,15 @@
+
+Fcom.chubb.FlightBookingSystem.model.Booking#getPnr()Ljava/lang/String;å
+ÅD:/CHUBB_Training/FlightBookingSystem_Microservice/booking-service/src/main/java/com/chubb/FlightBookingSystem/model/Booking.javaD D("1*∂
+1E	 E(Ä
+~
+E	 E(
+%0java.lang.String"__id*T
+
+__unknown_file (8*6-
++com.chubb.FlightBookingSystem.model.Booking"
+pnr"$
+E E(
+
+%0java.lang.StringB/-
++com.chubb.FlightBookingSystem.model.BookingH

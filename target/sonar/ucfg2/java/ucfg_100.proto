@@ -1,0 +1,15 @@
+
+Tcom.chubb.FlightBookingSystem.model.Flight#getDestinationAirport()Ljava/lang/String;â
+D:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Flight.java- -($"1*≈
+1.	 .(è
+å
+.	 .(
+%0java.lang.String"__id*b
+
+__unknown_file (F*D,
+*com.chubb.FlightBookingSystem.model.Flight"
+destinationAirport"$
+. .(
+
+%0java.lang.StringB.,
+*com.chubb.FlightBookingSystem.model.FlightH

@@ -1,0 +1,141 @@
+
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613408170*java2.B¸
+`
+[flight-service/src/main/java/com/chubb/FlightBookingSystem/repository/FlightRepository.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+flight-service6
+
+package8
+<
+7flight-service:com.chubb.FlightBookingSystem.repository9
+?
+9com.chubb.FlightBookingSystem.repository.FlightRepository11
+
+	interface12
+
+access13
+
+public14
+
+simple-name15
+
+FlightRepository16
+;
+5org.springframework.data.jpa.repository.JpaRepository18
+
+unknown19
+
+
+implements20
+/
+)org.springframework.stereotype.Repository22
+
+annotated by23
+
+
+uses24
+0
+*com.chubb.FlightBookingSystem.model.Flight26
+i
+ccom.chubb.FlightBookingSystem.repository.FlightRepository#existsByFlightNumber(Ljava/lang/String;)Z28
+
+method29
+
+existsByFlightNumber30
+“
+Œcom.chubb.FlightBookingSystem.repository.FlightRepository#findByFlightNumber(Ljava/lang/String;)Lcom/chubb/FlightBookingSystem/model/Flight;32
+
+findByFlightNumber33
+
+returns34J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6j„
+
+25
+252619
+B
+31<
+313229 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+33
+>
+108
+101112 *
+1	 	(":7B
+
+
+13
+14
+
+
+15
+16
+
+21
+212219
+B
+27<
+272829 *
+1
+ 
+(	210:7B
+
+
+13
+14
+
+
+15
+30
+
+17
+171819r½
+
+101720*
+1	+ 	(8
+
+102123*
+1 (
+
+102124*
+1 (
+
+101724*
+1	+ 	(8
+
+102524*
+1	9 	(?
+
+312534*
+1 (
+
+312524*
+1 (

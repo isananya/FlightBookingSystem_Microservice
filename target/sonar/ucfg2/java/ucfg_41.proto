@@ -1,0 +1,15 @@
+
+Ocom.chubb.FlightBookingSystem.model.Schedule#getAirlineName()Ljava/lang/String;å
+ÅD:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Schedule.javab b("1*¿
+1c	 c(ä
+á
+c	 c(
+%0java.lang.String"__id*]
+
+__unknown_file (A*?.
+,com.chubb.FlightBookingSystem.model.Schedule"
+airlineName"$
+c c(
+
+%0java.lang.StringB0.
+,com.chubb.FlightBookingSystem.model.ScheduleH

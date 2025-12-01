@@ -1,0 +1,15 @@
+
+Rcom.chubb.FlightBookingSystem.model.Flight#getDepartureTime()Ljava/time/LocalTime;â
+D:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Flight.java5 5(""1*∆
+16	 6(ç
+ä
+6	 6(
+%0java.time.LocalTime"__id*]
+
+__unknown_file (A*?,
+*com.chubb.FlightBookingSystem.model.Flight"
+departureTime"'
+6 6(
+
+%0java.time.LocalTimeB.,
+*com.chubb.FlightBookingSystem.model.FlightH

@@ -1,0 +1,136 @@
+
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613410995*java2.BÌ
+a
+\booking-service/src/main/java/com/chubb/FlightBookingSystem/repository/TicketRepository.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+booking-service6
+
+package8
+=
+8booking-service:com.chubb.FlightBookingSystem.repository9
+?
+9com.chubb.FlightBookingSystem.repository.TicketRepository11
+
+	interface12
+
+access13
+
+public14
+
+simple-name15
+
+TicketRepository16
+;
+5org.springframework.data.jpa.repository.JpaRepository18
+
+unknown19
+
+
+implements20
+/
+)org.springframework.stereotype.Repository22
+
+annotated by23
+
+
+uses24
+0
+*com.chubb.FlightBookingSystem.model.Ticket26
+ç
+Ücom.chubb.FlightBookingSystem.repository.TicketRepository#findByBooking(Lcom/chubb/FlightBookingSystem/model/Booking;)Ljava/util/List;28
+
+method29
+
+findByBooking30
+1
++com.chubb.FlightBookingSystem.model.Booking32
+
+	has param33
+
+is type34J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6j‘
+B
+27<
+272829 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+30
+
+21
+212219
+
+25
+252619
+
+31
+313219
+
+17
+171819
+>
+108
+101112 *
+1 (":7B
+
+
+13
+14
+
+
+15
+16rÛ
+
+101720*
+1+ (8
+
+102123*
+1 (
+
+102124*
+1 (
+
+101724*
+1+ (8
+
+102524*
+19 (?
+
+273133*
+1 ($
+
+272524*
+1 (
+
+273134*
+1% (,
+
+273124*
+1 ($

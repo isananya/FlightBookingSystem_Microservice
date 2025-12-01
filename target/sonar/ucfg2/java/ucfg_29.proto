@@ -1,0 +1,16 @@
+
+Wcom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO#getDuration()Ljava/time/Duration;ï
+äD:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/dto/ScheduleResponseDTO.javaA A("1* 
+1B	 B(í
+è
+B	 B(
+%0java.time.Duration"__id*c
+
+__unknown_file (G*E7
+5com.chubb.FlightBookingSystem.dto.ScheduleResponseDTO"
+
+duration"&
+B B(
+
+%0java.time.DurationB97
+5com.chubb.FlightBookingSystem.dto.ScheduleResponseDTOH

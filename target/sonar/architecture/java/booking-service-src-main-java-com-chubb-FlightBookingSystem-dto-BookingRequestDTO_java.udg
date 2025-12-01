@@ -1,0 +1,479 @@
+
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613410837*java2.BÏ
+[
+Vbooking-service/src/main/java/com/chubb/FlightBookingSystem/dto/BookingRequestDTO.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+booking-service6
+
+package8
+6
+1booking-service:com.chubb.FlightBookingSystem.dto9
+9
+3com.chubb.FlightBookingSystem.dto.BookingRequestDTO11
+
+class12
+
+access13
+
+public14
+
+simple-name15
+
+BookingRequestDTO16
+A
+;com.chubb.FlightBookingSystem.dto.BookingRequestDTO.emailId18
+
+field19
+
+private20
+
+emailId21
+*
+$jakarta.validation.constraints.Email23
+
+unknown24
+
+annotated by25
+
+
+uses26
+M
+Gcom.chubb.FlightBookingSystem.dto.BookingRequestDTO.departureScheduleId28
+
+departureScheduleId29
+J
+Dcom.chubb.FlightBookingSystem.dto.BookingRequestDTO.returnScheduleId31
+
+returnScheduleId32
+C
+=com.chubb.FlightBookingSystem.dto.BookingRequestDTO.roundTrip34
+
+	roundTrip35
+H
+Bcom.chubb.FlightBookingSystem.dto.BookingRequestDTO.passengerCount37
+
+passengerCount38
+(
+"jakarta.validation.constraints.Min40
+D
+>com.chubb.FlightBookingSystem.dto.BookingRequestDTO.passengers42
+
+
+passengers43
+8
+2com.chubb.FlightBookingSystem.dto.TicketRequestDTO45
+S
+Mcom.chubb.FlightBookingSystem.dto.BookingRequestDTO#getDepartureScheduleId()I47
+
+method48
+
+getDepartureScheduleId49
+
+
+references50
+T
+Ncom.chubb.FlightBookingSystem.dto.BookingRequestDTO#setDepartureScheduleId(I)V52
+
+setDepartureScheduleId53
+b
+\com.chubb.FlightBookingSystem.dto.BookingRequestDTO#getReturnScheduleId()Ljava/lang/Integer;55
+
+getReturnScheduleId56
+c
+]com.chubb.FlightBookingSystem.dto.BookingRequestDTO#setReturnScheduleId(Ljava/lang/Integer;)V58
+
+setReturnScheduleId59
+X
+Rcom.chubb.FlightBookingSystem.dto.BookingRequestDTO#getEmailId()Ljava/lang/String;61
+
+
+getEmailId62
+Y
+Scom.chubb.FlightBookingSystem.dto.BookingRequestDTO#setEmailId(Ljava/lang/String;)V64
+
+
+setEmailId65
+H
+Bcom.chubb.FlightBookingSystem.dto.BookingRequestDTO#isRoundTrip()Z67
+
+isRoundTrip68
+J
+Dcom.chubb.FlightBookingSystem.dto.BookingRequestDTO#setRoundTrip(Z)V70
+
+setRoundTrip71
+N
+Hcom.chubb.FlightBookingSystem.dto.BookingRequestDTO#getPassengerCount()I73
+
+getPassengerCount74
+O
+Icom.chubb.FlightBookingSystem.dto.BookingRequestDTO#setPassengerCount(I)V76
+
+setPassengerCount77
+\
+Vcom.chubb.FlightBookingSystem.dto.BookingRequestDTO#getPassengers()Ljava/util/HashSet;79
+
+getPassengers80
+]
+Wcom.chubb.FlightBookingSystem.dto.BookingRequestDTO#setPassengers(Ljava/util/HashSet;)V82
+
+setPassengers83J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6jÄ
+
+B
+54<
+545548 *
+1% %(210:7B
+
+
+13
+14
+
+
+15
+56
+B
+57<
+575848 *
+1) )(210:7B
+
+
+13
+14
+
+
+15
+59
+B
+33<
+333419 *
+1 (	210:7B
+
+
+13
+20
+
+
+15
+35
+B
+51<
+515248 *
+1! !(210:7B
+
+
+13
+14
+
+
+15
+53
+B
+66<
+666748 *
+16 6(210:7B
+
+
+13
+14
+
+
+15
+68
+
+22
+222324
+B
+63<
+636448 *
+11 1(210:7B
+
+
+13
+14
+
+
+15
+65
+B
+46<
+464748 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+49
+B
+81<
+818248 *
+1J J(210:7B
+
+
+13
+14
+
+
+15
+83
+>
+108
+101112 *
+1 (:7B
+
+
+13
+14
+
+
+15
+16
+
+44
+444524
+B
+78<
+787948 *
+1F F(210:7B
+
+
+13
+14
+
+
+15
+80
+B
+30<
+303119 *
+1 (	210:7B
+
+
+13
+20
+
+
+15
+32
+B
+60<
+606148 *
+1- -(210:7B
+
+
+13
+14
+
+
+15
+62
+B
+36<
+363719 *
+1 (210:7B
+
+
+13
+20
+
+
+15
+38
+B
+69<
+697048 *
+1: :(210:7B
+
+
+13
+14
+
+
+15
+71
+B
+75<
+757648 *
+1B B(210:7B
+
+
+13
+14
+
+
+15
+77
+B
+72<
+727348 *
+1> >(210:7B
+
+
+13
+14
+
+
+15
+74
+B
+17<
+171819 *
+1 (210:7B
+
+
+13
+20
+
+
+15
+21
+
+39
+394024
+B
+27<
+272819 *
+1 (	210:7B
+
+
+13
+20
+
+
+15
+29
+B
+41<
+414219 *
+1 (	210:7B
+
+
+13
+20
+
+
+15
+43rÅ
+
+172225*
+1 (
+
+172226*
+1 (
+
+363925*
+1 (
+
+363926*
+1 (
+
+414426*
+1 ("
+
+462750*
+1
+ (
+
+511026*
+1" "(
+
+511050*
+1" "(
+
+512750*
+1" "(
+
+543050*
+1&
+ &(
+
+571026*
+1* *(
+
+571050*
+1* *(
+
+573050*
+1* *(
+
+601750*
+1.
+ .(
+
+631026*
+12 2(
+
+631050*
+12 2(
+
+631750*
+12 2(
+
+663350*
+17
+ 7(
+
+691026*
+1; ;(
+
+691050*
+1; ;(
+
+693350*
+1; ;(
+
+723650*
+1?
+ ?(
+
+751026*
+1C C(
+
+751050*
+1C C(
+
+753650*
+1C C(
+
+784426*
+1F F(!
+
+784150*
+1G
+ G(
+
+814426*
+1J$ J(4
+
+811026*
+1K K(
+
+811050*
+1K K(
+
+814150*
+1K K(

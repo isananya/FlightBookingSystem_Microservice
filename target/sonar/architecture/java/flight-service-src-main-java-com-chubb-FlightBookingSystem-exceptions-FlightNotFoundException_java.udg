@@ -1,0 +1,118 @@
+
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613408211*java2.Bö
+g
+bflight-service/src/main/java/com/chubb/FlightBookingSystem/exceptions/FlightNotFoundException.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+flight-service6
+
+package8
+<
+7flight-service:com.chubb.FlightBookingSystem.exceptions9
+F
+@com.chubb.FlightBookingSystem.exceptions.FlightNotFoundException11
+
+	exception12
+
+access13
+
+public14
+
+simple-name15
+
+FlightNotFoundException16
+<
+6org.springframework.web.bind.annotation.ResponseStatus18
+
+unknown19
+
+annotated by20
+
+
+uses21
+)
+#org.springframework.http.HttpStatus23
+3
+-org.springframework.http.HttpStatus.NOT_FOUND25
+
+
+references26
+b
+\com.chubb.FlightBookingSystem.exceptions.FlightNotFoundException#<init>(Ljava/lang/String;)V28
+
+method29
+
+calls30J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6jÀ
+>
+108
+101112 *
+1 (%:7B
+
+
+13
+14
+
+
+15
+16
+
+22
+222319
+
+24
+242519
+B
+27<
+272829 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+16
+
+17
+171819r¢
+
+101720*
+1 (&
+
+101721*
+1 (
+
+102221*
+1 (
+
+102221*
+1 (%
+
+102426*
+1 (%
+
+271030*
+1	 ( 

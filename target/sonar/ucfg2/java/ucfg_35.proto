@@ -1,0 +1,15 @@
+
+Lcom.chubb.FlightBookingSystem.model.Schedule#getBookedSeats()Ljava/util/Set;å
+ÅD:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Schedule.javaJ J(""1*∫
+1K	 K(á
+Ñ
+K	 K(
+%0java.util.Set"__id*]
+
+__unknown_file (A*?.
+,com.chubb.FlightBookingSystem.model.Schedule"
+bookedSeats"!
+K K(
+
+%0java.util.SetB0.
+,com.chubb.FlightBookingSystem.model.ScheduleH

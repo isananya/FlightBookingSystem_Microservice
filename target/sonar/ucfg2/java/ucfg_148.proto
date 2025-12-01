@@ -1,0 +1,15 @@
+
+Jcom.chubb.FlightBookingSystem.model.Booking#getEmailId()Ljava/lang/String;å
+ÅD:/CHUBB_Training/FlightBookingSystem_Microservice/booking-service/src/main/java/com/chubb/FlightBookingSystem/model/Booking.javad d("1*ª
+1e	 e(Ö
+Ç
+e	 e(
+%0java.lang.String"__id*X
+
+__unknown_file (<*:-
++com.chubb.FlightBookingSystem.model.Booking"	
+emailId"$
+e e(
+
+%0java.lang.StringB/-
++com.chubb.FlightBookingSystem.model.BookingH

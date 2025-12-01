@@ -1,0 +1,7 @@
+organization=ananya
+projectKey=isananya_FlightBookingSystem_Microservice
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.76948
+dashboardUrl=https://sonarcloud.io/dashboard?id=isananya_FlightBookingSystem_Microservice
+ceTaskId=AZrbKDYtiZ7ItTMePT8T
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZrbKDYtiZ7ItTMePT8T

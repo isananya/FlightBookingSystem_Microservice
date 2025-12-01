@@ -1,0 +1,15 @@
+
+dcom.chubb.FlightBookingSystem.model.Schedule#getFlight()Lcom/chubb/FlightBookingSystem/model/Flight;å
+ÅD:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Schedule.javaR R("1*Ô
+1S	 S(ü
+ú
+S	 S(0
+%0*com.chubb.FlightBookingSystem.model.Flight"__id*X
+
+__unknown_file (<*:.
+,com.chubb.FlightBookingSystem.model.Schedule"
+flight">
+S S(2
+0
+%0*com.chubb.FlightBookingSystem.model.FlightB0.
+,com.chubb.FlightBookingSystem.model.ScheduleH

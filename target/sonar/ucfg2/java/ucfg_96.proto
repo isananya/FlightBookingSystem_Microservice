@@ -1,0 +1,15 @@
+
+Ncom.chubb.FlightBookingSystem.model.Flight#getFlightNumber()Ljava/lang/String;‰
+D:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Flight.java ("1*¿
+1	 (‰
+†
+	 (
+%0java.lang.String"__id*\
+
+__unknown_file (@*>,
+*com.chubb.FlightBookingSystem.model.Flight"
+flightNumber"$
+ (
+
+%0java.lang.StringB.,
+*com.chubb.FlightBookingSystem.model.FlightH

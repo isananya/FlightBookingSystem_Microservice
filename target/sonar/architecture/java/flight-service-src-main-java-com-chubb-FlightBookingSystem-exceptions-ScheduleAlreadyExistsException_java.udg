@@ -1,0 +1,157 @@
+
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613406926*java2.Bê
+n
+iflight-service/src/main/java/com/chubb/FlightBookingSystem/exceptions/ScheduleAlreadyExistsException.java2
+	
+type3
+	
+MAIN4
+
+
+module-key5
+
+flight-service6
+
+package8
+<
+7flight-service:com.chubb.FlightBookingSystem.exceptions9
+M
+Gcom.chubb.FlightBookingSystem.exceptions.ScheduleAlreadyExistsException11
+
+	exception12
+
+access13
+
+public14
+
+simple-name15
+$
+ScheduleAlreadyExistsException16
+<
+6org.springframework.web.bind.annotation.ResponseStatus18
+
+unknown19
+
+annotated by20
+
+
+uses21
+)
+#org.springframework.http.HttpStatus23
+2
+,org.springframework.http.HttpStatus.CONFLICT25
+
+
+references26
+™
+’com.chubb.FlightBookingSystem.exceptions.ScheduleAlreadyExistsException#<init>(Lcom/chubb/FlightBookingSystem/model/Flight;Ljava/time/LocalDate;)V28
+
+method29
+0
+*com.chubb.FlightBookingSystem.model.Flight31
+
+	has param32
+
+calls33
+
+is type34
+T
+Ncom.chubb.FlightBookingSystem.model.Flight#getFlightNumber()Ljava/lang/String;36J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6jè
+
+22
+222319
+
+30
+303119
+
+24
+242519
+B
+27<
+272829 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+16
+>
+108
+101112 *
+1 (,:7B
+
+
+13
+14
+
+
+15
+16
+
+17
+171819
+
+35
+353619r©
+
+101720*
+1
+ 
+(%
+
+101721*
+1
+ 
+(
+
+102221*
+1
+ 
+(
+
+102221*
+1
+ 
+($
+
+102426*
+1
+ 
+($
+
+273032*
+1( (.
+
+271033*
+1	 ('
+
+273034*
+1/ (5
+
+273021*
+1( (.
+
+273026*
+1' (-
+
+273533*
+1. (=
