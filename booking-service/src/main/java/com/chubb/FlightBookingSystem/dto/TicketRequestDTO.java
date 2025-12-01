@@ -5,6 +5,8 @@ import com.chubb.FlightBookingSystem.model.Ticket.MealOption;
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +15,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class TicketRequestDTO {
-    private int id;
     private String firstName;
     private String lastName;
     private int age;

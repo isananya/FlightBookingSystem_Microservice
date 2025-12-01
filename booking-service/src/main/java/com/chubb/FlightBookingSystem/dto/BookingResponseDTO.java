@@ -23,7 +23,7 @@ public class BookingResponseDTO {
 	private String arrivalSourceAirport;
 	private String arrivalDestinationAirport;
 	
-	private double totalAmount;
+	private float totalAmount;
     private HashSet<Ticket> ticketSet;
     
     public enum Gender {

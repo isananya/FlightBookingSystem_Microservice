@@ -25,4 +25,5 @@ public class BookingRequestDTO {
 	private int passengerCount;
 	
 	private HashSet<TicketRequestDTO> passengers;
+	
 }
