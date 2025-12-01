@@ -1,5 +1,5 @@
 
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613408376*java2.BŽ
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764628314392*java2.B·
 [
 Vflight-service/src/main/java/com/chubb/FlightBookingSystem/dto/ScheduleRequestDTO.java2
 	
@@ -27,91 +27,48 @@ module-key5
 simple-name15
 
 ScheduleRequestDTO16
-F
-@com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.airlineName18
-
-field19
-
-private20
 
-airlineName21
+lombok.Data18
+
+unknown19
+
+annotated by20
+
+
+uses21
+
+lombok.AllArgsConstructor23
+
+lombok.NoArgsConstructor25
+F
+@com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.airlineName27
+
+field28
+
+private29
+
+airlineName30
 H
-Bcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.departureDate23
+Bcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.departureDate32
 
-departureDate24
+departureDate33
 D
->com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.basePrice26
+>com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.basePrice35
 
-	basePrice27
+	basePrice36
 E
-?com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.totalSeats29
+?com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.totalSeats38
 
 
-totalSeats30
+totalSeats39
 I
-Ccom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.availableSeats32
+Ccom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.availableSeats41
 
-availableSeats33
+availableSeats42
 G
-Acom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.flightNumber35
+Acom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO.flightNumber44
 
-flightNumber36
-]
-Wcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#getAirlineName()Ljava/lang/String;38
-
-method39
-
-getAirlineName40
-
-
-references41
-^
-Xcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setAirlineName(Ljava/lang/String;)V43
-
-setAirlineName44
-
-
-uses45
-b
-\com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#getDepartureDate()Ljava/time/LocalDate;47
-
-getDepartureDate48
-c
-]com.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setDepartureDate(Ljava/time/LocalDate;)V50
-
-setDepartureDate51
-J
-Dcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#getBasePrice()F53
-
-getBasePrice54
-K
-Ecom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setBasePrice(F)V56
-
-setBasePrice57
-K
-Ecom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#getTotalSeats()I59
-
-getTotalSeats60
-L
-Fcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setTotalSeats(I)V62
-
-setTotalSeats63
-O
-Icom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#getAvailableSeats()I65
-
-getAvailableSeats66
-P
-Jcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setAvailableSeats(I)V68
-
-setAvailableSeats69
-^
-Xcom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#getFlightNumber()Ljava/lang/String;71
-
-getFlightNumber72
-_
-Ycom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setFlightNumber(Ljava/lang/String;)V74
-
-setFlightNumber75J#
+flightNumber45J#
 !
 1
 12
@@ -127,12 +84,11 @@ Ycom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setFlightNumber(Ljava/lang
 
 
 5
-6jˆ
-
+6j”
 >
 108
 101112 *
-1 ( :7B
+1 ( :7B
 
 
 13
@@ -142,298 +98,105 @@ Ycom.chubb.FlightBookingSystem.dto.ScheduleRequestDTO#setFlightNumber(Ljava/lang
 15
 16
 B
-22<
-222319 *
-1 (210:7B
-
-
-13
-20
-
-
-15
-24
-B
-52<
-525339 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-54
-B
-58<
-585939 *
-1' '(210:7B
-
-
-13
-14
-
-
-15
-60
-B
-28<
-282919 *
-1
- 
-(210:7B
-
-
-13
-20
-
-
-15
-30
-B
 31<
-313219 *
-1 (210:7B
+313228 *
+1 (210:7B
 
 
 13
-20
+29
 
 
 15
 33
 B
-64<
-646539 *
-1/ /(210:7B
+26<
+262728 *
+1 (210:7B
 
 
 13
-14
+29
 
 
 15
-66
-B
-46<
-464739 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-48
-B
-49<
-495039 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-51
-B
-61<
-616239 *
-1+ +(210:7B
-
-
-13
-14
-
-
-15
-63
-B
-42<
-424339 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-44
-B
-17<
-171819 *
-1 (210:7B
-
-
-13
-20
-
-
-15
-21
-B
-25<
-252619 *
-1	 	(210:7B
-
-
-13
-20
-
-
-15
-27
-B
-37<
-373839 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-40
+30
 B
 34<
-343519 *
-1 (210:7B
+343528 *
+1 (210:7B
 
 
 13
-20
+29
 
 
 15
 36
 B
-70<
-707139 *
-17 7(210:7B
+37<
+373828 *
+1 (210:7B
 
 
 13
-14
+29
 
 
 15
-72
+39
 B
-67<
-676839 *
-13 3(210:7B
+40<
+404128 *
+1 (210:7B
 
 
 13
-14
+29
 
 
 15
-69
+42
+
+17
+171819
 B
-73<
-737439 *
-1; ;(210:7B
+43<
+434428 *
+1 (210:7B
 
 
 13
-14
+29
 
 
 15
-75
-B
-55<
-555639 *
-1# #(210:7B
-
-
-13
-14
-
-
-15
-57rˆ
+45
+
+22
+222319
+
+24
+242519r¢
 
-371741*
-1
- (
+101720*
+1
+ 
+(
 
-421045*
-1 (
+101721*
+1
+ 
+(
 
-421041*
-1 (
+102220*
+1 (
 
-421741*
-1 (
+102221*
+1 (
 
-462241*
-1
- (
+102420*
+1 (
 
-491045*
-1 (
-
-491041*
-1 (
-
-492241*
-1 (
-
-522541*
-1 
-  (
-
-551045*
-1$ $(
-
-551041*
-1$ $(
-
-552541*
-1$ $(
-
-582841*
-1(
- ((
-
-611045*
-1, ,(
-
-611041*
-1, ,(
-
-612841*
-1, ,(
-
-643141*
-10
- 0(
-
-671045*
-14 4(
-
-671041*
-14 4(
-
-673141*
-14 4(
-
-703441*
-18
- 8(
-
-731045*
-1< <(
-
-731041*
-1< <(
-
-733441*
-1< <(
+102421*
+1 (

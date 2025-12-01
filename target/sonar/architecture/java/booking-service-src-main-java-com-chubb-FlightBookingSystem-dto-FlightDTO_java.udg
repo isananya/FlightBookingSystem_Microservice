@@ -1,5 +1,5 @@
 
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613413171*java2.B´
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764628321497*java2.Bõ
 S
 Nbooking-service/src/main/java/com/chubb/FlightBookingSystem/dto/FlightDTO.java2
 	
@@ -36,34 +36,38 @@ module-key5
 
 
 uses21
+
+lombok.NoArgsConstructor23
+
+lombok.AllArgsConstructor25
 >
-8com.chubb.FlightBookingSystem.dto.FlightDTO.flightNumber23
+8com.chubb.FlightBookingSystem.dto.FlightDTO.flightNumber27
 
-field24
+field28
 
-private25
+private29
 
-flightNumber26
+flightNumber30
 ?
-9com.chubb.FlightBookingSystem.dto.FlightDTO.sourceAirport28
+9com.chubb.FlightBookingSystem.dto.FlightDTO.sourceAirport32
 
-sourceAirport29
+sourceAirport33
 D
->com.chubb.FlightBookingSystem.dto.FlightDTO.destinationAirport31
+>com.chubb.FlightBookingSystem.dto.FlightDTO.destinationAirport35
 
-destinationAirport32
+destinationAirport36
 ?
-9com.chubb.FlightBookingSystem.dto.FlightDTO.departureTime34
+9com.chubb.FlightBookingSystem.dto.FlightDTO.departureTime38
 
-departureTime35
+departureTime39
 =
-7com.chubb.FlightBookingSystem.dto.FlightDTO.arrivalTime37
+7com.chubb.FlightBookingSystem.dto.FlightDTO.arrivalTime41
 
-arrivalTime38
+arrivalTime42
 :
-4com.chubb.FlightBookingSystem.dto.FlightDTO.duration40
+4com.chubb.FlightBookingSystem.dto.FlightDTO.duration44
 
-duration41J#
+duration45J#
 !
 1
 12
@@ -79,64 +83,62 @@ D
 
 
 5
-6jì
+6j”
 B
-30<
-303124 *
-1 (210:7B
+34<
+343528 *
+1 (210:7B
 
 
 13
-25
+29
 
 
 15
-32
+36
 B
-36<
-363724 *
+40<
+404128 *
+1 (210:7B
+
+
+13
+29
+
+
+15
+42
+B
+43<
+434428 *
+1 (210:7B
+
+
+13
+29
+
+
+15
+45
+B
+26<
+262728 *
 1 (210:7B
 
 
 13
-25
+29
 
 
 15
-38
-B
-39<
-394024 *
-1 (210:7B
-
-
-13
-25
-
-
-15
-41
-B
-22<
-222324 *
-1
- 
-(210:7B
-
-
-13
-25
-
-
-15
-26
+30
 
 17
 171819
 >
 108
 101112 *
-1	 	(:7B
+1 (:7B
 
 
 13
@@ -146,32 +148,54 @@ B
 15
 16
 B
-33<
-333424 *
-1 (210:7B
+37<
+373828 *
+1 (210:7B
 
 
 13
-25
+29
 
 
 15
-35
+39
+
+24
+242519
+
+22
+222319
 B
-27<
-272824 *
-1 (210:7B
+31<
+313228 *
+1 (210:7B
 
 
 13
-25
+29
 
 
 15
-29r6
+33r¢
 
 101720*
-1 (
+1
+ 
+(
 
 101721*
-1 (
+1
+ 
+(
+
+102220*
+1 (
+
+102221*
+1 (
+
+102420*
+1 (
+
+102421*
+1 (

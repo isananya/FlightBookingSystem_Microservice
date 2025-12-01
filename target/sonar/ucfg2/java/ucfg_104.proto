@@ -1,15 +1,0 @@
-
-Pcom.chubb.FlightBookingSystem.model.Flight#getArrivalTime()Ljava/time/LocalTime;‰
-D:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Flight.java= =( "1*Ä
-1>	 >(‹
-ˆ
->	 >(
-%0java.time.LocalTime"__id*[
-
-__unknown_file (?*=,
-*com.chubb.FlightBookingSystem.model.Flight"
-arrivalTime"'
-> >(
-
-%0java.time.LocalTimeB.,
-*com.chubb.FlightBookingSystem.model.FlightH

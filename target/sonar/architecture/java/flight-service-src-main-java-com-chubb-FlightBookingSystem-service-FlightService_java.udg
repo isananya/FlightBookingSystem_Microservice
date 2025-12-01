@@ -1,5 +1,6 @@
 
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613408959*java2.BÓ
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764628315326*java2.Bý
+
 Z
 Uflight-service/src/main/java/com/chubb/FlightBookingSystem/service/FlightService.java2
 	
@@ -71,16 +72,14 @@ i
 ccom.chubb.FlightBookingSystem.repository.FlightRepository#existsByFlightNumber(Ljava/lang/String;)Z45
 
 calls46
-T
-Ncom.chubb.FlightBookingSystem.model.Flight#getFlightNumber()Ljava/lang/String;48
 K
-Ecom.chubb.FlightBookingSystem.exceptions.FlightAlreadyExistsException50
+Ecom.chubb.FlightBookingSystem.exceptions.FlightAlreadyExistsException48
 
-returns51
+returns49
 8
-2org.springframework.data.repository.CrudRepository53
+2org.springframework.data.repository.CrudRepository51
 c
-]org.springframework.data.repository.CrudRepository#save(Ljava/lang/Object;)Ljava/lang/Object;55J#
+]org.springframework.data.repository.CrudRepository#save(Ljava/lang/Object;)Ljava/lang/Object;53J#
 !
 1
 12
@@ -96,7 +95,7 @@ c
 
 
 5
-6j¤
+6j
 >
 108
 101112 *
@@ -113,8 +112,8 @@ c
 38
 383919
 
-54
-545519
+52
+525319
 
 29
 293019
@@ -122,11 +121,8 @@ c
 32
 323319
 
-52
-525319
-
-47
-474819
+50
+505119
 B
 34<
 343536 *
@@ -146,8 +142,8 @@ B
 17
 171819
 
-49
-495019
+47
+474819
 
 41
 414219
@@ -165,7 +161,7 @@ B
 
 
 15
-28rª
+28r¾
 
 101720*
 1 (	
@@ -226,28 +222,16 @@ B
 342443*
 1 (
 
-343843*
-1, (2
-
 344746*
-13 (B
-
-344946*
 1 (*
 
-343843*
-1+ (1
-
-344746*
-12 (A
-
-343851*
+343849*
 1 (
 
-345243*
+345043*
 1 (
 
-345446*
+345246*
 1 (
 
 342443*

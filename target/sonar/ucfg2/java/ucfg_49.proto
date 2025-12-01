@@ -1,9 +1,22 @@
 
-Acom.chubb.FlightBookingSystem.model.Schedule#getAvailableSeats()Ié
-ÅD:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Schedule.javaÇ Ç("1*%
-1
-É	 É("
-
-É É(
-""B0.
-,com.chubb.FlightBookingSystem.model.ScheduleHX
+=com.chubb.FlightBookingSystem.model.Ticket#%field_initializer
+__unknown_file ("1*ø
+1 (Í
+Á
+ã
+ÄD:/CHUBB_Training/FlightBookingSystem_Microservice/booking-service/src/main/java/com/chubb/FlightBookingSystem/model/Ticket.java1 1(5=
+%07com.chubb.FlightBookingSystem.model.Ticket$TicketStatus"__id*
+ (
+""û
+õ
+ã
+ÄD:/CHUBB_Training/FlightBookingSystem_Microservice/booking-service/src/main/java/com/chubb/FlightBookingSystem/model/Ticket.java0 1(68,
+*com.chubb.FlightBookingSystem.model.Ticket"
+status"__id*K
+ (?
+=
+%07com.chubb.FlightBookingSystem.model.Ticket$TicketStatus"°
+â
+ÄD:/CHUBB_Training/FlightBookingSystem_Microservice/booking-service/src/main/java/com/chubb/FlightBookingSystem/model/Ticket.java V(
+implicit returnB.,
+*com.chubb.FlightBookingSystem.model.Ticket

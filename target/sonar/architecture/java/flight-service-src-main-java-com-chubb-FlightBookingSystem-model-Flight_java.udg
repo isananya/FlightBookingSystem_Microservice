@@ -1,5 +1,5 @@
 
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764613408882*java2.Bâ
+1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764628315194*java2.BØ
 Q
 Lflight-service/src/main/java/com/chubb/FlightBookingSystem/model/Flight.java2
 	
@@ -36,91 +36,44 @@ module-key5
 
 
 uses21
+
+lombok.AllArgsConstructor23
+
+lombok.NoArgsConstructor25
+
+lombok.Data27
 =
-7com.chubb.FlightBookingSystem.model.Flight.flightNumber23
+7com.chubb.FlightBookingSystem.model.Flight.flightNumber29
 
-field24
+field30
 
-private25
+private31
 
-flightNumber26
+flightNumber32
 
-jakarta.persistence.Id28
+jakarta.persistence.Id34
 -
-'jakarta.validation.constraints.NotBlank30
+'jakarta.validation.constraints.NotBlank36
 >
-8com.chubb.FlightBookingSystem.model.Flight.sourceAirport32
+8com.chubb.FlightBookingSystem.model.Flight.sourceAirport38
 
-sourceAirport33
+sourceAirport39
 C
-=com.chubb.FlightBookingSystem.model.Flight.destinationAirport35
+=com.chubb.FlightBookingSystem.model.Flight.destinationAirport41
 
-destinationAirport36
+destinationAirport42
 >
-8com.chubb.FlightBookingSystem.model.Flight.departureTime38
+8com.chubb.FlightBookingSystem.model.Flight.departureTime44
 
-departureTime39
+departureTime45
 <
-6com.chubb.FlightBookingSystem.model.Flight.arrivalTime41
+6com.chubb.FlightBookingSystem.model.Flight.arrivalTime47
 
-arrivalTime42
+arrivalTime48
 9
-3com.chubb.FlightBookingSystem.model.Flight.duration44
+3com.chubb.FlightBookingSystem.model.Flight.duration50
 
-duration45
-T
-Ncom.chubb.FlightBookingSystem.model.Flight#getFlightNumber()Ljava/lang/String;47
-
-method48
-
-getFlightNumber49
-
-
-references50
-U
-Ocom.chubb.FlightBookingSystem.model.Flight#setFlightNumber(Ljava/lang/String;)V52
-
-setFlightNumber53
-U
-Ocom.chubb.FlightBookingSystem.model.Flight#getSourceAirport()Ljava/lang/String;55
-
-getSourceAirport56
-V
-Pcom.chubb.FlightBookingSystem.model.Flight#setSourceAirport(Ljava/lang/String;)V58
-
-setSourceAirport59
-Z
-Tcom.chubb.FlightBookingSystem.model.Flight#getDestinationAirport()Ljava/lang/String;61
-
-getDestinationAirport62
-[
-Ucom.chubb.FlightBookingSystem.model.Flight#setDestinationAirport(Ljava/lang/String;)V64
-
-setDestinationAirport65
-X
-Rcom.chubb.FlightBookingSystem.model.Flight#getDepartureTime()Ljava/time/LocalTime;67
-
-getDepartureTime68
-Y
-Scom.chubb.FlightBookingSystem.model.Flight#setDepartureTime(Ljava/time/LocalTime;)V70
-
-setDepartureTime71
-V
-Pcom.chubb.FlightBookingSystem.model.Flight#getArrivalTime()Ljava/time/LocalTime;73
-
-getArrivalTime74
-W
-Qcom.chubb.FlightBookingSystem.model.Flight#setArrivalTime(Ljava/time/LocalTime;)V76
-
-setArrivalTime77
-R
-Lcom.chubb.FlightBookingSystem.model.Flight#getDuration()Ljava/time/Duration;79
-
-getDuration80
-S
-Mcom.chubb.FlightBookingSystem.model.Flight#setDuration(Ljava/time/Duration;)V82
-
-setDuration83J#
+duration51J#
 !
 1
 12
@@ -136,12 +89,11 @@ Mcom.chubb.FlightBookingSystem.model.Flight#setDuration(Ljava/time/Duration;)V
 
 
 5
-6jÄ
-
+6jÐ
 >
 108
 101112 *
-1 (:7B
+1 (:7B
 
 
 13
@@ -154,336 +106,137 @@ Mcom.chubb.FlightBookingSystem.model.Flight#setDuration(Ljava/time/Duration;)V
 17
 171819
 B
-31<
-313224 *
-1 (210:7B
-
-
-13
-25
-
-
-15
-33
-B
-78<
-787948 *
-1E E(210:7B
-
-
-13
-14
-
-
-15
-80
-B
-22<
-222324 *
-1 (210:7B
-
-
-13
-25
-
-
-15
-26
-
-27
-272819
-B
-60<
-606148 *
-1- -(210:7B
-
-
-13
-14
-
-
-15
-62
-B
-34<
-343524 *
-1 (210:7B
-
-
-13
-25
-
-
-15
-36
-B
-46<
-464748 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-49
-B
-63<
-636448 *
-11 1(210:7B
-
-
-13
-14
-
-
-15
-65
-B
-43<
-434424 *
-1 (	210:7B
-
-
-13
-25
-
-
-15
-45
-B
-40<
-404124 *
-1 (	210:7B
-
-
-13
-25
-
-
-15
-42
-B
-51<
-515248 *
-1! !(210:7B
-
-
-13
-14
-
-
-15
-53
-B
-66<
-666748 *
-15 5(210:7B
-
-
-13
-14
-
-
-15
-68
-
-29
-293019
-B
-75<
-757648 *
-1A A(210:7B
-
-
-13
-14
-
-
-15
-77
-B
-57<
-575848 *
-1) )(210:7B
-
-
-13
-14
-
-
-15
-59
-B
-72<
-727348 *
-1= =(210:7B
-
-
-13
-14
-
-
-15
-74
-B
-54<
-545548 *
-1% %(210:7B
-
-
-13
-14
-
-
-15
-56
-B
 37<
-373824 *
-1 (	210:7B
+373830 *
+1 (210:7B
 
 
 13
-25
+31
 
 
 15
 39
 B
-69<
-697048 *
-19 9(210:7B
+28<
+282930 *
+1 (210:7B
 
 
 13
-14
+31
 
 
 15
-71
+32
+
+33
+333419
 B
-81<
-818248 *
-1I I(210:7B
+40<
+404130 *
+1 (210:7B
 
 
 13
-14
+31
 
 
 15
-83r–
+42
+B
+49<
+495030 *
+1! !(	210:7B
+
+
+13
+31
+
+
+15
+51
+B
+46<
+464730 *
+1 (	210:7B
+
+
+13
+31
+
+
+15
+48
+
+35
+353619
+
+26
+262719
+
+22
+222319
+B
+43<
+434430 *
+1 (	210:7B
+
+
+13
+31
+
+
+15
+45
+
+24
+242519r°
 
 101720*
-1
- 
-(
+1 (
 
 101721*
-1
- 
-(
+1 (
 
-222720*
-1 (
+102220*
+1 (
 
-222721*
-1 (
+102221*
+1 (
 
-222920*
-1 (
+102420*
+1 (
 
-222921*
-1 (
+102421*
+1 (
 
-312920*
-1 (
+102620*
+1 (
 
-312921*
-1 (
+102621*
+1 (
 
-342920*
+283320*
+1 (
+
+283321*
+1 (
+
+283520*
 1 (
 
-342921*
+283521*
 1 (
 
-462250*
-1
- (
+373520*
+1 (
 
-511021*
-1" "(
+373521*
+1 (
 
-511050*
-1" "(
+403520*
+1 (
 
-512250*
-1" "(
-
-543150*
-1&
- &(
-
-571021*
-1* *(
-
-571050*
-1* *(
-
-573150*
-1* *(
-
-603450*
-1.
- .(
-
-631021*
-12 2(
-
-631050*
-12 2(
-
-633450*
-12 2(
-
-663750*
-16
- 6(
-
-691021*
-1: :(
-
-691050*
-1: :(
-
-693750*
-1: :(
-
-724050*
-1>
- >(
-
-751021*
-1B B(
-
-751050*
-1B B(
-
-754050*
-1B B(
-
-784350*
-1F
- F(
-
-811021*
-1J J(
-
-811050*
-1J J(
-
-814350*
-1J J(
+403521*
+1 (

@@ -2,7 +2,6 @@ package com.chubb.FlightBookingSystem.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,10 +37,33 @@ public class TicketService {
 
         List<Ticket> tickets = ticketRepository.findByBooking(booking);
 
-        List<TicketResponseDTO> response = tickets.stream()
+        return mapTicketsToResponse(tickets);
+    }
+    
+    public List<TicketResponseDTO> getTicketsByEmail(String emailId) {
+        List<Booking> bookings = bookingRepository.findByEmailId(emailId);
+        if (bookings.isEmpty()) {
+            throw new BookingNotFoundException(emailId);
+        }
+
+        List<Ticket> tickets = new ArrayList<>();
+        for (Booking booking : bookings) {
+            tickets.addAll(ticketRepository.findByBooking(booking));
+        }
+
+        return mapTicketsToResponse(tickets);
+    }
+
+    private List<TicketResponseDTO> mapTicketsToResponse(List<Ticket> tickets) {
+        return tickets.stream()
             .map(t -> {
-            	ScheduleDTO schedule = flightClient.getSchedule(t.getScheduleId());
-            	FlightDTO flight = flightClient.getFlight(schedule.getFlightNumber());
+                ScheduleDTO schedule = flightClient.getSchedule(t.getScheduleId());
+                
+                FlightDTO flight = null;
+                if (schedule != null) {
+                    flight = flightClient.getFlight(schedule.getFlightNumber());
+                }
+
                 return new TicketResponseDTO(
                         t.getFirstName(),
                         t.getLastName(),
@@ -50,49 +72,12 @@ public class TicketService {
                         t.getSeatNumber(),
                         t.getMealOption(),
                         t.getStatus(),
-                        schedule.getDepartureDate(),
-                        flight.getSourceAirport(),
-                        flight.getDestinationAirport(),
-                        flight.getDepartureTime(),
-                        flight.getArrivalTime()
+                        schedule != null ? schedule.getDepartureDate() : null,
+                        (schedule != null && flight != null) ? flight.getSourceAirport() : null,
+                        (schedule != null && flight != null) ? flight.getDestinationAirport() : null,
+                        (schedule != null && flight != null) ? flight.getDepartureTime() : null,
+                        (schedule != null && flight != null) ? flight.getArrivalTime() : null
                 );
             }).toList();
-        return response;
     }
-    
-    public List<TicketResponseDTO> getTicketsByEmail(String emailId) {
-	    List<Booking> bookings = bookingRepository.findByEmailId(emailId);
-	    if (bookings.isEmpty()) {
-	        throw new BookingNotFoundException(emailId);
-	    }
-
-	    List<Ticket> tickets = new ArrayList<>();
-	    for (Booking booking : bookings) {
-	        tickets.addAll(ticketRepository.findByBooking(booking));
-	    }
-
-	    List<TicketResponseDTO> response = tickets.stream()
-	        .map(t -> {
-	            ScheduleDTO schedule = flightClient.getSchedule(t.getScheduleId());
-            	FlightDTO flight = flightClient.getFlight(schedule.getFlightNumber());
-
-	            return new TicketResponseDTO(
-	                t.getFirstName(),
-	                t.getLastName(),
-	                t.getAge(),
-	                t.getGender(),
-	                t.getSeatNumber(),
-	                t.getMealOption(),
-	                t.getStatus(),
-	                schedule != null ? schedule.getDepartureDate() : null,
-	                schedule != null ? flight.getSourceAirport() : null,
-	                schedule != null ? flight.getDestinationAirport() : null,
-	                schedule != null ? flight.getDepartureTime() : null,
-	                schedule != null ? flight.getArrivalTime() : null
-	            );
-	        })
-	        .toList();
-
-	    return response;
-	}
 }

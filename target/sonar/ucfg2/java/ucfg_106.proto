@@ -1,16 +1,0 @@
-
-Lcom.chubb.FlightBookingSystem.model.Flight#getDuration()Ljava/time/Duration;‰
-D:/CHUBB_Training/FlightBookingSystem_Microservice/flight-service/src/main/java/com/chubb/FlightBookingSystem/model/Flight.javaE E("1*¿
-1F	 F(‡
-„
-F	 F(
-%0java.time.Duration"__id*X
-
-__unknown_file (<*:,
-*com.chubb.FlightBookingSystem.model.Flight"
-
-duration"&
-F F(
-
-%0java.time.DurationB.,
-*com.chubb.FlightBookingSystem.model.FlightH
