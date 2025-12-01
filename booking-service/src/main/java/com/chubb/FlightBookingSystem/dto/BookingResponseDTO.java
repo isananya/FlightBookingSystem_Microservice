@@ -6,7 +6,13 @@ import com.chubb.FlightBookingSystem.model.Ticket;
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class BookingResponseDTO {
 	private int id;
 	private String pnr;

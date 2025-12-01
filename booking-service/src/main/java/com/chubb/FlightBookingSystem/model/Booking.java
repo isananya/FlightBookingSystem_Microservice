@@ -12,8 +12,14 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Booking {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -38,11 +44,6 @@ public class Booking {
 	@Min(value=1)
 	@Column(name = "passengers_count")
 	private int passengerCount;
-	
-	
-	public Booking() {
-		super();
-	}
 
 	public Booking(boolean roundTrip, int departureScheduleId, Integer returnScheduleId, float totalAmount,
 			@Email String emailId, @Min(1) int passengerCount) {
@@ -53,71 +54,6 @@ public class Booking {
 		this.returnScheduleId = returnScheduleId;
 		this.totalAmount = totalAmount;
 		this.emailId = emailId;
-		this.passengerCount = passengerCount;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-	public String getPnr() {
-		return pnr;
-	}
-
-	public void setPnr(String pnr) {
-		this.pnr = pnr;
-	}
-
-	public boolean isRoundTrip() {
-		return roundTrip;
-	}
-
-	public void setRoundTrip(boolean roundTrip) {
-		this.roundTrip = roundTrip;
-	}
-
-	public int getDepartureScheduleId() {
-		return departureScheduleId;
-	}
-
-	public void setDepartureScheduleId(int departureScheduleId) {
-		this.departureScheduleId = departureScheduleId;
-	}
-
-	public Integer getReturnScheduleId() {
-		return returnScheduleId;
-	}
-
-	public void setReturnScheduleId(Integer returnScheduleId) {
-		this.returnScheduleId = returnScheduleId;
-	}
-
-	public String getEmailId() {
-		return emailId;
-	}
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-
-	public float getTotalAmount() {
-		return totalAmount;
-	}
-
-	public void setTotalAmount(float totalAmount) {
-		this.totalAmount = totalAmount;
-	}
-
-	public int getPassengerCount() {
-		return passengerCount;
-	}
-
-	public void setPassengerCount(int passengerCount) {
 		this.passengerCount = passengerCount;
 	}
 }
