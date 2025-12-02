@@ -71,7 +71,7 @@ cd config-server
 mvn clean install
 mvn spring-boot:run
 ```
-* Start Eureka Server
+* Eureka Server
 
 ```sh
 cd eureka-server
@@ -79,7 +79,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-* Start Flight Service
+* Flight Service
 
 ```sh
 cd flight-service
@@ -87,7 +87,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-* Start Booking Service
+* Booking Service
 
 ```sh
 cd booking-service
@@ -95,7 +95,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-* Start API Gateway
+* API Gateway
 
 ```sh
 cd api-gateway
