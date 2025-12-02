@@ -22,14 +22,18 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TicketService {
 
-    @Autowired
     private BookingRepository bookingRepository;
-
-    @Autowired
     private TicketRepository ticketRepository;
-
-    @Autowired
     private FlightClient flightClient;
+    
+    @Autowired
+    public TicketService(BookingRepository bookingRepository, TicketRepository ticketRepository,
+			FlightClient flightClient) {
+		super();
+		this.bookingRepository = bookingRepository;
+		this.ticketRepository = ticketRepository;
+		this.flightClient = flightClient;
+	}
     
     public List<TicketResponseDTO> getTicketsByPnr(String pnr) {
         Booking booking = bookingRepository.findByPnr(pnr)

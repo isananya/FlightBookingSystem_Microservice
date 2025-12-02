@@ -17,8 +17,13 @@ import com.chubb.FlightBookingSystem.service.ScheduleService;
 
 @RestController
 public class FlightSearchController {
+	private final ScheduleService scheduleService;
+
 	@Autowired
-	ScheduleService scheduleService;
+	public FlightSearchController(ScheduleService scheduleService) {
+		super();
+		this.scheduleService = scheduleService;
+	}	
 	
 	@GetMapping("/flights/search")
 	public ResponseEntity<Map<String, Object>> searchFlights(

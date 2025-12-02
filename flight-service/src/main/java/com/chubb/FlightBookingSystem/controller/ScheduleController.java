@@ -28,12 +28,17 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/schedule")
 public class ScheduleController {
-	@Autowired
-	ScheduleService scheduleService;
+
+	private final ScheduleService scheduleService;
+	private final FlightService flightService;
 	
-	@Autowired
-	FlightService flightService;
-	
+	@Autowired	
+	public ScheduleController(ScheduleService scheduleService, FlightService flightService) {
+		super();
+		this.scheduleService = scheduleService;
+		this.flightService = flightService;
+	}
+
 	private final String adminSecretKey = "Admin";
 	
 	@PostMapping("/inventory")

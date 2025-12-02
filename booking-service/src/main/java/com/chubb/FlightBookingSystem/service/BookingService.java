@@ -32,15 +32,20 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class BookingService {
-	@Autowired
-	private BookingRepository bookingRepository;
+
+	private final BookingRepository bookingRepository;
+	private final TicketRepository ticketRepository;
+	private final FlightClient flightClient;
 	
 	@Autowired
-	private TicketRepository ticketRepository;
-	
-	@Autowired
-	private FlightClient flightClient;
-	
+	public BookingService(BookingRepository bookingRepository, TicketRepository ticketRepository,
+			FlightClient flightClient) {
+		super();
+		this.bookingRepository = bookingRepository;
+		this.ticketRepository = ticketRepository;
+		this.flightClient = flightClient;
+	}
+
 	private float calculateTotalPrice(BookingRequestDTO request) {
 	
 		float departureFare = flightClient.getPrice(request.getDepartureScheduleId());
@@ -165,5 +170,4 @@ public class BookingService {
 	    booking.setTotalAmount(0); 
 	    bookingRepository.save(booking);
 	}
-
 }

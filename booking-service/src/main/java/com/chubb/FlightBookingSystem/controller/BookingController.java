@@ -24,12 +24,16 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/booking")
 public class BookingController {
-	@Autowired
-	BookingService bookingService;
+	private final BookingService bookingService;
+	private final TicketService ticketService;
 	
-	@Autowired
-	TicketService ticketService;
-	
+	@Autowired	
+	public BookingController(BookingService bookingService, TicketService ticketService) {
+		super();
+		this.bookingService = bookingService;
+		this.ticketService = ticketService;
+	}
+
 	@PostMapping()
 	public ResponseEntity<String> saveBooking(@RequestBody @Valid BookingRequestDTO request){
 		String pnr = bookingService.addBooking(request);

@@ -21,12 +21,18 @@ import com.chubb.FlightBookingSystem.service.TicketService;
 
 @RestController
 public class TicketController {
-	@Autowired
     private TicketService ticketService;
+    
+	@Autowired
+	public TicketController(TicketService ticketService) {
+		super();
+		this.ticketService = ticketService;
+	}
 
     @GetMapping("/ticket/{pnr}")
     public ResponseEntity<?> getTicketsByPnr(@PathVariable String pnr) {
     	List<TicketResponseDTO> response = ticketService.getTicketsByPnr(pnr);
         return ResponseEntity.ok(response);
     }
+
 }

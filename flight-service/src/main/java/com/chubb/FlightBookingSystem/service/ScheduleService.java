@@ -29,11 +29,16 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class ScheduleService {
-	@Autowired
-	private ScheduleRepository scheduleRepository;
+
+	private final ScheduleRepository scheduleRepository;
+	private final FlightRepository flightRepository;
 	
 	@Autowired
-	private FlightRepository flightRepository;
+	public ScheduleService(ScheduleRepository scheduleRepository, FlightRepository flightRepository) {
+		super();
+		this.scheduleRepository = scheduleRepository;
+		this.flightRepository = flightRepository;
+	}
 	
 	@Transactional
 	public Schedule addSchedule(ScheduleRequestDTO scheduleDto) {
@@ -50,7 +55,7 @@ public class ScheduleService {
 		}
 		return scheduleRepository.save(schedule);
 	}
-	
+
 	private ScheduleResponseDTO mapToResponseDTO(Schedule schedule) {
         Flight flight = schedule.getFlight();
         
