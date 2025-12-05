@@ -7,7 +7,7 @@ import com.chubb.FlightBookingSystem.exceptions.BookingNotFoundException;
 import com.chubb.FlightBookingSystem.exceptions.CancellationNotAllowedException;
 import com.chubb.FlightBookingSystem.exceptions.ScheduleNotFoundException;
 import com.chubb.FlightBookingSystem.exceptions.SeatNotAvailableException;
-import com.chubb.FlightBookingSystem.feign.FlightClient;
+import com.chubb.FlightBookingSystem.feign.FlightClientWrapper;
 import com.chubb.FlightBookingSystem.model.Booking;
 import com.chubb.FlightBookingSystem.model.Ticket;
 import com.chubb.FlightBookingSystem.model.Ticket.Gender;
@@ -24,6 +24,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -41,7 +42,7 @@ class BookingServiceTest {
     private TicketRepository ticketRepository;
 
     @Mock
-    private FlightClient flightClient;
+    private FlightClientWrapper flightClient;
 
     @InjectMocks
     private BookingService bookingService;
@@ -92,7 +93,7 @@ class BookingServiceTest {
 
         assertNotNull(pnr);
         verify(bookingRepository, times(1)).save(any(Booking.class));
-        verify(ticketRepository, times(2)).save(any(Ticket.class)); // One for departure, one for return
+        verify(ticketRepository, times(2)).save(any(Ticket.class)); 
         verify(flightClient, times(1)).decrementSeats(1, 1);
         verify(flightClient, times(1)).decrementSeats(2, 1);
         verify(flightClient, times(1)).addSeats(eq(1), anySet());
@@ -163,7 +164,7 @@ class BookingServiceTest {
     void whenCancelBooking_CancellationNotAllowed_thenThrowException() {
         Booking booking = new Booking(false, 1, null, 5000, "test@example.com", 1);
         Ticket ticket = new Ticket("John", "Doe", 30, Gender.MALE, "A1", MealOption.VEG, 1, booking);
-        schedule.setDepartureDate(LocalDate.now()); // Departure is today, so cancellation is not allowed
+        schedule.setDepartureDate(LocalDate.now()); 
         when(bookingRepository.findByPnr("PNR123")).thenReturn(Optional.of(booking));
         when(ticketRepository.findByBooking(booking)).thenReturn(Collections.singletonList(ticket));
         when(flightClient.getSchedule(1)).thenReturn(schedule);

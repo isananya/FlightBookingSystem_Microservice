@@ -20,6 +20,7 @@ import com.chubb.FlightBookingSystem.exceptions.CancellationNotAllowedException;
 import com.chubb.FlightBookingSystem.exceptions.ScheduleNotFoundException;
 import com.chubb.FlightBookingSystem.exceptions.SeatNotAvailableException;
 import com.chubb.FlightBookingSystem.feign.FlightClient;
+import com.chubb.FlightBookingSystem.feign.FlightClientWrapper;
 import com.chubb.FlightBookingSystem.model.Booking;
 import com.chubb.FlightBookingSystem.model.Ticket;
 import com.chubb.FlightBookingSystem.model.Ticket.TicketStatus;
@@ -35,11 +36,11 @@ public class BookingService {
 
 	private final BookingRepository bookingRepository;
 	private final TicketRepository ticketRepository;
-	private final FlightClient flightClient;
+	private final FlightClientWrapper flightClient;
 	
 	@Autowired
 	public BookingService(BookingRepository bookingRepository, TicketRepository ticketRepository,
-			FlightClient flightClient) {
+			FlightClientWrapper flightClient) {
 		super();
 		this.bookingRepository = bookingRepository;
 		this.ticketRepository = ticketRepository;
@@ -129,11 +130,11 @@ public class BookingService {
 						request.getReturnScheduleId(),
 						booking
 				);
-				
-				flightClient.addSeats(request.getReturnScheduleId(),bookedSeats2);
+				bookedSeats2.add(passenger.getReturnSeatNumber());
 				ticketRepository.save(ticket);
 				
 			}
+			flightClient.addSeats(request.getReturnScheduleId(),bookedSeats2);
 		}
 		
 		return booking.getPnr();
