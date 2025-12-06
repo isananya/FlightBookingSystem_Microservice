@@ -15,6 +15,7 @@ import com.chubb.FlightBookingSystem.dto.BookingRequestDTO;
 import com.chubb.FlightBookingSystem.dto.ScheduleDTO;
 import com.chubb.FlightBookingSystem.dto.TicketRequestDTO;
 import com.chubb.FlightBookingSystem.dto.TicketResponseDTO;
+import com.chubb.FlightBookingSystem.event.BookingEventPublisher;
 import com.chubb.FlightBookingSystem.exceptions.BookingNotFoundException;
 import com.chubb.FlightBookingSystem.exceptions.CancellationNotAllowedException;
 import com.chubb.FlightBookingSystem.exceptions.ScheduleNotFoundException;
@@ -37,14 +38,16 @@ public class BookingService {
 	private final BookingRepository bookingRepository;
 	private final TicketRepository ticketRepository;
 	private final FlightClientWrapper flightClient;
+	private final BookingEventPublisher bookingEventPublisher;
 	
 	@Autowired
 	public BookingService(BookingRepository bookingRepository, TicketRepository ticketRepository,
-			FlightClientWrapper flightClient) {
+			FlightClientWrapper flightClient,BookingEventPublisher bookingEventPublisher) {
 		super();
 		this.bookingRepository = bookingRepository;
 		this.ticketRepository = ticketRepository;
 		this.flightClient = flightClient;
+		this.bookingEventPublisher = bookingEventPublisher;
 	}
 
 	private float calculateTotalPrice(BookingRequestDTO request) {
@@ -137,6 +140,8 @@ public class BookingService {
 			flightClient.addSeats(request.getReturnScheduleId(),bookedSeats2);
 		}
 		
+		bookingEventPublisher.publishBookingCreated(booking.getPnr(), booking.getEmailId());
+		
 		return booking.getPnr();
 		
 	}
@@ -169,6 +174,7 @@ public class BookingService {
 	    
 	  
 	    booking.setTotalAmount(0); 
+	    bookingEventPublisher.publishBookingCancelled(booking.getPnr(), booking.getEmailId());
 	    bookingRepository.save(booking);
 	}
 }
