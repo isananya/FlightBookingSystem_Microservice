@@ -1,11 +1,10 @@
 # **Flight Booking Microservices System**
 
-This project is an implementation of a flight booking platform built on a microservices architecture. It creates a separation of concerns by isolating Flight Inventory and Booking Operations into independent units. Key infrastructure components include:
+This project is an implementation of a flight booking platform built on a microservices architecture. It creates a separation of concerns by isolating User management, Flight Inventory and Booking Operations into independent units. 
 
-* API Gateway: A single entry point for all client requests.
-* Eureka Server: For dynamic service registration and discovery.
-* Config Server: For externalized, central management of application properties.
-* OpenFeign: To facilitate seamless communication between the microservices.
+## **Architecture Diagram**
+
+<img width="1375" height="574" alt="image" src="https://github.com/user-attachments/assets/64ae6a44-451a-4aad-8a92-b4def23ff003" />
 
 ## **Overview**
 
