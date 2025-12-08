@@ -89,9 +89,7 @@ Used for containerizing:
 * SonarQube
 * Docker
 
-# **Endpoints**
-
-## API Endpoints
+## **API Endpoints**
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -104,6 +102,19 @@ Used for containerizing:
 | DELETE | /booking/cancel/{pnr} | Cancels a booking if allowed. |
 | GET | /ticket/{pnr} | Retrieves all tickets for a given PNR. |
 | GET | /booking/history/{emailId} | Retrieves all tickets for a given email. |
+
+## **Ports**
+
+| Service         | Port |
+| :---            | :--- |
+| Eureka Server   | 8761 |
+| API Gateway     | 8765 |
+| Config Server   | 8888 |
+| User Service    | 9090 |
+| Flight Service  | 9091 |
+| Booking Service | 9092 |
+| Email Service   | 9093 |
+| RabbitMQ        | 5672 |
 
 # **Installation & Setup**
 
