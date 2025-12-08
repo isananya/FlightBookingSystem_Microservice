@@ -38,26 +38,15 @@ public class ScheduleController {
 		this.scheduleService = scheduleService;
 		this.flightService = flightService;
 	}
-
-	private final String adminSecretKey = "Admin";
 	
 	@PostMapping("/inventory")
-	public ResponseEntity<String> saveSchedule(@RequestHeader(value="Admin_key",required=false) String adminKey,
-			@RequestBody @Valid ScheduleRequestDTO scheduleDto) {
-		System.out.println(adminKey+" : "+adminSecretKey);
-		if(adminKey==null || !adminSecretKey.equals(adminKey)) {
-			throw new AccessNotGrantedException("Access denied: Invalid or missing Admin Key");
-		}
+	public ResponseEntity<String> saveSchedule(@RequestBody @Valid ScheduleRequestDTO scheduleDto) {
 		Schedule schedule = scheduleService.addSchedule(scheduleDto);
 		return ResponseEntity.status(HttpStatus.CREATED).body("Schedule added!!");
 	}
 	
 	@PostMapping("/route")
-	public ResponseEntity<String> saveFlight(@RequestHeader(value="Admin_key",required=false) String adminKey,
-			@RequestBody @Valid Flight flight){
-		if(adminKey==null || !adminSecretKey.equals(adminKey)) {
-			return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-		}
+	public ResponseEntity<String> saveFlight(@RequestBody @Valid Flight flight){
 		flightService.addFlight(flight);
 		return ResponseEntity.status(HttpStatus.CREATED).body("Flight details added!!");
 	}
