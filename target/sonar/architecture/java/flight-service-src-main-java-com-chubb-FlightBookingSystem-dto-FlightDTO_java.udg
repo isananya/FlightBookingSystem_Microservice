@@ -1,293 +1,0 @@
-
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764635498616*java2.BÚ	
-R
-Mflight-service/src/main/java/com/chubb/FlightBookingSystem/dto/FlightDTO.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-flight-service6
-
-package8
-5
-0flight-service:com.chubb.FlightBookingSystem.dto9
-1
-+com.chubb.FlightBookingSystem.dto.FlightDTO11
-
-class12
-
-access13
-
-public14
-
-simple-name15
-
-	FlightDTO16
-
-lombok.Data18
-
-unknown19
-
-annotated by20
-
-
-uses21
-
-lombok.AllArgsConstructor23
-
-lombok.NoArgsConstructor25
->
-8com.chubb.FlightBookingSystem.dto.FlightDTO.flightNumber27
-
-field28
-
-private29
-
-flightNumber30
-?
-9com.chubb.FlightBookingSystem.dto.FlightDTO.sourceAirport32
-
-sourceAirport33
-D
->com.chubb.FlightBookingSystem.dto.FlightDTO.destinationAirport35
-
-destinationAirport36
-?
-9com.chubb.FlightBookingSystem.dto.FlightDTO.departureTime38
-
-departureTime39
-=
-7com.chubb.FlightBookingSystem.dto.FlightDTO.arrivalTime41
-
-arrivalTime42
-:
-4com.chubb.FlightBookingSystem.dto.FlightDTO.duration44
-
-duration45
-g
-acom.chubb.FlightBookingSystem.dto.FlightDTO#<init>(Lcom/chubb/FlightBookingSystem/model/Flight;)V47
-
-method48
-0
-*com.chubb.FlightBookingSystem.model.Flight50
-
-	has param51
-
-calls52
-
-is type53
-
-
-references54J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6jì
-B
-34<
-343528 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-36
-
-49
-495019
-B
-40<
-404128 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-42
-B
-43<
-434428 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-45
-B
-26<
-262728 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-30
-
-17
-171819
->
-108
-101112 *
-1 (:7B
-
-
-13
-14
-
-
-15
-16
-B
-37<
-373828 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-39
-
-22
-222319
-B
-46<
-464748 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-16
-
-24
-242519
-B
-31<
-313228 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-33rô
-
-101720*
-1 (
-
-101721*
-1 (
-
-102220*
-1 (
-
-102221*
-1 (
-
-102420*
-1 (
-
-102421*
-1 (
-
-464951*
-1 (
-
-461052*
-1 (
-
-464953*
-1 (#
-
-464921*
-1 (
-
-461021*
-1	 (
-
-461054*
-1	 (
-
-462654*
-1 (
-
-461021*
-1	 (
-
-461054*
-1	 (
-
-463154*
-1 (
-
-461021*
-1	 (
-
-461054*
-1	 (
-
-463454*
-1 ( 
-
-461021*
-1	 (
-
-461054*
-1	 (
-
-463754*
-1 (
-
-461021*
-1	 (
-
-461054*
-1	 (
-
-464054*
-1 (
-
-461021*
-1	 (
-
-461054*
-1	 (
-
-464354*
-1 (

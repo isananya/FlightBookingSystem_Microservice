@@ -1,0 +1,192 @@
+version: "3.9"
+
+services:
+  mysql-shared:
+    image: mysql:8.0
+    container_name: mysql-shared
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - flight-network
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - flight-network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+
+  eureka-server:
+    build: 
+      context: .
+      dockerfile: eureka-server/Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xmx256m # Limit RAM usage
+    networks:
+      - flight-network
+    depends_on:
+      mysql-shared:
+        condition: service_healthy
+
+  config-server:
+    build: 
+      context: .
+      dockerfile: config-server/Dockerfile
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - JAVA_TOOL_OPTIONS=-Xmx256m
+    networks:
+      - flight-network
+    depends_on:
+      eureka-server:
+        condition: service_started
+
+  # --- MICROSERVICES ---
+
+  api-gateway:
+    build: 
+      context: .
+      dockerfile: api-gateway/Dockerfile
+    container_name: api-gateway
+    ports:
+      - "8765:8765"
+    restart: on-failure
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://config-server:8888/
+      - JAVA_TOOL_OPTIONS=-Xmx256m
+    depends_on:
+      eureka-server:
+        condition: service_started
+      config-server:
+        condition: service_started
+    networks:
+      - flight-network
+
+  user-service:
+    build: 
+      context: .
+      dockerfile: user-service/Dockerfile
+    container_name: user-service
+    restart: on-failure
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://config-server:8888/
+      # Point to shared DB, but use 'userdb' schema. Auto-create if missing.
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-shared:3306/userdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - JAVA_TOOL_OPTIONS=-Xmx350m
+    depends_on:
+      mysql-shared:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - flight-network
+
+  flight-service:
+    build: 
+      context: .
+      dockerfile: flight-service/Dockerfile
+    container_name: flight-service
+    restart: on-failure
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://config-server:8888/
+      # Point to shared DB, but use 'flightdb' schema
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-shared:3306/flightdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - JAVA_TOOL_OPTIONS=-Xmx350m
+    depends_on:
+      mysql-shared:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - flight-network
+
+  booking-service:
+    build: 
+      context: .
+      dockerfile: booking-service/Dockerfile
+    container_name: booking-service
+    restart: on-failure
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://config-server:8888/
+      # Point to shared DB, but use 'bookingdb' schema
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-shared:3306/bookingdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - JAVA_TOOL_OPTIONS=-Xmx350m
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    depends_on:
+      mysql-shared:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - flight-network
+
+  email-service:
+    build: 
+      context: .
+      dockerfile: email-service/Dockerfile
+    container_name: email-service
+    restart: on-failure
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://config-server:8888/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - JAVA_TOOL_OPTIONS=-Xmx256m
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - flight-network
+
+volumes:
+  mysql_data:
+
+networks:
+  flight-network:
+    driver: bridge

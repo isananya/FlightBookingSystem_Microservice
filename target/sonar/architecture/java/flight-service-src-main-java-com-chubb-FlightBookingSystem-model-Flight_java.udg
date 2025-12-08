@@ -1,242 +1,0 @@
-
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764635498652*java2.BØ
-Q
-Lflight-service/src/main/java/com/chubb/FlightBookingSystem/model/Flight.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-flight-service6
-
-package8
-7
-2flight-service:com.chubb.FlightBookingSystem.model9
-0
-*com.chubb.FlightBookingSystem.model.Flight11
-
-class12
-
-access13
-
-public14
-
-simple-name15
-
-Flight16
- 
-jakarta.persistence.Entity18
-
-unknown19
-
-annotated by20
-
-
-uses21
-
-lombok.AllArgsConstructor23
-
-lombok.NoArgsConstructor25
-
-lombok.Data27
-=
-7com.chubb.FlightBookingSystem.model.Flight.flightNumber29
-
-field30
-
-private31
-
-flightNumber32
-
-jakarta.persistence.Id34
--
-'jakarta.validation.constraints.NotBlank36
->
-8com.chubb.FlightBookingSystem.model.Flight.sourceAirport38
-
-sourceAirport39
-C
-=com.chubb.FlightBookingSystem.model.Flight.destinationAirport41
-
-destinationAirport42
->
-8com.chubb.FlightBookingSystem.model.Flight.departureTime44
-
-departureTime45
-<
-6com.chubb.FlightBookingSystem.model.Flight.arrivalTime47
-
-arrivalTime48
-9
-3com.chubb.FlightBookingSystem.model.Flight.duration50
-
-duration51J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6jÐ
->
-108
-101112 *
-1 (:7B
-
-
-13
-14
-
-
-15
-16
-
-17
-171819
-B
-37<
-373830 *
-1 (210:7B
-
-
-13
-31
-
-
-15
-39
-B
-28<
-282930 *
-1 (210:7B
-
-
-13
-31
-
-
-15
-32
-
-33
-333419
-B
-40<
-404130 *
-1 (210:7B
-
-
-13
-31
-
-
-15
-42
-B
-49<
-495030 *
-1! !(	210:7B
-
-
-13
-31
-
-
-15
-51
-B
-46<
-464730 *
-1 (	210:7B
-
-
-13
-31
-
-
-15
-48
-
-35
-353619
-
-26
-262719
-
-22
-222319
-B
-43<
-434430 *
-1 (	210:7B
-
-
-13
-31
-
-
-15
-45
-
-24
-242519r°
-
-101720*
-1 (
-
-101721*
-1 (
-
-102220*
-1 (
-
-102221*
-1 (
-
-102420*
-1 (
-
-102421*
-1 (
-
-102620*
-1 (
-
-102621*
-1 (
-
-283320*
-1 (
-
-283321*
-1 (
-
-283520*
-1 (
-
-283521*
-1 (
-
-373520*
-1 (
-
-373521*
-1 (
-
-403520*
-1 (
-
-403521*
-1 (

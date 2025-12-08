@@ -1,228 +1,0 @@
-
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764635500471*java2.BÕ	
-[
-Vbooking-service/src/main/java/com/chubb/FlightBookingSystem/dto/BookingRequestDTO.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-booking-service6
-
-package8
-6
-1booking-service:com.chubb.FlightBookingSystem.dto9
-9
-3com.chubb.FlightBookingSystem.dto.BookingRequestDTO11
-
-class12
-
-access13
-
-public14
-
-simple-name15
-
-BookingRequestDTO16
-
-lombok.AllArgsConstructor18
-
-unknown19
-
-annotated by20
-
-
-uses21
-
-lombok.NoArgsConstructor23
-
-lombok.Data25
-A
-;com.chubb.FlightBookingSystem.dto.BookingRequestDTO.emailId27
-
-field28
-
-private29
-
-emailId30
-*
-$jakarta.validation.constraints.Email32
-C
-=com.chubb.FlightBookingSystem.dto.BookingRequestDTO.roundTrip34
-
-	roundTrip35
-M
-Gcom.chubb.FlightBookingSystem.dto.BookingRequestDTO.departureScheduleId37
-
-departureScheduleId38
-J
-Dcom.chubb.FlightBookingSystem.dto.BookingRequestDTO.returnScheduleId40
-
-returnScheduleId41
-H
-Bcom.chubb.FlightBookingSystem.dto.BookingRequestDTO.passengerCount43
-
-passengerCount44
-(
-"jakarta.validation.constraints.Min46
-D
->com.chubb.FlightBookingSystem.dto.BookingRequestDTO.passengers48
-
-
-passengers49
-8
-2com.chubb.FlightBookingSystem.dto.TicketRequestDTO51J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6j–
-B
-33<
-333428 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-35
-
-31
-313219
->
-108
-101112 *
-1 (:7B
-
-
-13
-14
-
-
-15
-16
-
-50
-505119
-B
-39<
-394028 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-41
-B
-42<
-424328 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-44
-
-24
-242519
-B
-26<
-262728 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-30
-
-17
-171819
-
-45
-454619
-
-22
-222319
-B
-36<
-363728 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-38
-B
-47<
-474828 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-49r©
-
-101720*
-1 (
-
-101721*
-1 (
-
-102220*
-1 (
-
-102221*
-1 (
-
-102420*
-1 (
-
-102421*
-1 (
-
-263120*
-1 (
-
-263121*
-1 (
-
-424520*
-1 (
-
-424521*
-1 (
-
-475021*
-1 ("

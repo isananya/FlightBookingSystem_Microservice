@@ -30,11 +30,8 @@ public class JwtAuthFilter extends AbstractGatewayFilterFactory<JwtAuthFilter.Co
 
     @Override
     public GatewayFilter apply(Config config) {
-    	System.out.println(">>> Route matched filter config: requiredRole=" + config.requiredRole);
 
         return (exchange, chain) -> {
-        	System.out.println(">>> JwtAuthFilter triggered for request: " 
-                    + exchange.getRequest().getURI());
 
             HttpCookie cookie = exchange.getRequest()
                     .getCookies()
@@ -54,8 +51,6 @@ public class JwtAuthFilter extends AbstractGatewayFilterFactory<JwtAuthFilter.Co
                     exchange.getResponse().setStatusCode(HttpStatus.FORBIDDEN);
                     return exchange.getResponse().setComplete();
                 }
-                System.out.println(">>> Extracted role = " + userRole);
-            	System.out.println(">>> Required role = " + config.getRequiredRole());
                 return chain.filter(exchange);
 
             } catch (Exception e) {

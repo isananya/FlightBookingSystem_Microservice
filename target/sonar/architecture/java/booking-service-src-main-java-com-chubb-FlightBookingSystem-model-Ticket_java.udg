@@ -1,922 +1,0 @@
-
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764635501294*java2.B™
-R
-Mbooking-service/src/main/java/com/chubb/FlightBookingSystem/model/Ticket.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-booking-service6
-
-package8
-8
-3booking-service:com.chubb.FlightBookingSystem.model9
-0
-*com.chubb.FlightBookingSystem.model.Ticket11
-
-class12
-
-access13
-
-public14
-
-simple-name15
-
-Ticket16
- 
-jakarta.persistence.Entity18
-
-unknown19
-
-annotated by20
-
-
-uses21
-
-lombok.AllArgsConstructor23
-
-lombok.NoArgsConstructor25
-
-lombok.Data27
-3
--com.chubb.FlightBookingSystem.model.Ticket.id29
-
-field30
-
-private31
-
-id32
-
-jakarta.persistence.Id34
-(
-"jakarta.persistence.GeneratedValue36
-(
-"jakarta.persistence.GenerationType38
--
-'jakarta.persistence.GenerationType.AUTO40
-
-
-references41
-:
-4com.chubb.FlightBookingSystem.model.Ticket.firstName43
-
-	firstName44
--
-'jakarta.validation.constraints.NotBlank46
-9
-3com.chubb.FlightBookingSystem.model.Ticket.lastName48
-
-lastName49
-4
-.com.chubb.FlightBookingSystem.model.Ticket.age51
-	
-age52
-(
-"jakarta.validation.constraints.Min54
-7
-1com.chubb.FlightBookingSystem.model.Ticket.gender56
-
-gender57
-7
-1com.chubb.FlightBookingSystem.model.Ticket$Gender59
-
-is type60
-$
-jakarta.persistence.Enumerated62
-"
-jakarta.persistence.EnumType64
-)
-#jakarta.persistence.EnumType.STRING66
-;
-5com.chubb.FlightBookingSystem.model.Ticket.seatNumber68
-
-
-seatNumber69
-;
-5com.chubb.FlightBookingSystem.model.Ticket.mealOption71
-
-
-mealOption72
-;
-5com.chubb.FlightBookingSystem.model.Ticket$MealOption74
-7
-1com.chubb.FlightBookingSystem.model.Ticket.status76
-
-status77
-=
-7com.chubb.FlightBookingSystem.model.Ticket$TicketStatus79
-G
-Acom.chubb.FlightBookingSystem.model.Ticket$TicketStatus.CONFIRMED81
-;
-5com.chubb.FlightBookingSystem.model.Ticket.scheduleId83
-
-
-scheduleId84
-8
-2com.chubb.FlightBookingSystem.model.Ticket.booking86
-
-booking87
-1
-+com.chubb.FlightBookingSystem.model.Booking89
-#
-jakarta.persistence.ManyToOne91
-#
-jakarta.persistence.FetchType93
-(
-"jakarta.persistence.FetchType.LAZY95
-$
-jakarta.persistence.JoinColumn97
-(
-"org.hibernate.annotations.OnDelete99
-/
-(org.hibernate.annotations.OnDeleteAction101
-7
-0org.hibernate.annotations.OnDeleteAction.CASCADE103
-
-enum104
-
-Gender105
-u
-ncom.chubb.FlightBookingSystem.model.Ticket$Gender#values()[Lcom/chubb/FlightBookingSystem/model/Ticket$Gender;107
-
-method108
-
-values109
-à
-Äcom.chubb.FlightBookingSystem.model.Ticket$Gender#valueOf(Ljava/lang/String;)Lcom/chubb/FlightBookingSystem/model/Ticket$Gender;111
-
-valueOf112
-=
-6com.chubb.FlightBookingSystem.model.Ticket$Gender.MALE114
-
-MALE115
-
-calls116
-?
-8com.chubb.FlightBookingSystem.model.Ticket$Gender.FEMALE118
-
-FEMALE119
->
-7com.chubb.FlightBookingSystem.model.Ticket$Gender.OTHER121
-
-OTHER122
-
-
-MealOption123
-}
-vcom.chubb.FlightBookingSystem.model.Ticket$MealOption#values()[Lcom/chubb/FlightBookingSystem/model/Ticket$MealOption;125
-ê
-àcom.chubb.FlightBookingSystem.model.Ticket$MealOption#valueOf(Ljava/lang/String;)Lcom/chubb/FlightBookingSystem/model/Ticket$MealOption;127
-@
-9com.chubb.FlightBookingSystem.model.Ticket$MealOption.VEG129
-
-
-VEG130
-C
-<com.chubb.FlightBookingSystem.model.Ticket$MealOption.NONVEG132
-
-NONVEG133
-
-TicketStatus134
-Å
-zcom.chubb.FlightBookingSystem.model.Ticket$TicketStatus#values()[Lcom/chubb/FlightBookingSystem/model/Ticket$TicketStatus;136
-î
-åcom.chubb.FlightBookingSystem.model.Ticket$TicketStatus#valueOf(Ljava/lang/String;)Lcom/chubb/FlightBookingSystem/model/Ticket$TicketStatus;138
-
-	CONFIRMED139
-H
-Acom.chubb.FlightBookingSystem.model.Ticket$TicketStatus.CANCELLED141
-
-	CANCELLED142
-ã
-Écom.chubb.FlightBookingSystem.model.Ticket#<init>(Ljava/lang/String;Ljava/lang/String;ILcom/chubb/FlightBookingSystem/model/Ticket$Gender;Ljava/lang/String;Lcom/chubb/FlightBookingSystem/model/Ticket$MealOption;ILcom/chubb/FlightBookingSystem/model/Booking;)V144
-
-	has param145J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6jª
-
-98
-989919
-
-17
-171819
-B
-75<
-757630 *
-10 0(210:7B
-
-
-13
-31
-
-
-15
-77
-B
-42<
-424330 *
-1   (210:7B
-
-
-13
-31
-
-
-15
-44
-B
-82<
-828330 *
-13 3(	210:7B
-
-
-13
-31
-
-
-15
-84
-:
-1403
-14014130 *
-1G G(278:7B
-
-15
-142
-
-37
-373819
-
-65
-656619
-B
-55<
-555630 *
-1( ((210:7B
-
-
-13
-31
-
-
-15
-57
-B
-47<
-474830 *
-1# #(	210:7B
-
-
-13
-31
-
-
-15
-49
-;
-1244
-124125108 *
-1@ @(273:7B
-
-15
-109
-:
-1133
-11311430 *
-1;	 ;(258:7B
-
-15
-115
->
-108
-101112 *
-1 (:7B
-
-
-13
-14
-
-
-15
-16
-
-92
-929319
-
-96
-969719
-
-33
-333419
-
-61
-616219
-
-94
-949519
-D
-73>
-7374104 *
-1@ @(210:7B
-
-
-13
-14
-
-15
-123
-B
-50<
-505130 *
-1% %(210:7B
-
-
-13
-31
-
-
-15
-52
-B
-67<
-676830 *
-1+ +(	210:7B
-
-
-13
-31
-
-
-15
-69
-
-45
-454619
-B
-70<
-707130 *
-1- -(210:7B
-
-
-13
-31
-
-
-15
-72
-
-102
-10210319
-B
-85<
-858630 *
-15 5(210:7B
-
-
-13
-31
-
-
-15
-87
-
-90
-909119
-
-39
-394019
-:
-1173
-11711830 *
-1<	 <(258:7B
-
-15
-119
-D
-58>
-5859104 *
-1: :(210:7B
-
-
-13
-14
-
-15
-105
-B
-28<
-282930 *
-1 (210:7B
-
-
-13
-31
-
-
-15
-32
-;
-1104
-110111108 *
-1: :(258:7B
-
-15
-112
-7
-801
-808130 *
-1F F(278:7B
-
-15
-139
-:
-1313
-13113230 *
-1B B(	273:7B
-
-15
-133
-:
-1283
-12812930 *
-1A A(273:7B
-
-15
-130
-
-35
-353619
-;
-1374
-137138108 *
-1E E(278:7B
-
-15
-112
-;
-1064
-106107108 *
-1: :(258:7B
-
-15
-109
-:
-1203
-12012130 *
-1=	 =(258:7B
-
-15
-122
-;
-1264
-126127108 *
-1@ @(273:7B
-
-15
-112
-
-63
-636419
-;
-1354
-135136108 *
-1E E(278:7B
-
-15
-109
-
-26
-262719
-
-100
-10010119
-F
-143?
-143144108 *
-1J J(210:7B
-
-
-13
-14
-
-
-15
-16
-D
-78>
-7879104 *
-1E E(210:7B
-
-
-13
-14
-
-15
-134
-
-22
-222319
-
-88
-888919
-
-53
-535419
-
-24
-242519r™
-
-101720*
-1 (
-
-101721*
-1 (
-
-102220*
-1 (
-
-102221*
-1 (
-
-102420*
-1 (
-
-102421*
-1 (
-
-102620*
-1 (
-
-102621*
-1 (
-
-283320*
-1 (
-
-283321*
-1 (
-
-283520*
-1 (1
-
-283521*
-1 (
-
-283721*
-1 (+
-
-283721*
-1, (0
-
-283941*
-1, (0
-
-424520*
-1   (
-
-424521*
-1   (
-
-505320*
-1% %(
-
-505321*
-1% %(
-
-555860*
-1)
- )(
-
-556120*
-1( ((
-
-556121*
-1( ((
-
-556321*
-1( ((
-
-556321*
-1( ((
-
-556541*
-1( ((
-
-555821*
-1)
- )(
-
-555841*
-1)
- )(
-
-555821*
-1) )(
-
-707360*
-1.
- .(
-
-706120*
-1- -(
-
-706121*
-1- -(
-
-706321*
-1- -(
-
-706321*
-1- -(
-
-706541*
-1- -(
-
-707321*
-1.
- .(
-
-707341*
-1.
- .(
-
-707321*
-1. .(
-
-757860*
-11
- 1(
-
-756120*
-10 0(
-
-756121*
-10 0(
-
-756321*
-10 0(
-
-756321*
-10 0(
-
-756541*
-10 0(
-
-757821*
-11
- 1(
-
-757841*
-11
- 1(
-
-757821*
-11 1(
-
-757821*
-11  1(,
-
-757841*
-11  1(,
-
-757821*
-11- 1(6
-
-758041*
-11- 1(6
-
-858860*
-18
- 8(
-
-859020*
-15 5(6
-
-859021*
-15 5(
-
-859221*
-15 5(
-
-859221*
-15 5(#
-
-859441*
-15 5(#
-
-859620*
-16 6(4
-
-859621*
-16 6(
-
-859820*
-17 7(,
-
-859821*
-17 7(
-
-8510021*
-17 7(#
-
-8510021*
-17$ 7(+
-
-8510241*
-17$ 7(+
-
-858821*
-18
- 8(
-
-858821*
-18 8(
-
-11358116*
-1;	 ;(
-
-11358116*
-1;	 ;(
-
-11758116*
-1<	 <(
-
-11758116*
-1<	 <(
-
-12058116*
-1=	 =(
-
-12058116*
-1=	 =(
-
-12873116*
-1A A(
-
-12873116*
-1A A(
-
-13173116*
-1B B(	
-
-13173116*
-1B B(	
-
-8078116*
-1F F(
-
-8078116*
-1F F(
-
-14078116*
-1G G(
-
-14078116*
-1G G(
-
-14358145*
-1JN J(T
-
-14373145*
-1K K(
-
-14388145*
-1K* K(1
-
-14310116*
-1J	 J(
-
-1434520*
-1J J(
-
-1434521*
-1J J(
-
-1435320*
-1J= J(D
-
-1435321*
-1J> J(A
-
-1435860*
-1JU J([
-
-1435821*
-1JN J(T
-
-1435841*
-1JN J(T
-
-1437360*
-1K K(
-
-1437321*
-1K K(
-
-1437341*
-1K K(
-
-1438860*
-1K2 K(9
-
-1438821*
-1K* K(1
-
-1431021*
-1M M(
-
-1431041*
-1M M(
-
-1434241*
-1M M(
-
-1431021*
-1N N(
-
-1431041*
-1N N(
-
-1434741*
-1N N(
-
-1431021*
-1O O(
-
-1431041*
-1O O(
-
-1435041*
-1O O(
-
-1431021*
-1P P(
-
-1431041*
-1P P(
-
-1435821*
-1P P(
-
-1435541*
-1P P(
-
-1431021*
-1Q Q(
-
-1431041*
-1Q Q(
-
-1436741*
-1Q Q(
-
-1431021*
-1R R(
-
-1431041*
-1R R(
-
-1437321*
-1R R(
-
-1437041*
-1R R(
-
-1431021*
-1S S(
-
-1431041*
-1S S(
-
-1438821*
-1S S(
-
-1438541*
-1S S(
-
-1431021*
-1T T(
-
-1431041*
-1T T(
-
-1438241*
-1T T(

@@ -1,246 +1,0 @@
-
-1.0)isananya_FlightBookingSystem_MicroserviceJavaFrontend"1764635497492*java2.Bà
-
-\
-Wflight-service/src/main/java/com/chubb/FlightBookingSystem/dto/ScheduleResponseDTO.java2
-	
-type3
-	
-MAIN4
-
-
-module-key5
-
-flight-service6
-
-package8
-5
-0flight-service:com.chubb.FlightBookingSystem.dto9
-;
-5com.chubb.FlightBookingSystem.dto.ScheduleResponseDTO11
-
-class12
-
-access13
-
-public14
-
-simple-name15
-
-ScheduleResponseDTO16
-
-lombok.Data18
-
-unknown19
-
-annotated by20
-
-
-uses21
-
-lombok.AllArgsConstructor23
-
-lombok.NoArgsConstructor25
-G
-Acom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.airlineName27
-
-field28
-
-private29
-
-airlineName30
-I
-Ccom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.departureDate32
-
-departureDate33
-E
-?com.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.basePrice35
-
-	basePrice36
-H
-Bcom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.flightNumber38
-
-flightNumber39
-I
-Ccom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.departureTime41
-
-departureTime42
-G
-Acom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.arrivalTime44
-
-arrivalTime45
-I
-Ccom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.sourceAirport47
-
-sourceAirport48
-N
-Hcom.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.destinationAirport50
-
-destinationAirport51
-D
->com.chubb.FlightBookingSystem.dto.ScheduleResponseDTO.duration53
-
-duration54J#
-!
-1
-12
-
-3
-4
-
-5
-6Z
-
-7
-7982
-
-
-5
-6jà
->
-108
-101112 *
-1 (!:7B
-
-
-13
-14
-
-
-15
-16
-B
-31<
-313228 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-33
-B
-26<
-262728 *
-1 (	210:7B
-
-
-13
-29
-
-
-15
-30
-B
-46<
-464728 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-48
-B
-43<
-434428 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-45
-B
-37<
-373828 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-39
-B
-49<
-495028 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-51
-
-17
-171819
-B
-40<
-404128 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-42
-
-22
-222319
-B
-52<
-525328 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-54
-
-24
-242519
-B
-34<
-343528 *
-1 (210:7B
-
-
-13
-29
-
-
-15
-36r¢
-
-101720*
-1 (
-
-101721*
-1 (
-
-102220*
-1 (
-
-102221*
-1 (
-
-102420*
-1 (
-
-102421*
-1 (
