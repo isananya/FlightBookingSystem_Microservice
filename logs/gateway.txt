@@ -1,0 +1,159 @@
+api-gateway  | Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+api-gateway  | 
+api-gateway  |   .   ____          _            __ _ _
+api-gateway  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api-gateway  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api-gateway  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api-gateway  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api-gateway  |  =========|_|==============|___/=/_/_/_/
+api-gateway  |  :: Spring Boot ::               (v2.7.18)
+api-gateway  | 
+api-gateway  | 2025-12-08 20:12:10.817  INFO 1 --- [           main] c.c.F.ApiGatewayApplication              : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.17 on db754e277dfc with PID 1 (/app/app.jar started by root in /app)
+api-gateway  | 2025-12-08 20:12:10.980  INFO 1 --- [           main] c.c.F.ApiGatewayApplication              : No active profile set, falling back to 1 default profile: "default"
+api-gateway  | 2025-12-08 20:12:13.104  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+api-gateway  | 2025-12-08 20:12:13.105  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888/. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:12:13.105  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7ee955a8 uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/application/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:12:13.105  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+api-gateway  | 2025-12-08 20:12:13.105  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:12:13.105  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@be64738 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:12:13.105  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+api-gateway  | 2025-12-08 20:12:13.122  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888/. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:12:13.124  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@72a7c7e0 uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:12:13.125  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+api-gateway  | 2025-12-08 20:12:13.126  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888/. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:12:13.132  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2e4b8173 uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:12:13.133  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+api-gateway  | 2025-12-08 20:12:13.134  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:12:13.135  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@17046283 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:12:13.135  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+api-gateway  | 2025-12-08 20:12:13.135  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:12:13.136  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5bd03f44 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:12:44.048  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=178402bb-c3f9-32ff-b7e0-4918dd7b8a4e
+api-gateway  | 2025-12-08 20:12:45.703  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+api-gateway  | 2025-12-08 20:12:45.725  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+api-gateway  | 2025-12-08 20:12:45.803  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+api-gateway  | 2025-12-08 20:12:54.009  WARN 1 --- [           main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtil' defined in URL [jar:file:/app/app.jar!/BOOT-INF/classes!/com/chubb/FlightBookingSystem/security/JwtUtil.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+api-gateway  | 2025-12-08 20:12:54.715  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+api-gateway  | 
+api-gateway  | Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+api-gateway  | 2025-12-08 20:12:55.518 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+api-gateway  | 
+api-gateway  | org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtil' defined in URL [jar:file:/app/app.jar!/BOOT-INF/classes!/com/chubb/FlightBookingSystem/security/JwtUtil.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-2.7.18.jar!/:2.7.18]
+api-gateway  | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar!/:2.7.18]
+api-gateway  | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar!/:2.7.18]
+api-gateway  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar!/:2.7.18]
+api-gateway  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar!/:2.7.18]
+api-gateway  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar!/:2.7.18]
+api-gateway  | 	at com.chubb.FlightBookingSystem.ApiGatewayApplication.main(ApiGatewayApplication.java:12) ~[classes!/:0.0.1-SNAPSHOT]
+api-gateway  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+api-gateway  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+api-gateway  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+api-gateway  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+api-gateway  | 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[app.jar:0.0.1-SNAPSHOT]
+api-gateway  | 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[app.jar:0.0.1-SNAPSHOT]
+api-gateway  | 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[app.jar:0.0.1-SNAPSHOT]
+api-gateway  | 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[app.jar:0.0.1-SNAPSHOT]
+api-gateway  | Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+api-gateway  | 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar!/:5.3.31]
+api-gateway  | 	... 22 common frames omitted
+api-gateway  | 
+api-gateway  | Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+api-gateway  | 
+api-gateway  |   .   ____          _            __ _ _
+api-gateway  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api-gateway  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api-gateway  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api-gateway  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api-gateway  |  =========|_|==============|___/=/_/_/_/
+api-gateway  |  :: Spring Boot ::               (v2.7.18)
+api-gateway  | 
+api-gateway  | 2025-12-08 20:14:32.668  INFO 1 --- [           main] c.c.F.ApiGatewayApplication              : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.17 on db754e277dfc with PID 1 (/app/app.jar started by root in /app)
+api-gateway  | 2025-12-08 20:14:32.780  INFO 1 --- [           main] c.c.F.ApiGatewayApplication              : No active profile set, falling back to 1 default profile: "default"
+api-gateway  | 2025-12-08 20:14:34.263  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+api-gateway  | 2025-12-08 20:14:34.264  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=52dbfbe5eea8be36a0fff34718f1de972080125f, state=
+api-gateway  | 2025-12-08 20:14:34.265  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+api-gateway  | 2025-12-08 20:14:34.265  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:14:34.265  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1139b2f3 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:14:34.265  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+api-gateway  | 2025-12-08 20:14:34.265  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=api-gateway, profiles=[default], label=null, version=52dbfbe5eea8be36a0fff34718f1de972080125f, state=
+api-gateway  | 2025-12-08 20:14:34.266  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+api-gateway  | 2025-12-08 20:14:34.266  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:14:34.267  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@27ce24aa uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:14:34.267  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+api-gateway  | 2025-12-08 20:14:34.267  INFO 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+api-gateway  | 2025-12-08 20:14:34.267  WARN 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@481a996b uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/api-gateway/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+api-gateway  | 2025-12-08 20:14:56.783  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=178402bb-c3f9-32ff-b7e0-4918dd7b8a4e
+api-gateway  | 2025-12-08 20:14:58.485  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+api-gateway  | 2025-12-08 20:14:58.517  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+api-gateway  | 2025-12-08 20:14:58.555  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+api-gateway  | 2025-12-08 20:15:24.429  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+api-gateway  | 2025-12-08 20:15:24.435  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+api-gateway  | 2025-12-08 20:15:24.435  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+api-gateway  | 2025-12-08 20:15:24.437  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+api-gateway  | 2025-12-08 20:15:24.442  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+api-gateway  | 2025-12-08 20:15:24.485  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+api-gateway  | 2025-12-08 20:15:24.485  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+api-gateway  | 2025-12-08 20:15:24.485  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+api-gateway  | 2025-12-08 20:15:24.485  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+api-gateway  | 2025-12-08 20:15:24.486  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+api-gateway  | 2025-12-08 20:15:24.486  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+api-gateway  | 2025-12-08 20:15:24.486  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+api-gateway  | 2025-12-08 20:15:24.486  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+api-gateway  | 2025-12-08 20:15:24.486  INFO 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+api-gateway  | 2025-12-08 20:15:38.054  INFO 1 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+api-gateway  | 2025-12-08 20:15:45.094  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+api-gateway  | 2025-12-08 20:15:46.238  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+api-gateway  | 2025-12-08 20:15:48.749  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+api-gateway  | 2025-12-08 20:15:49.109  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway  | 2025-12-08 20:15:50.803  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+api-gateway  | 2025-12-08 20:15:50.804  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+api-gateway  | 2025-12-08 20:15:50.804  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+api-gateway  | 2025-12-08 20:15:50.804  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+api-gateway  | 2025-12-08 20:15:50.804  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+api-gateway  | 2025-12-08 20:15:50.804  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+api-gateway  | 2025-12-08 20:15:50.804  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+api-gateway  | 2025-12-08 20:16:03.611  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+api-gateway  | 2025-12-08 20:16:03.794  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+api-gateway  | 2025-12-08 20:16:03.894  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+api-gateway  | 2025-12-08 20:16:03.997  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765224963968 with initial instances count: 0
+api-gateway  | 2025-12-08 20:16:04.035  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+api-gateway  | 2025-12-08 20:16:04.082  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765224964082, current=UP, previous=STARTING]
+api-gateway  | 2025-12-08 20:16:04.215  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/db754e277dfc:api-gateway:8765: registering service...
+api-gateway  | 2025-12-08 20:16:05.857  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/db754e277dfc:api-gateway:8765 - registration status: 204
+api-gateway  | 2025-12-08 20:16:10.867  INFO 1 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8765
+api-gateway  | 2025-12-08 20:16:10.910  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8765
+api-gateway  | 2025-12-08 20:16:11.943  INFO 1 --- [           main] c.c.F.ApiGatewayApplication              : Started ApiGatewayApplication in 164.508 seconds (JVM running for 183.956)
+api-gateway  | 2025-12-08 20:16:33.823  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+api-gateway  | 2025-12-08 20:16:33.830  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+api-gateway  | 2025-12-08 20:16:33.831  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+api-gateway  | 2025-12-08 20:16:33.832  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+api-gateway  | 2025-12-08 20:16:33.832  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+api-gateway  | 2025-12-08 20:16:33.832  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+api-gateway  | 2025-12-08 20:16:33.833  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+api-gateway  | 2025-12-08 20:16:34.006  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+api-gateway  | 2025-12-08 20:20:50.783  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway  | 2025-12-08 20:25:50.719  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway  | 2025-12-08 20:30:50.689  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

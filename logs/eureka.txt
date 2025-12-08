@@ -1,0 +1,71 @@
+eureka-server  | Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+eureka-server  | 
+eureka-server  |   .   ____          _            __ _ _
+eureka-server  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+eureka-server  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+eureka-server  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+eureka-server  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+eureka-server  |  =========|_|==============|___/=/_/_/_/
+eureka-server  | 
+eureka-server  |  :: Spring Boot ::                (v4.0.0)
+eureka-server  | 
+eureka-server  | 2025-12-08T20:11:39.064Z  INFO 1 --- [eureka-server] [           main] c.c.F.EurekaServerApplication            : Starting EurekaServerApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+eureka-server  | 2025-12-08T20:11:39.356Z  INFO 1 --- [eureka-server] [           main] c.c.F.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+eureka-server  | 2025-12-08T20:12:30.658Z  INFO 1 --- [eureka-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cf11047e-6adc-3d88-a41c-fb77e34074b4
+eureka-server  | 2025-12-08T20:12:42.019Z  INFO 1 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8761 (http)
+eureka-server  | 2025-12-08T20:12:42.206Z  INFO 1 --- [eureka-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+eureka-server  | 2025-12-08T20:12:42.209Z  INFO 1 --- [eureka-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+eureka-server  | 2025-12-08T20:12:42.824Z  INFO 1 --- [eureka-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 57438 ms
+eureka-server  | 2025-12-08T20:13:21.833Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+eureka-server  | 2025-12-08T20:13:21.869Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+eureka-server  | 2025-12-08T20:13:30.409Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+eureka-server  | 2025-12-08T20:13:30.432Z  INFO 1 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+eureka-server  | 2025-12-08T20:13:39.049Z  INFO 1 --- [eureka-server] [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+eureka-server  | 2025-12-08T20:14:02.647Z  WARN 1 --- [eureka-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+eureka-server  | 2025-12-08T20:14:03.062Z  INFO 1 --- [eureka-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+eureka-server  | 2025-12-08T20:14:03.857Z  INFO 1 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+eureka-server  | 2025-12-08T20:14:03.857Z  INFO 1 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+eureka-server  | 2025-12-08T20:14:03.888Z  INFO 1 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765224843867 with initial instances count: 0
+eureka-server  | 2025-12-08T20:14:04.717Z  INFO 1 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+eureka-server  | 2025-12-08T20:14:04.743Z  WARN 1 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server  | 2025-12-08T20:14:05.506Z  INFO 1 --- [eureka-server] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+eureka-server  | 2025-12-08T20:14:05.508Z  INFO 1 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+eureka-server  | 2025-12-08T20:14:05.842Z  INFO 1 --- [eureka-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+eureka-server  | 2025-12-08T20:14:08.180Z  INFO 1 --- [eureka-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
+eureka-server  | 2025-12-08T20:14:08.678Z  INFO 1 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+eureka-server  | 2025-12-08T20:14:08.680Z  INFO 1 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+eureka-server  | 2025-12-08T20:14:08.687Z  INFO 1 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+eureka-server  | 2025-12-08T20:14:08.708Z  INFO 1 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+eureka-server  | 2025-12-08T20:14:08.717Z  INFO 1 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+eureka-server  | 2025-12-08T20:14:08.805Z  INFO 1 --- [eureka-server] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+eureka-server  | 2025-12-08T20:14:09.232Z  INFO 1 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8761 (http) with context path '/'
+eureka-server  | 2025-12-08T20:14:09.247Z  INFO 1 --- [eureka-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+eureka-server  | 2025-12-08T20:14:09.533Z  INFO 1 --- [eureka-server] [           main] c.c.F.EurekaServerApplication            : Started EurekaServerApplication in 169.255 seconds (process running for 191.36)
+eureka-server  | 2025-12-08T20:15:08.811Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+eureka-server  | 2025-12-08T20:15:53.238Z  INFO 1 --- [eureka-server] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+eureka-server  | 2025-12-08T20:15:53.335Z  INFO 1 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+eureka-server  | 2025-12-08T20:15:53.370Z  INFO 1 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 33 ms
+eureka-server  | 2025-12-08T20:16:03.931Z  INFO 1 --- [eureka-server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHT-SERVICE/4a97ca29cb99:flight-service with status UP (replication=false)
+eureka-server  | 2025-12-08T20:16:05.812Z  INFO 1 --- [eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/db754e277dfc:api-gateway:8765 with status UP (replication=false)
+eureka-server  | 2025-12-08T20:16:08.810Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 30ms
+eureka-server  | 2025-12-08T20:16:56.371Z  INFO 1 --- [eureka-server] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMAIL-SERVICE/09dc4a3ccd3b:email-service:9093 with status UP (replication=false)
+eureka-server  | 2025-12-08T20:17:03.159Z  INFO 1 --- [eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USER-SERVICE/9c50bea9339d:user-service:9090 with status UP (replication=false)
+eureka-server  | 2025-12-08T20:17:08.816Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 30ms
+eureka-server  | 2025-12-08T20:18:08.820Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 30ms
+eureka-server  | 2025-12-08T20:18:16.050Z  INFO 1 --- [eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKING-SERVICE/86d8c93d692b:booking-service:9092 with status UP (replication=false)
+eureka-server  | 2025-12-08T20:19:08.820Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 18ms
+eureka-server  | 2025-12-08T20:20:08.819Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+eureka-server  | 2025-12-08T20:21:08.820Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+eureka-server  | 2025-12-08T20:22:08.819Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+eureka-server  | 2025-12-08T20:23:08.819Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+eureka-server  | 2025-12-08T20:24:04.647Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server  | 2025-12-08T20:24:08.820Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+eureka-server  | 2025-12-08T20:25:08.820Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+eureka-server  | 2025-12-08T20:26:08.820Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+eureka-server  | 2025-12-08T20:27:08.821Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+eureka-server  | 2025-12-08T20:28:08.821Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+eureka-server  | 2025-12-08T20:29:05.509Z  INFO 1 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+eureka-server  | 2025-12-08T20:29:08.822Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+eureka-server  | 2025-12-08T20:30:08.822Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+eureka-server  | 2025-12-08T20:31:08.821Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+eureka-server  | 2025-12-08T20:32:08.821Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms

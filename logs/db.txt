@@ -1,0 +1,33 @@
+mysql-shared  | 2025-12-08 19:36:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.44-1.el9 started.
+mysql-shared  | 2025-12-08 19:36:55+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql-shared  | 2025-12-08 19:36:55+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.44-1.el9 started.
+mysql-shared  | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+mysql-shared  | 2025-12-08T19:37:00.700370Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql-shared  | 2025-12-08T19:37:00.765097Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+mysql-shared  | 2025-12-08T19:37:00.765160Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.44) starting as process 1
+mysql-shared  | 2025-12-08T19:37:00.891605Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql-shared  | 2025-12-08T19:37:05.046838Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql-shared  | 2025-12-08T19:37:05.904673Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql-shared  | 2025-12-08T19:37:05.904789Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql-shared  | 2025-12-08T19:37:05.920443Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql-shared  | 2025-12-08T19:37:06.034285Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+mysql-shared  | 2025-12-08T19:37:06.034498Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.44'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+mysql-shared  | 2025-12-08T19:37:10.053851Z 8 [Warning] [MY-013360] [Server] Plugin mysql_native_password reported: ''mysql_native_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+mysql-shared  | 2025-12-08T20:08:36.579829Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.44).
+mysql-shared  | 2025-12-08T20:08:38.733251Z 0 [Warning] [MY-010909] [Server] /usr/sbin/mysqld: Forcing close of thread 186  user: 'root'.
+mysql-shared  | 2025-12-08T20:08:41.455653Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.44)  MySQL Community Server - GPL.
+mysql-shared  | 2025-12-08 20:10:44+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.44-1.el9 started.
+mysql-shared  | 2025-12-08 20:10:45+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+mysql-shared  | 2025-12-08 20:10:45+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.44-1.el9 started.
+mysql-shared  | '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+mysql-shared  | 2025-12-08T20:10:48.118039Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+mysql-shared  | 2025-12-08T20:10:48.128364Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+mysql-shared  | 2025-12-08T20:10:48.128433Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.44) starting as process 1
+mysql-shared  | 2025-12-08T20:10:48.177904Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+mysql-shared  | 2025-12-08T20:10:51.201665Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+mysql-shared  | 2025-12-08T20:10:53.368282Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+mysql-shared  | 2025-12-08T20:10:53.368450Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+mysql-shared  | 2025-12-08T20:10:53.441432Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+mysql-shared  | 2025-12-08T20:10:53.712355Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+mysql-shared  | 2025-12-08T20:10:53.715035Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.44'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+mysql-shared  | 2025-12-08T20:10:54.967519Z 8 [Warning] [MY-013360] [Server] Plugin mysql_native_password reported: ''mysql_native_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'

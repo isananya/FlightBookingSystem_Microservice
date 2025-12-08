@@ -1,0 +1,239 @@
+user-service  | Picked up JAVA_TOOL_OPTIONS: -Xmx350m
+user-service  | 
+user-service  |   .   ____          _            __ _ _
+user-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+user-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+user-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+user-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+user-service  |  =========|_|==============|___/=/_/_/_/
+user-service  | 
+user-service  |  :: Spring Boot ::                (v4.0.0)
+user-service  | 
+user-service  | 2025-12-08T20:12:07.238Z  INFO 1 --- [user-service] [           main] c.c.F.UserServiceApplication             : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+user-service  | 2025-12-08T20:12:07.331Z  INFO 1 --- [user-service] [           main] c.c.F.UserServiceApplication             : No active profile set, falling back to 1 default profile: "default"
+user-service  | 2025-12-08T20:12:10.241Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+user-service  | 2025-12-08T20:12:10.243Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://config-server:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://config-server:8888/application/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:12:10.253Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@4fe89c24 uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/application/default": Connection refused
+user-service  | 2025-12-08T20:12:10.374Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+user-service  | 2025-12-08T20:12:10.389Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:12:10.390Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@51e4ccb3 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:12:10.391Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+user-service  | 2025-12-08T20:12:10.392Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://config-server:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://config-server:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:12:10.392Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@32cb636e uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:12:10.392Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+user-service  | 2025-12-08T20:12:10.392Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://config-server:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://config-server:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:12:10.392Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@63cd604c uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:12:10.393Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+user-service  | 2025-12-08T20:12:10.406Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:12:10.406Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3a4e343 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:12:10.407Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+user-service  | 2025-12-08T20:12:10.413Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:12:10.427Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6a1d204a uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:12:42.991Z  INFO 1 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+user-service  | 2025-12-08T20:12:47.369Z  INFO 1 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4176 ms. Found 1 JPA repository interface.
+user-service  | 2025-12-08T20:12:59.861Z  INFO 1 --- [user-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b6ba8959-ca8e-3c60-9a79-71c27337aa11
+user-service  | 2025-12-08T20:13:21.365Z  INFO 1 --- [user-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+user-service  | 2025-12-08T20:13:21.785Z  INFO 1 --- [user-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+user-service  | 2025-12-08T20:13:21.817Z  INFO 1 --- [user-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+user-service  | 2025-12-08T20:13:23.334Z  INFO 1 --- [user-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 72865 ms
+user-service  | 2025-12-08T20:13:24.289Z ERROR 1 --- [user-service] [           main] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'jwtService': Error creating bean with name 'jwtService' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/chubb/FlightBookingSystem/security/JwtService.class]: Unexpected exception during bean creation
+user-service  | 2025-12-08T20:13:25.519Z  INFO 1 --- [user-service] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+user-service  | 2025-12-08T20:13:25.893Z  WARN 1 --- [user-service] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+user-service  | 2025-12-08T20:13:26.268Z  INFO 1 --- [user-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+user-service  | 
+user-service  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+user-service  | 2025-12-08T20:13:26.998Z ERROR 1 --- [user-service] [           main] o.s.boot.SpringApplication               : Application run failed
+user-service  | 
+user-service  | org.springframework.context.ApplicationContextException: Unable to start web server
+user-service  | 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at com.chubb.FlightBookingSystem.UserServiceApplication.main(UserServiceApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+user-service  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+user-service  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+user-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+user-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+user-service  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106) ~[app.jar:0.0.1-SNAPSHOT]
+user-service  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:0.0.1-SNAPSHOT]
+user-service  | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:0.0.1-SNAPSHOT]
+user-service  | Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+user-service  | 	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.0.jar!/:4.0.0]
+user-service  | 	... 15 common frames omitted
+user-service  | Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'jwtService': Error creating bean with name 'jwtService' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/chubb/FlightBookingSystem/security/JwtService.class]: Unexpected exception during bean creation
+user-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:766) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.0.0.jar!/:4.0.0]
+user-service  | 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4416) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+user-service  | 	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+user-service  | 	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:767) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+user-service  | 	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+user-service  | 	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.14.jar!/:na]
+user-service  | 	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.0.0.jar!/:4.0.0]
+user-service  | 	... 20 common frames omitted
+user-service  | Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtService' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/chubb/FlightBookingSystem/security/JwtService.class]: Unexpected exception during bean creation
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:538) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	... 61 common frames omitted
+user-service  | Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+user-service  | 	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296) ~[spring-core-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129) ~[spring-core-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96) ~[spring-core-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286) ~[spring-core-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257) ~[spring-core-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184) ~[spring-context-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1672) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar!/:7.0.1]
+user-service  | 	... 69 common frames omitted
+user-service  | 
+user-service  | Picked up JAVA_TOOL_OPTIONS: -Xmx350m
+user-service  | 
+user-service  |   .   ____          _            __ _ _
+user-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+user-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+user-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+user-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+user-service  |  =========|_|==============|___/=/_/_/_/
+user-service  | 
+user-service  |  :: Spring Boot ::                (v4.0.0)
+user-service  | 
+user-service  | 2025-12-08T20:14:35.075Z  INFO 1 --- [user-service] [           main] c.c.F.UserServiceApplication             : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+user-service  | 2025-12-08T20:14:35.138Z  INFO 1 --- [user-service] [           main] c.c.F.UserServiceApplication             : No active profile set, falling back to 1 default profile: "default"
+user-service  | 2025-12-08T20:14:37.051Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+user-service  | 2025-12-08T20:14:37.052Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=52dbfbe5eea8be36a0fff34718f1de972080125f, state=
+user-service  | 2025-12-08T20:14:37.457Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+user-service  | 2025-12-08T20:14:37.459Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:14:37.460Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@21680803 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:14:37.507Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+user-service  | 2025-12-08T20:14:37.695Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=52dbfbe5eea8be36a0fff34718f1de972080125f, state=
+user-service  | 2025-12-08T20:14:37.698Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+user-service  | 2025-12-08T20:14:37.710Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:14:37.711Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47d93e0d uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:14:37.712Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+user-service  | 2025-12-08T20:14:37.713Z  INFO 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused. Will be trying the next url if available
+user-service  | 2025-12-08T20:14:37.713Z  WARN 1 --- [user-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@475b7792 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused
+user-service  | 2025-12-08T20:15:01.964Z  INFO 1 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+user-service  | 2025-12-08T20:15:05.056Z  INFO 1 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2759 ms. Found 1 JPA repository interface.
+user-service  | 2025-12-08T20:15:15.776Z  INFO 1 --- [user-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b6ba8959-ca8e-3c60-9a79-71c27337aa11
+user-service  | 2025-12-08T20:15:33.326Z  INFO 1 --- [user-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+user-service  | 2025-12-08T20:15:34.198Z  INFO 1 --- [user-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+user-service  | 2025-12-08T20:15:34.247Z  INFO 1 --- [user-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+user-service  | 2025-12-08T20:15:35.888Z  INFO 1 --- [user-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 57882 ms
+user-service  | 2025-12-08T20:15:40.643Z  INFO 1 --- [user-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+user-service  | 2025-12-08T20:15:43.975Z  INFO 1 --- [user-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+user-service  | 2025-12-08T20:16:04.417Z  INFO 1 --- [user-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+user-service  | 2025-12-08T20:16:04.792Z  INFO 1 --- [user-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+user-service  | 2025-12-08T20:16:07.823Z  INFO 1 --- [user-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1317ac2c
+user-service  | 2025-12-08T20:16:07.868Z  INFO 1 --- [user-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+user-service  | 2025-12-08T20:16:08.469Z  WARN 1 --- [user-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+user-service  | 2025-12-08T20:16:08.796Z  INFO 1 --- [user-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+user-service  | 	Database JDBC URL [jdbc:mysql://mysql-shared:3306/userdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false]
+user-service  | 	Database driver: MySQL Connector/J
+user-service  | 	Database dialect: MySQLDialect
+user-service  | 	Database version: 8.0.44
+user-service  | 	Default catalog/schema: userdb/undefined
+user-service  | 	Autocommit mode: undefined/unknown
+user-service  | 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+user-service  | 	JDBC fetch size: none
+user-service  | 	Pool: DatasourceConnectionProviderImpl
+user-service  | 	Minimum pool size: undefined/unknown
+user-service  | 	Maximum pool size: undefined/unknown
+user-service  | 2025-12-08T20:16:27.031Z  INFO 1 --- [user-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+user-service  | 2025-12-08T20:16:27.788Z  INFO 1 --- [user-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+user-service  | 2025-12-08T20:16:29.115Z  INFO 1 --- [user-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+user-service  | 2025-12-08T20:16:37.211Z  INFO 1 --- [user-service] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authProvider
+user-service  | 2025-12-08T20:16:37.226Z  WARN 1 --- [user-service] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+user-service  | 2025-12-08T20:16:37.812Z  WARN 1 --- [user-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+user-service  | 2025-12-08T20:16:52.300Z  INFO 1 --- [user-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+user-service  | 2025-12-08T20:16:52.946Z  WARN 1 --- [user-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+user-service  | 2025-12-08T20:16:53.327Z  INFO 1 --- [user-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+user-service  | 2025-12-08T20:16:53.858Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+user-service  | 2025-12-08T20:16:53.910Z  INFO 1 --- [user-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service  | 2025-12-08T20:16:54.161Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+user-service  | 2025-12-08T20:16:54.180Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+user-service  | 2025-12-08T20:16:54.181Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+user-service  | 2025-12-08T20:16:54.181Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+user-service  | 2025-12-08T20:16:54.181Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+user-service  | 2025-12-08T20:16:54.181Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+user-service  | 2025-12-08T20:16:54.181Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+user-service  | 2025-12-08T20:17:02.152Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+user-service  | 2025-12-08T20:17:02.206Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+user-service  | 2025-12-08T20:17:02.234Z  INFO 1 --- [user-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+user-service  | 2025-12-08T20:17:02.266Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765225022264 with initial instances count: 3
+user-service  | 2025-12-08T20:17:02.349Z  INFO 1 --- [user-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+user-service  | 2025-12-08T20:17:02.365Z  INFO 1 --- [user-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765225022365, current=UP, previous=STARTING]
+user-service  | 2025-12-08T20:17:02.394Z  INFO 1 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/9c50bea9339d:user-service:9090: registering service...
+user-service  | 2025-12-08T20:17:02.688Z  INFO 1 --- [user-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+user-service  | 2025-12-08T20:17:02.703Z  INFO 1 --- [user-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+user-service  | 2025-12-08T20:17:02.903Z  INFO 1 --- [user-service] [           main] c.c.F.UserServiceApplication             : Started UserServiceApplication in 186.2 seconds (process running for 206.172)
+user-service  | 2025-12-08T20:17:03.182Z  INFO 1 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/9c50bea9339d:user-service:9090 - registration status: 204
+user-service  | 2025-12-08T20:21:54.099Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service  | 2025-12-08T20:26:38.144Z  INFO 1 --- [user-service] [nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+user-service  | 2025-12-08T20:26:38.147Z  INFO 1 --- [user-service] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+user-service  | 2025-12-08T20:26:38.178Z  INFO 1 --- [user-service] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+user-service  | Hibernate: select u1_0.id from user u1_0 where u1_0.email=? limit ?
+user-service  | Hibernate: insert into user (email,name,password,role) values (?,?,?,?)
+user-service  | Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+user-service  | 2025-12-08T20:26:54.046Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service  | Hibernate: select u1_0.id from user u1_0 where u1_0.email=? limit ?
+user-service  | Hibernate: insert into user (email,name,password,role) values (?,?,?,?)
+user-service  | Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+user-service  | 2025-12-08T20:31:54.020Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

@@ -1,0 +1,237 @@
+booking-service  | Picked up JAVA_TOOL_OPTIONS: -Xmx350m
+booking-service  | 
+booking-service  |   .   ____          _            __ _ _
+booking-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+booking-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+booking-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+booking-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+booking-service  |  =========|_|==============|___/=/_/_/_/
+booking-service  | 
+booking-service  |  :: Spring Boot ::                (v4.0.0)
+booking-service  | 
+booking-service  | 2025-12-08T20:12:08.657Z  INFO 1 --- [booking-service] [           main] c.c.F.BookingServiceApplication          : Starting BookingServiceApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+booking-service  | 2025-12-08T20:12:08.919Z  INFO 1 --- [booking-service] [           main] c.c.F.BookingServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+booking-service  | 2025-12-08T20:12:12.127Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+booking-service  | 2025-12-08T20:12:12.135Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://config-server:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://config-server:8888/application/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:12:12.148Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3a1d593e uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/application/default": Connection refused
+booking-service  | 2025-12-08T20:12:12.239Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+booking-service  | 2025-12-08T20:12:12.255Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:12:12.257Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5471388b uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:12:12.269Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+booking-service  | 2025-12-08T20:12:12.286Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://config-server:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://config-server:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:12:12.287Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@759fad4 uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:12:12.290Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+booking-service  | 2025-12-08T20:12:12.291Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://config-server:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://config-server:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:12:12.299Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@64712be uris = array<String>['http://config-server:8888/'], optional = true, profiles = 'default']): I/O error on GET request for "http://config-server:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:12:12.303Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+booking-service  | 2025-12-08T20:12:12.310Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:12:12.311Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@30ed9c6c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:12:12.314Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+booking-service  | 2025-12-08T20:12:12.319Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:12:12.320Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@782a4fff uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:12:54.534Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+booking-service  | 2025-12-08T20:13:01.567Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6465 ms. Found 2 JPA repository interfaces.
+booking-service  | 2025-12-08T20:13:24.557Z  INFO 1 --- [booking-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ea202d33-c919-3b24-899d-4fd6765644e9
+booking-service  | 2025-12-08T20:13:58.907Z  INFO 1 --- [booking-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+booking-service  | 2025-12-08T20:13:59.322Z  INFO 1 --- [booking-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+booking-service  | 2025-12-08T20:13:59.323Z  INFO 1 --- [booking-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+booking-service  | 2025-12-08T20:14:00.462Z  INFO 1 --- [booking-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 108034 ms
+booking-service  | 2025-12-08T20:14:13.160Z  INFO 1 --- [booking-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+booking-service  | 2025-12-08T20:14:14.389Z  INFO 1 --- [booking-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+booking-service  | 2025-12-08T20:14:29.442Z  INFO 1 --- [booking-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+booking-service  | 2025-12-08T20:14:30.236Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+booking-service  | 2025-12-08T20:14:35.101Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fe33512
+booking-service  | 2025-12-08T20:14:35.150Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+booking-service  | 2025-12-08T20:14:37.048Z  INFO 1 --- [booking-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+booking-service  | 	Database JDBC URL [jdbc:mysql://mysql-shared:3306/bookingdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false]
+booking-service  | 	Database driver: MySQL Connector/J
+booking-service  | 	Database dialect: MySQLDialect
+booking-service  | 	Database version: 8.0.44
+booking-service  | 	Default catalog/schema: bookingdb/undefined
+booking-service  | 	Autocommit mode: undefined/unknown
+booking-service  | 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+booking-service  | 	JDBC fetch size: none
+booking-service  | 	Pool: DatasourceConnectionProviderImpl
+booking-service  | 	Minimum pool size: undefined/unknown
+booking-service  | 	Maximum pool size: undefined/unknown
+booking-service  | 2025-12-08T20:15:07.151Z  INFO 1 --- [booking-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+booking-service  | 2025-12-08T20:15:09.434Z  INFO 1 --- [booking-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+booking-service  | 2025-12-08T20:15:11.118Z  WARN 1 --- [booking-service] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConfig': Injection of autowired dependencies failed
+booking-service  | 2025-12-08T20:15:11.132Z  INFO 1 --- [booking-service] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+booking-service  | 2025-12-08T20:15:11.235Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+booking-service  | 2025-12-08T20:15:11.508Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+booking-service  | 2025-12-08T20:15:11.576Z  INFO 1 --- [booking-service] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+booking-service  | 2025-12-08T20:15:12.160Z  INFO 1 --- [booking-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+booking-service  | 
+booking-service  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+booking-service  | 2025-12-08T20:15:12.723Z ERROR 1 --- [booking-service] [           main] o.s.boot.SpringApplication               : Application run failed
+booking-service  | 
+booking-service  | org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitConfig': Injection of autowired dependencies failed
+booking-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:498) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:983) ~[spring-context-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.0.jar!/:4.0.0]
+booking-service  | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765) ~[spring-boot-4.0.0.jar!/:4.0.0]
+booking-service  | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454) ~[spring-boot-4.0.0.jar!/:4.0.0]
+booking-service  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.0.jar!/:4.0.0]
+booking-service  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374) ~[spring-boot-4.0.0.jar!/:4.0.0]
+booking-service  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-4.0.0.jar!/:4.0.0]
+booking-service  | 	at com.chubb.FlightBookingSystem.BookingServiceApplication.main(BookingServiceApplication.java:14) ~[!/:0.0.1-SNAPSHOT]
+booking-service  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+booking-service  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+booking-service  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+booking-service  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+booking-service  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106) ~[app.jar:0.0.1-SNAPSHOT]
+booking-service  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:0.0.1-SNAPSHOT]
+booking-service  | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:0.0.1-SNAPSHOT]
+booking-service  | Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'app.queue.booking' in value "${app.queue.booking}"
+booking-service  | 	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296) ~[spring-core-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129) ~[spring-core-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96) ~[spring-core-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286) ~[spring-core-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257) ~[spring-core-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184) ~[spring-context-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1672) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-7.0.1.jar!/:7.0.1]
+booking-service  | 	... 26 common frames omitted
+booking-service  | 
+booking-service  | Picked up JAVA_TOOL_OPTIONS: -Xmx350m
+booking-service  | 
+booking-service  |   .   ____          _            __ _ _
+booking-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+booking-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+booking-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+booking-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+booking-service  |  =========|_|==============|___/=/_/_/_/
+booking-service  | 
+booking-service  |  :: Spring Boot ::                (v4.0.0)
+booking-service  | 
+booking-service  | 2025-12-08T20:16:23.897Z  INFO 1 --- [booking-service] [           main] c.c.F.BookingServiceApplication          : Starting BookingServiceApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+booking-service  | 2025-12-08T20:16:23.995Z  INFO 1 --- [booking-service] [           main] c.c.F.BookingServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+booking-service  | 2025-12-08T20:16:25.713Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+booking-service  | 2025-12-08T20:16:25.718Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=52dbfbe5eea8be36a0fff34718f1de972080125f, state=
+booking-service  | 2025-12-08T20:16:25.755Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+booking-service  | 2025-12-08T20:16:25.756Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:16:25.758Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7b02e036 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:16:25.776Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888/
+booking-service  | 2025-12-08T20:16:25.777Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=booking-service, profiles=[default], label=null, version=52dbfbe5eea8be36a0fff34718f1de972080125f, state=
+booking-service  | 2025-12-08T20:16:25.792Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+booking-service  | 2025-12-08T20:16:25.792Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:16:25.792Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@492fc69e uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:16:25.799Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+booking-service  | 2025-12-08T20:16:25.800Z  INFO 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused. Will be trying the next url if available
+booking-service  | 2025-12-08T20:16:25.800Z  WARN 1 --- [booking-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@117632cf uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/booking-service/default": Connection refused
+booking-service  | 2025-12-08T20:16:50.592Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+booking-service  | 2025-12-08T20:16:53.572Z  INFO 1 --- [booking-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2920 ms. Found 2 JPA repository interfaces.
+booking-service  | 2025-12-08T20:17:03.047Z  INFO 1 --- [booking-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b6212952-ad10-32d2-a69a-0c5bb7e5eaf8
+booking-service  | 2025-12-08T20:17:11.805Z  INFO 1 --- [booking-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9092 (http)
+booking-service  | 2025-12-08T20:17:11.988Z  INFO 1 --- [booking-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+booking-service  | 2025-12-08T20:17:11.990Z  INFO 1 --- [booking-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+booking-service  | 2025-12-08T20:17:12.374Z  INFO 1 --- [booking-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 46542 ms
+booking-service  | 2025-12-08T20:17:17.933Z  INFO 1 --- [booking-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+booking-service  | 2025-12-08T20:17:18.709Z  INFO 1 --- [booking-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+booking-service  | 2025-12-08T20:17:24.971Z  INFO 1 --- [booking-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+booking-service  | 2025-12-08T20:17:25.551Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+booking-service  | 2025-12-08T20:17:28.463Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e6f7c25
+booking-service  | 2025-12-08T20:17:28.481Z  INFO 1 --- [booking-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+booking-service  | 2025-12-08T20:17:29.060Z  WARN 1 --- [booking-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+booking-service  | 2025-12-08T20:17:29.195Z  INFO 1 --- [booking-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+booking-service  | 	Database JDBC URL [jdbc:mysql://mysql-shared:3306/bookingdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false]
+booking-service  | 	Database driver: MySQL Connector/J
+booking-service  | 	Database dialect: MySQLDialect
+booking-service  | 	Database version: 8.0.44
+booking-service  | 	Default catalog/schema: bookingdb/undefined
+booking-service  | 	Autocommit mode: undefined/unknown
+booking-service  | 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+booking-service  | 	JDBC fetch size: none
+booking-service  | 	Pool: DatasourceConnectionProviderImpl
+booking-service  | 	Minimum pool size: undefined/unknown
+booking-service  | 	Maximum pool size: undefined/unknown
+booking-service  | 2025-12-08T20:17:39.921Z  INFO 1 --- [booking-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+booking-service  | 2025-12-08T20:17:40.527Z  INFO 1 --- [booking-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+booking-service  | 2025-12-08T20:17:42.461Z  INFO 1 --- [booking-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+booking-service  | 2025-12-08T20:17:46.552Z  WARN 1 --- [booking-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+booking-service  | 2025-12-08T20:17:47.919Z  INFO 1 --- [booking-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'flight-service' URL not provided. Will try picking an instance via load-balancing.
+booking-service  | 2025-12-08T20:18:11.330Z  INFO 1 --- [booking-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+booking-service  | 2025-12-08T20:18:12.077Z  WARN 1 --- [booking-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+booking-service  | 2025-12-08T20:18:12.235Z  INFO 1 --- [booking-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 26 endpoints beneath base path '/actuator'
+booking-service  | 2025-12-08T20:18:12.904Z  INFO 1 --- [booking-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+booking-service  | 2025-12-08T20:18:13.164Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+booking-service  | 2025-12-08T20:18:13.205Z  INFO 1 --- [booking-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+booking-service  | 2025-12-08T20:18:13.302Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+booking-service  | 2025-12-08T20:18:13.313Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+booking-service  | 2025-12-08T20:18:13.326Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+booking-service  | 2025-12-08T20:18:13.339Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+booking-service  | 2025-12-08T20:18:13.346Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+booking-service  | 2025-12-08T20:18:13.347Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+booking-service  | 2025-12-08T20:18:13.347Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+booking-service  | 2025-12-08T20:18:15.602Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+booking-service  | 2025-12-08T20:18:15.617Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+booking-service  | 2025-12-08T20:18:15.635Z  INFO 1 --- [booking-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+booking-service  | 2025-12-08T20:18:15.650Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765225095648 with initial instances count: 4
+booking-service  | 2025-12-08T20:18:15.712Z  INFO 1 --- [booking-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING-SERVICE with eureka with status UP
+booking-service  | 2025-12-08T20:18:15.715Z  INFO 1 --- [booking-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765225095715, current=UP, previous=STARTING]
+booking-service  | 2025-12-08T20:18:15.730Z  INFO 1 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/86d8c93d692b:booking-service:9092: registering service...
+booking-service  | 2025-12-08T20:18:15.830Z  INFO 1 --- [booking-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9092 (http) with context path '/'
+booking-service  | 2025-12-08T20:18:15.843Z  INFO 1 --- [booking-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9092
+booking-service  | 2025-12-08T20:18:15.936Z  INFO 1 --- [booking-service] [           main] c.c.F.BookingServiceApplication          : Started BookingServiceApplication in 152.464 seconds (process running for 174.499)
+booking-service  | 2025-12-08T20:18:16.062Z  INFO 1 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/86d8c93d692b:booking-service:9092 - registration status: 204
+booking-service  | 2025-12-08T20:23:13.293Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+booking-service  | 2025-12-08T20:28:13.257Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+booking-service  | 2025-12-08T20:28:45.120Z  INFO 1 --- [booking-service] [nio-9092-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+booking-service  | 2025-12-08T20:28:45.128Z  INFO 1 --- [booking-service] [nio-9092-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+booking-service  | 2025-12-08T20:28:45.156Z  INFO 1 --- [booking-service] [nio-9092-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+booking-service  | 2025-12-08T20:29:18.468Z DEBUG 1 --- [booking-service] [nio-9092-exec-2] org.hibernate.SQL                        : select next_val as id_val from booking_seq for update
+booking-service  | Hibernate: select next_val as id_val from booking_seq for update
+booking-service  | 2025-12-08T20:29:18.501Z DEBUG 1 --- [booking-service] [nio-9092-exec-2] org.hibernate.SQL                        : update booking_seq set next_val= ? where next_val=?
+booking-service  | Hibernate: update booking_seq set next_val= ? where next_val=?
+booking-service  | 2025-12-08T20:29:19.093Z DEBUG 1 --- [booking-service] [nio-9092-exec-2] org.hibernate.SQL                        : select next_val as id_val from ticket_seq for update
+booking-service  | Hibernate: select next_val as id_val from ticket_seq for update
+booking-service  | 2025-12-08T20:29:19.132Z DEBUG 1 --- [booking-service] [nio-9092-exec-2] org.hibernate.SQL                        : update ticket_seq set next_val= ? where next_val=?
+booking-service  | Hibernate: update ticket_seq set next_val= ? where next_val=?
+booking-service  | 2025-12-08T20:29:19.889Z  INFO 1 --- [booking-service] [nio-9092-exec-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+booking-service  | 2025-12-08T20:29:21.486Z  INFO 1 --- [booking-service] [nio-9092-exec-2] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#74ed1b3d:0/SimpleConnection@42c1cc9c [delegate=amqp://guest@172.18.0.3:5672/, localPort=34536]
+booking-service  | 2025-12-08T20:29:21.731Z DEBUG 1 --- [booking-service] [nio-9092-exec-2] org.hibernate.SQL                        : insert into booking (departure_schedule_id,email_id,passengers_count,pnr,return_schedule_id,round_trip,total_amount,id) values (?,?,?,?,?,?,?,?)
+booking-service  | Hibernate: insert into booking (departure_schedule_id,email_id,passengers_count,pnr,return_schedule_id,round_trip,total_amount,id) values (?,?,?,?,?,?,?,?)
+booking-service  | 2025-12-08T20:29:21.784Z DEBUG 1 --- [booking-service] [nio-9092-exec-2] org.hibernate.SQL                        : insert into ticket (age,booking_id,first_name,gender,last_name,meal_option,schedule_id,seat_number,status,id) values (?,?,?,?,?,?,?,?,?,?)
+booking-service  | Hibernate: insert into ticket (age,booking_id,first_name,gender,last_name,meal_option,schedule_id,seat_number,status,id) values (?,?,?,?,?,?,?,?,?,?)
+booking-service  | 2025-12-08T20:29:21.798Z DEBUG 1 --- [booking-service] [nio-9092-exec-2] org.hibernate.SQL                        : insert into ticket (age,booking_id,first_name,gender,last_name,meal_option,schedule_id,seat_number,status,id) values (?,?,?,?,?,?,?,?,?,?)
+booking-service  | Hibernate: insert into ticket (age,booking_id,first_name,gender,last_name,meal_option,schedule_id,seat_number,status,id) values (?,?,?,?,?,?,?,?,?,?)
+booking-service  | 2025-12-08T20:30:06.546Z DEBUG 1 --- [booking-service] [nio-9092-exec-3] org.hibernate.SQL                        : select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.pnr=?
+booking-service  | Hibernate: select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.pnr=?
+booking-service  | 2025-12-08T20:30:06.752Z DEBUG 1 --- [booking-service] [nio-9092-exec-3] org.hibernate.SQL                        : select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
+booking-service  | Hibernate: select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
+booking-service  | 2025-12-08T20:30:31.616Z DEBUG 1 --- [booking-service] [nio-9092-exec-4] org.hibernate.SQL                        : select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.email_id=?
+booking-service  | Hibernate: select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.email_id=?
+booking-service  | 2025-12-08T20:30:31.677Z DEBUG 1 --- [booking-service] [nio-9092-exec-4] org.hibernate.SQL                        : select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
+booking-service  | Hibernate: select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
+booking-service  | 2025-12-08T20:30:55.877Z DEBUG 1 --- [booking-service] [nio-9092-exec-5] org.hibernate.SQL                        : select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.pnr=?
+booking-service  | Hibernate: select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.pnr=?
+booking-service  | 2025-12-08T20:30:55.892Z DEBUG 1 --- [booking-service] [nio-9092-exec-5] org.hibernate.SQL                        : select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
+booking-service  | Hibernate: select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
+booking-service  | 2025-12-08T20:30:56.650Z DEBUG 1 --- [booking-service] [nio-9092-exec-5] org.hibernate.SQL                        : update booking set departure_schedule_id=?,email_id=?,passengers_count=?,pnr=?,return_schedule_id=?,round_trip=?,total_amount=? where id=?
+booking-service  | Hibernate: update booking set departure_schedule_id=?,email_id=?,passengers_count=?,pnr=?,return_schedule_id=?,round_trip=?,total_amount=? where id=?
+booking-service  | 2025-12-08T20:30:56.677Z DEBUG 1 --- [booking-service] [nio-9092-exec-5] org.hibernate.SQL                        : update ticket set age=?,booking_id=?,first_name=?,gender=?,last_name=?,meal_option=?,schedule_id=?,seat_number=?,status=? where id=?
+booking-service  | Hibernate: update ticket set age=?,booking_id=?,first_name=?,gender=?,last_name=?,meal_option=?,schedule_id=?,seat_number=?,status=? where id=?
+booking-service  | 2025-12-08T20:30:56.683Z DEBUG 1 --- [booking-service] [nio-9092-exec-5] org.hibernate.SQL                        : update ticket set age=?,booking_id=?,first_name=?,gender=?,last_name=?,meal_option=?,schedule_id=?,seat_number=?,status=? where id=?
+booking-service  | Hibernate: update ticket set age=?,booking_id=?,first_name=?,gender=?,last_name=?,meal_option=?,schedule_id=?,seat_number=?,status=? where id=?
+booking-service  | 2025-12-08T20:31:11.841Z DEBUG 1 --- [booking-service] [nio-9092-exec-6] org.hibernate.SQL                        : select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.pnr=?
+booking-service  | Hibernate: select b1_0.id,b1_0.departure_schedule_id,b1_0.email_id,b1_0.passengers_count,b1_0.pnr,b1_0.return_schedule_id,b1_0.round_trip,b1_0.total_amount from booking b1_0 where b1_0.pnr=?
+booking-service  | 2025-12-08T20:31:11.851Z DEBUG 1 --- [booking-service] [nio-9092-exec-6] org.hibernate.SQL                        : select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
+booking-service  | Hibernate: select t1_0.id,t1_0.age,t1_0.booking_id,t1_0.first_name,t1_0.gender,t1_0.last_name,t1_0.meal_option,t1_0.schedule_id,t1_0.seat_number,t1_0.status from ticket t1_0 where t1_0.booking_id=?
