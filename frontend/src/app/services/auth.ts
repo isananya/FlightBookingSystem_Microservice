@@ -15,4 +15,12 @@ export class AuthService {
       responseType: 'text'
     });
   }
+
+  signup(data: any) {
+    return this.http.post(
+      `${this.baseUrl}/signup`,
+      data,
+      { responseType: 'text' }
+    );
+  }
 }

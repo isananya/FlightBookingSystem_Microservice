@@ -1,1 +1,27 @@
-<p>signup works!</p>
+<h2>Signup</h2>
+
+<input
+  placeholder="Name"
+  [(ngModel)]="name"
+/>
+
+<input
+  type="email"
+  placeholder="Email"
+  [(ngModel)]="email"
+/>
+
+<input
+  type="password"
+  placeholder="Password"
+  [(ngModel)]="password"
+/>
+
+<select [(ngModel)]="role">
+  <option value="ROLE_USER">User</option>
+  <option value="ROLE_ADMIN">Admin</option>
+</select>
+
+<button (click)="signup()">Signup</button>
+
+<p>{{ message }}</p>
