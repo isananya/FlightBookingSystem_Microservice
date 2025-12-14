@@ -1539,3 +1539,260 @@ rabbitmq         | 2025-12-08 20:29:21.417583+00:00 [info] <0.1338.0> connection
 rabbitmq         | 2025-12-08 20:29:21.449962+00:00 [info] <0.1338.0> connection <0.1338.0> (172.18.0.7:34536 -> 172.18.0.3:5672 - rabbitConnectionFactory#74ed1b3d:0): user 'guest' authenticated and granted access to vhost '/'[0m
 email-service    | 2025-12-08T20:41:49.272Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 user-service     | 2025-12-08T20:41:53.968Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:42:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+eureka-server    | 2025-12-08T20:43:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+booking-service  | 2025-12-08T20:43:13.544Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:44:04.519Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server    | 2025-12-08T20:44:05.508Z  INFO 1 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+eureka-server    | 2025-12-08T20:44:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+eureka-server    | 2025-12-08T20:45:08.824Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+flight-service   | 2025-12-08T20:45:43.232Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 20:45:50.613  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:46:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+email-service    | 2025-12-08T20:46:49.252Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T20:46:53.947Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:47:08.824Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T20:48:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+booking-service  | 2025-12-08T20:48:13.524Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:49:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T20:50:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+flight-service   | 2025-12-08T20:50:43.214Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 20:50:50.595  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:51:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+email-service    | 2025-12-08T20:51:49.236Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T20:51:53.929Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:52:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T20:53:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+booking-service  | 2025-12-08T20:53:13.507Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:54:04.482Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server    | 2025-12-08T20:54:08.823Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T20:55:08.824Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+flight-service   | 2025-12-08T20:55:43.197Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 20:55:50.578  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:56:08.824Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+email-service    | 2025-12-08T20:56:49.219Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T20:56:53.912Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:57:08.825Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+eureka-server    | 2025-12-08T20:58:08.825Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+booking-service  | 2025-12-08T20:58:13.491Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T20:59:05.511Z  INFO 1 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+eureka-server    | 2025-12-08T20:59:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 160ms
+eureka-server    | 2025-12-08T21:00:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+flight-service   | 2025-12-08T21:00:43.189Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:00:50.563  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:01:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+email-service    | 2025-12-08T21:01:49.204Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:01:53.895Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:02:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:03:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+booking-service  | 2025-12-08T21:03:13.477Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:04:04.448Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server    | 2025-12-08T21:04:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:05:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+flight-service   | 2025-12-08T21:05:43.191Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:05:50.550  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:06:08.982Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+email-service    | 2025-12-08T21:06:49.188Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:06:53.879Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:07:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:08:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+booking-service  | 2025-12-08T21:08:13.461Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:09:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:10:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+flight-service   | 2025-12-08T21:10:43.176Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:10:50.534  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:11:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+email-service    | 2025-12-08T21:11:49.174Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:11:53.864Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:12:08.982Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:13:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+booking-service  | 2025-12-08T21:13:13.448Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:14:04.416Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server    | 2025-12-08T21:14:05.508Z  INFO 1 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+eureka-server    | 2025-12-08T21:14:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:15:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+flight-service   | 2025-12-08T21:15:43.163Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:15:50.521  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:16:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+email-service    | 2025-12-08T21:16:49.162Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:16:53.851Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:17:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:18:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+booking-service  | 2025-12-08T21:18:13.436Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:19:08.981Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:20:08.982Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+flight-service   | 2025-12-08T21:20:43.151Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:20:50.508  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:21:08.983Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+email-service    | 2025-12-08T21:21:49.150Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:21:53.838Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:22:08.983Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:23:08.984Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+booking-service  | 2025-12-08T21:23:13.423Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:24:04.391Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server    | 2025-12-08T21:24:08.984Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:25:08.983Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+flight-service   | 2025-12-08T21:25:43.138Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:25:50.497  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:26:08.983Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+email-service    | 2025-12-08T21:26:49.137Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:26:53.825Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:27:08.983Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:28:08.984Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+booking-service  | 2025-12-08T21:28:13.412Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:29:05.509Z  INFO 1 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+eureka-server    | 2025-12-08T21:29:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:30:08.986Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+flight-service   | 2025-12-08T21:30:43.127Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:30:50.485  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:31:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+email-service    | 2025-12-08T21:31:49.126Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:31:53.814Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:32:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:33:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+booking-service  | 2025-12-08T21:33:13.400Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:34:04.364Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server    | 2025-12-08T21:34:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:35:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+flight-service   | 2025-12-08T21:35:43.114Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:35:50.472  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:36:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+email-service    | 2025-12-08T21:36:49.115Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:36:53.802Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:37:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:38:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+booking-service  | 2025-12-08T21:38:13.389Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:39:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+eureka-server    | 2025-12-08T21:40:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+flight-service   | 2025-12-08T21:40:43.101Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:40:50.459  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:41:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+email-service    | 2025-12-08T21:41:49.102Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:41:53.789Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:42:08.985Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:43:08.986Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+booking-service  | 2025-12-08T21:43:13.378Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:44:04.339Z  WARN 1 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+eureka-server    | 2025-12-08T21:44:05.509Z  INFO 1 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+eureka-server    | 2025-12-08T21:44:08.986Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:45:08.987Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+flight-service   | 2025-12-08T21:45:43.089Z  INFO 1 --- [flight-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:45:50.447  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:46:08.987Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+email-service    | 2025-12-08T21:46:49.091Z  INFO 1 --- [email-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+user-service     | 2025-12-08T21:46:53.780Z  INFO 1 --- [user-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+eureka-server    | 2025-12-08T21:47:08.987Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+eureka-server    | 2025-12-08T21:48:08.987Z  INFO 1 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+booking-service  | 2025-12-08T21:48:13.365Z  INFO 1 --- [booking-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway      | 2025-12-08 21:48:56.392  INFO 1 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application API-GATEWAY with eureka with status DOWN
+api-gateway      | 2025-12-08 21:48:56.394  INFO 1 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765230536394, current=DOWN, previous=UP]
+api-gateway      | 2025-12-08 21:48:56.398  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/db754e277dfc:api-gateway:8765: registering service...
+user-service     | 2025-12-08T21:48:56.451Z  INFO 1 --- [user-service] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-SERVICE with eureka with status DOWN
+flight-service   | 2025-12-08T21:48:56.453Z  INFO 1 --- [flight-service] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FLIGHT-SERVICE with eureka with status DOWN
+flight-service   | 2025-12-08T21:48:56.459Z  INFO 1 --- [flight-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765230536458, current=DOWN, previous=UP]
+user-service     | 2025-12-08T21:48:56.455Z  INFO 1 --- [user-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765230536455, current=DOWN, previous=UP]
+user-service     | 2025-12-08T21:48:56.461Z  INFO 1 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/9c50bea9339d:user-service:9090: registering service...
+flight-service   | 2025-12-08T21:48:56.464Z  INFO 1 --- [flight-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/4a97ca29cb99:flight-service: registering service...
+email-service    | 2025-12-08T21:48:56.465Z  INFO 1 --- [email-service] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EMAIL-SERVICE with eureka with status DOWN
+email-service    | 2025-12-08T21:48:56.473Z  INFO 1 --- [email-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765230536473, current=DOWN, previous=UP]
+email-service    | 2025-12-08T21:48:56.480Z  INFO 1 --- [email-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMAIL-SERVICE/09dc4a3ccd3b:email-service:9093: registering service...
+booking-service  | 2025-12-08T21:48:56.541Z  INFO 1 --- [booking-service] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKING-SERVICE with eureka with status DOWN
+eureka-server    | 2025-12-08T21:48:56.537Z  INFO 1 --- [eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/db754e277dfc:api-gateway:8765 with status DOWN (replication=false)
+api-gateway      | 2025-12-08 21:48:56.547  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/db754e277dfc:api-gateway:8765 - registration status: 204
+booking-service  | 2025-12-08T21:48:56.554Z  INFO 1 --- [booking-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1765230536554, current=DOWN, previous=UP]
+booking-service  | 2025-12-08T21:48:56.560Z  INFO 1 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/86d8c93d692b:booking-service:9092: registering service...
+eureka-server    | 2025-12-08T21:48:56.619Z  INFO 1 --- [eureka-server] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHT-SERVICE/4a97ca29cb99:flight-service with status DOWN (replication=false)
+flight-service   | 2025-12-08T21:48:56.622Z  INFO 1 --- [flight-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/4a97ca29cb99:flight-service - registration status: 204
+eureka-server    | 2025-12-08T21:48:56.696Z  INFO 1 --- [eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMAIL-SERVICE/09dc4a3ccd3b:email-service:9093 with status DOWN (replication=false)
+eureka-server    | 2025-12-08T21:48:56.703Z  INFO 1 --- [eureka-server] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USER-SERVICE/9c50bea9339d:user-service:9090 with status DOWN (replication=false)
+user-service     | 2025-12-08T21:48:56.707Z  INFO 1 --- [user-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/9c50bea9339d:user-service:9090 - registration status: 204
+flight-service   | 2025-12-08T21:48:56.709Z  INFO 1 --- [flight-service] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+email-service    | 2025-12-08T21:48:56.719Z  INFO 1 --- [email-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMAIL-SERVICE/09dc4a3ccd3b:email-service:9093 - registration status: 204
+email-service    | 2025-12-08T21:48:56.761Z DEBUG 1 --- [email-service] [ionShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutting down Rabbit listener container
+flight-service   | 2025-12-08T21:48:56.770Z  INFO 1 --- [flight-service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+eureka-server    | 2025-12-08T21:48:56.775Z  INFO 1 --- [eureka-server] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKING-SERVICE/86d8c93d692b:booking-service:9092 with status DOWN (replication=false)
+booking-service  | 2025-12-08T21:48:56.783Z  INFO 1 --- [booking-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/86d8c93d692b:booking-service:9092 - registration status: 204
+user-service     | 2025-12-08T21:48:56.785Z  INFO 1 --- [user-service] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+email-service    | 2025-12-08T21:48:56.826Z  INFO 1 --- [email-service] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+email-service    | 2025-12-08T21:48:56.826Z DEBUG 1 --- [email-service] [pool-2-thread-6] o.s.a.r.listener.BlockingQueueConsumer   : Received cancelOk for tag amq.ctag-jtvxIo3N6aJdj4xrZbWspQ (booking.queue); Consumer@5b1f0f26: tags=[[amq.ctag-jtvxIo3N6aJdj4xrZbWspQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.18.0.3:5672/,1), conn: Proxy@45e35a0d Shared Rabbit Connection: SimpleConnection@5ac7550a [delegate=amqp://guest@172.18.0.3:5672/, localPort=54926], acknowledgeMode=AUTO local queue size=0
+user-service     | 2025-12-08T21:48:56.830Z  INFO 1 --- [user-service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+flight-service   | 2025-12-08T21:48:56.902Z  INFO 1 --- [flight-service] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+user-service     | 2025-12-08T21:48:56.931Z  INFO 1 --- [user-service] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+booking-service  | 2025-12-08T21:48:56.962Z  INFO 1 --- [booking-service] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+flight-service   | 2025-12-08T21:48:57.013Z  INFO 1 --- [flight-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+booking-service  | 2025-12-08T21:48:57.018Z  INFO 1 --- [booking-service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+user-service     | 2025-12-08T21:48:57.018Z  INFO 1 --- [user-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+flight-service   | 2025-12-08T21:48:57.044Z  INFO 1 --- [flight-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+flight-service   | 2025-12-08T21:48:57.056Z  INFO 1 --- [flight-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+user-service     | 2025-12-08T21:48:57.068Z  INFO 1 --- [user-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+user-service     | 2025-12-08T21:48:57.080Z  INFO 1 --- [user-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+email-service    | 2025-12-08T21:48:57.438Z DEBUG 1 --- [email-service] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Cancelling Consumer@5b1f0f26: tags=[[amq.ctag-jtvxIo3N6aJdj4xrZbWspQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.18.0.3:5672/,1), conn: Proxy@45e35a0d Shared Rabbit Connection: SimpleConnection@5ac7550a [delegate=amqp://guest@172.18.0.3:5672/, localPort=54926], acknowledgeMode=AUTO local queue size=0
+email-service    | 2025-12-08T21:48:57.443Z  INFO 1 --- [email-service] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+email-service    | 2025-12-08T21:48:57.450Z DEBUG 1 --- [email-service] [ntContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@172.18.0.3:5672/,1), conn: Proxy@45e35a0d Shared Rabbit Connection: SimpleConnection@5ac7550a [delegate=amqp://guest@172.18.0.3:5672/, localPort=54926]
+email-service    | 2025-12-08T21:48:57.462Z DEBUG 1 --- [email-service] [ntContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Closing cached Channel: AMQChannel(amqp://guest@172.18.0.3:5672/,1)
+email-service    | 2025-12-08T21:48:57.492Z  INFO 1 --- [email-service] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+email-service    | 2025-12-08T21:48:57.641Z  INFO 1 --- [email-service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+rabbitmq         | 2025-12-08 21:48:57.689858+00:00 [info] <0.838.0> closing AMQP connection <0.838.0> (172.18.0.10:54926 -> 172.18.0.3:5672 - rabbitConnectionFactory#37f41a81:0, vhost: '/', user: 'guest')[0m
+rabbitmq         | 2025-12-08 21:48:57.725511+00:00 [info] <0.1338.0> closing AMQP connection <0.1338.0> (172.18.0.7:34536 -> 172.18.0.3:5672 - rabbitConnectionFactory#74ed1b3d:0, vhost: '/', user: 'guest')[0m
+email-service    | 2025-12-08T21:48:57.757Z DEBUG 1 --- [email-service] [ionShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+email-service    | 2025-12-08T21:48:57.768Z  INFO 1 --- [email-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+booking-service  | 2025-12-08T21:48:57.803Z  INFO 1 --- [booking-service] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+booking-service  | 2025-12-08T21:48:57.845Z  INFO 1 --- [booking-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+booking-service  | 2025-12-08T21:48:57.854Z  INFO 1 --- [booking-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+booking-service  | 2025-12-08T21:48:57.859Z  INFO 1 --- [booking-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+api-gateway      | 2025-12-08 21:48:58.873  INFO 1 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+flight-service   | 2025-12-08T21:49:00.058Z  INFO 1 --- [flight-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+eureka-server    | 2025-12-08T21:49:00.084Z  INFO 1 --- [eureka-server] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance FLIGHT-SERVICE/4a97ca29cb99:flight-service (replication=false)
+user-service     | 2025-12-08T21:49:00.084Z  INFO 1 --- [user-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+eureka-server    | 2025-12-08T21:49:00.109Z  INFO 1 --- [eureka-server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance USER-SERVICE/9c50bea9339d:user-service:9090 (replication=false)
+user-service     | 2025-12-08T21:49:00.166Z  INFO 1 --- [user-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/9c50bea9339d:user-service:9090 - deregister  status: 200
+user-service     | 2025-12-08T21:49:00.169Z  INFO 1 --- [user-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+flight-service   | 2025-12-08T21:49:00.165Z  INFO 1 --- [flight-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FLIGHT-SERVICE/4a97ca29cb99:flight-service - deregister  status: 200
+flight-service   | 2025-12-08T21:49:00.167Z  INFO 1 --- [flight-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+[Kuser-service exited with code 143
+[Kflight-service exited with code 143
+email-service    | 2025-12-08T21:49:00.772Z  INFO 1 --- [email-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+eureka-server    | 2025-12-08T21:49:00.797Z  INFO 1 --- [eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EMAIL-SERVICE/09dc4a3ccd3b:email-service:9093 (replication=false)
+email-service    | 2025-12-08T21:49:00.800Z  INFO 1 --- [email-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMAIL-SERVICE/09dc4a3ccd3b:email-service:9093 - deregister  status: 200
+email-service    | 2025-12-08T21:49:00.802Z  INFO 1 --- [email-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+booking-service  | 2025-12-08T21:49:00.860Z  INFO 1 --- [booking-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+eureka-server    | 2025-12-08T21:49:00.881Z  INFO 1 --- [eureka-server] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance BOOKING-SERVICE/86d8c93d692b:booking-service:9092 (replication=false)
+booking-service  | 2025-12-08T21:49:00.883Z  INFO 1 --- [booking-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING-SERVICE/86d8c93d692b:booking-service:9092 - deregister  status: 200
+booking-service  | 2025-12-08T21:49:00.884Z  INFO 1 --- [booking-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+[Kemail-service exited with code 143
+rabbitmq         | [38;5;87m2025-12-08 21:49:01.199349+00:00 [notice] <0.64.0> SIGTERM received - shutting down[0m
+rabbitmq         | [38;5;87m2025-12-08 21:49:01.199349+00:00 [notice] <0.64.0> [0m
+rabbitmq         | [38;5;214m2025-12-08 21:49:01.213574+00:00 [warning] <0.591.0> HTTP listener registry could not find context rabbitmq_prometheus_tls[0m
+rabbitmq         | [38;5;214m2025-12-08 21:49:01.226098+00:00 [warning] <0.591.0> HTTP listener registry could not find context rabbitmq_management_tls[0m
+rabbitmq         | 2025-12-08 21:49:01.254077+00:00 [info] <0.742.0> stopped TCP listener on [::]:5672[0m
+rabbitmq         | 2025-12-08 21:49:01.258001+00:00 [info] <0.509.0> Virtual host '/' is stopping[0m
+rabbitmq         | 2025-12-08 21:49:01.258987+00:00 [info] <0.4841.0> Closing all connections in vhost '/' on node 'rabbit@e080e68e28de' because the vhost is stopping[0m
+rabbitmq         | 2025-12-08 21:49:01.286506+00:00 [info] <0.522.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@e080e68e28de/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent'[0m
+[Kbooking-service exited with code 143
+rabbitmq         | 2025-12-08 21:49:01.326777+00:00 [info] <0.522.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@e080e68e28de/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent' is stopped[0m
+rabbitmq         | 2025-12-08 21:49:01.327526+00:00 [info] <0.518.0> Stopping message store for directory '/var/lib/rabbitmq/mnesia/rabbit@e080e68e28de/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient'[0m
+rabbitmq         | 2025-12-08 21:49:01.340376+00:00 [info] <0.518.0> Message store for directory '/var/lib/rabbitmq/mnesia/rabbit@e080e68e28de/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/msg_store_transient' is stopped[0m
+api-gateway      | 2025-12-08 21:49:01.877  INFO 1 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+eureka-server    | 2025-12-08T21:49:01.890Z  INFO 1 --- [eureka-server] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/db754e277dfc:api-gateway:8765 (replication=false)
+api-gateway      | 2025-12-08 21:49:01.891  INFO 1 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/db754e277dfc:api-gateway:8765 - deregister  status: 200
+api-gateway      | 2025-12-08 21:49:01.906  INFO 1 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+[Kapi-gateway exited with code 143
+config-server    | 2025-12-08T21:49:02.232Z  INFO 1 --- [config-server] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+config-server    | 2025-12-08T21:49:02.271Z  INFO 1 --- [config-server] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+[Kconfig-server exited with code 143
+eureka-server    | 2025-12-08T21:49:02.722Z  INFO 1 --- [eureka-server] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKA-SERVER with eureka with status DOWN
+eureka-server    | 2025-12-08T21:49:02.805Z  INFO 1 --- [eureka-server] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+eureka-server    | 2025-12-08T21:49:02.944Z  INFO 1 --- [eureka-server] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+eureka-server    | 2025-12-08T21:49:02.964Z  INFO 1 --- [eureka-server] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+eureka-server    | 2025-12-08T21:49:02.965Z  INFO 1 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+eureka-server    | 2025-12-08T21:49:02.968Z  INFO 1 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+eureka-server    | 2025-12-08T21:49:02.969Z  INFO 1 --- [eureka-server] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+eureka-server    | 2025-12-08T21:49:02.981Z  INFO 1 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+eureka-server    | 2025-12-08T21:49:02.982Z  INFO 1 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+eureka-server    | 2025-12-08T21:49:03.005Z  INFO 1 --- [eureka-server] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+eureka-server    | 2025-12-08T21:49:03.006Z  INFO 1 --- [eureka-server] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+[Krabbitmq exited with code 0
+[Keureka-server exited with code 143
+mysql-shared     | 2025-12-08T21:49:03.503753Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.44).
+mysql-shared     | 2025-12-08T21:49:04.777654Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.44)  MySQL Community Server - GPL.
+[Kmysql-shared exited with code 0
