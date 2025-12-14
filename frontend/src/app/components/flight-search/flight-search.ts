@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FlightService } from '../../services/flight';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-flight-search',
@@ -20,7 +21,7 @@ export class FlightSearch {
   result: any;
   error = '';
 
-  constructor(private flightService: FlightService) {}
+  constructor(private flightService: FlightService, private router: Router) {}
 
   search() {
     if (!this.sourceAirport || !this.destinationAirport || !this.departureDate) {
@@ -33,7 +34,7 @@ export class FlightSearch {
       return;
     }
 
-    const params: any = {
+    const queryParams: any = {
       sourceAirport: this.sourceAirport,
       destinationAirport: this.destinationAirport,
       departureDate: this.departureDate,
@@ -42,17 +43,12 @@ export class FlightSearch {
     };
 
     if (this.tripType === 'ROUND_TRIP') {
-      params.returnDate = this.returnDate;
+      queryParams.returnDate = this.returnDate;
     }
 
     this.error = '';
 
-    this.flightService.searchFlights(params).subscribe({
-      next: res => this.result = res,
-      error: err => {
-        console.error(err);
-        this.error = 'Search failed ';
-      }
-    });
+    this.router.navigate(['/results'], { queryParams });
+
   }
 }
