@@ -25,7 +25,15 @@ export class Signup {
       password: this.password,
       role: this.role
     }).subscribe({
-      next: res => this.message = res,
+      next: ()=>{
+        this.authService.login({
+          email: this.email,
+          password: this.password
+        }).subscribe({
+          next: res => this.message = 'Signup + Login successful',
+          error: err => this.message = err.error
+        });
+      },
       error: err => this.message = err.error
     });
   }
