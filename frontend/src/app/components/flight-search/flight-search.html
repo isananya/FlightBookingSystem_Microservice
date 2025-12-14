@@ -1,48 +1,35 @@
 <h2>Search Flights</h2>
 
-<label>
-  Trip Type:
-  <select [(ngModel)]="tripType">
-    <option value="ONE_WAY">One Way</option>
-    <option value="ROUND_TRIP">Round Trip</option>
-  </select>
-</label>
+<form (ngSubmit)="search()">
 
-<br /><br />
+    <label>
+        Trip Type:
+        <select name="tripType" [(ngModel)]="tripType">
+            <option value="ONE_WAY">One Way</option>
+            <option value="ROUND_TRIP">Round Trip</option>
+        </select>
+    </label>
 
-<input
-  placeholder="Source Airport"
-  [(ngModel)]="sourceAirport"
-/>
+    <br /><br />
 
-<input
-  placeholder="Destination Airport"
-  [(ngModel)]="destinationAirport"
-/>
+    <input name="sourceAirport" placeholder="Source Airport" [(ngModel)]="sourceAirport" required />
 
-<input
-  type="date"
-  [(ngModel)]="departureDate"
-/>
+    <input name="destinationAirport" placeholder="Destination Airport" [(ngModel)]="destinationAirport" required />
 
-<div *ngIf="tripType === 'ROUND_TRIP'">
-  <input
-    type="date"
-    [(ngModel)]="returnDate"
-  />
-</div>
+    <input type="date" name="departureDate" [(ngModel)]="departureDate" required />
 
-<input
-  type="number"
-  min="1"
-  [(ngModel)]="passengerCount"
-/>
+    <div *ngIf="tripType === 'ROUND_TRIP'">
+        <input type="date" name="returnDate" [(ngModel)]="returnDate" required />
+    </div>
 
-<button (click)="search()">Search</button>
+    <input type="number" name="passengerCount" min="1" [(ngModel)]="passengerCount" />
+
+    <button type="submit">Search</button>
+
+</form>
 
 <p style="color: red">{{ error }}</p>
 
 <hr />
 
-<h3>Result</h3>
 <pre>{{ result | json }}</pre>

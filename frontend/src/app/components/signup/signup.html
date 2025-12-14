@@ -1,27 +1,18 @@
 <h2>Signup</h2>
 
-<input
-  placeholder="Name"
-  [(ngModel)]="name"
-/>
+<form (ngSubmit)="signup()">
 
-<input
-  type="email"
-  placeholder="Email"
-  [(ngModel)]="email"
-/>
+    <input name="name" placeholder="Name" [(ngModel)]="name" required />
 
-<input
-  type="password"
-  placeholder="Password"
-  [(ngModel)]="password"
-/>
+    <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required />
 
-<select [(ngModel)]="role">
-  <option value="ROLE_USER">User</option>
-  <option value="ROLE_ADMIN">Admin</option>
-</select>
+    <input type="password" name="password" placeholder="Password" [(ngModel)]="password" required />
 
-<button (click)="signup()">Signup</button>
+    <select name="role" [(ngModel)]="role">
+        <option value="ROLE_USER">User</option>
+        <option value="ROLE_ADMIN">Admin</option>
+    </select>
 
-<p>{{ message }}</p>
+    <button type="submit">Signup</button>
+
+</form>

@@ -1,17 +1,11 @@
 <h2>Login</h2>
 
-<input
-  type="email"
-  placeholder="Email"
-  [(ngModel)]="email"
-/>
+<form (ngSubmit)="login()">
 
-<input
-  type="password"
-  placeholder="Password"
-  [(ngModel)]="password"
-/>
+    <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required />
 
-<button (click)="login()">Login</button>
+    <input type="password" name="password" placeholder="Password" [(ngModel)]="password" required />
 
-<p>{{ message }}</p>
+    <button type="submit">Login</button>
+
+</form>

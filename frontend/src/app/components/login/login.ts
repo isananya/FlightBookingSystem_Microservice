@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,17 +14,21 @@ import { AuthService } from '../../services/auth';
 export class Login {
   email = '';
   password = '';
-  message = '';
+  error = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   login() {
     this.authService.login({
       email: this.email,
       password: this.password
     }).subscribe({
-      next: res => this.message = res,
-      error: err => this.message = err.error
+      next:() => {
+        this.router.navigate(['/']);
+      },
+      error: err => {
+        this.error = err.error || 'Login failed';
+      }
     });
   }
 }

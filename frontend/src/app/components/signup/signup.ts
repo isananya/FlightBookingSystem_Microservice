@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -14,9 +15,9 @@ export class Signup {
   email = '';
   password = '';
   role = 'ROLE_USER';
-  message = '';
+  error = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) { }
 
   signup() {
     this.authService.signup({
@@ -25,16 +26,22 @@ export class Signup {
       password: this.password,
       role: this.role
     }).subscribe({
-      next: ()=>{
+      next: () => {
         this.authService.login({
           email: this.email,
           password: this.password
         }).subscribe({
-          next: res => this.message = 'Signup + Login successful',
-          error: err => this.message = err.error
+          next: () => {
+            this.router.navigate(['/']);
+          },
+          error: err => {
+            this.error = err.error || 'Login failed';
+          }
         });
       },
-      error: err => this.message = err.error
+      error: err => {
+        this.error = err.error || 'Signup failed';
+      }
     });
   }
 }
