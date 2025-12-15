@@ -3,6 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FlightService } from '../../services/flight';
 import { Router } from '@angular/router';
+import airportsData from '../../../assets/airports.json';
+
+interface Airport {
+  city: string;
+  airportName: string;
+  code: string;
+}
 
 @Component({
   selector: 'app-flight-search',
@@ -10,9 +17,10 @@ import { Router } from '@angular/router';
   templateUrl: './flight-search.html',
   styleUrl: './flight-search.css',
 })
+
 export class FlightSearch {
-  sourceAirport = '';
-  destinationAirport = '';
+  sourceAirport = 'BOM';
+  destinationAirport = 'DEL';
   departureDate = '';
   returnDate = '';
   passengerCount = 1;
@@ -21,6 +29,8 @@ export class FlightSearch {
   result: any;
   error = '';
 
+  airports: Airport[] = airportsData;
+  
   constructor(private flightService: FlightService, private router: Router) {}
 
   search() {
@@ -47,6 +57,5 @@ export class FlightSearch {
     }
 
     this.router.navigate(['/results'], { queryParams });
-
   }
 }

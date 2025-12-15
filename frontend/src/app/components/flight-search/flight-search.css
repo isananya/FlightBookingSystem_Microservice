@@ -1,0 +1,163 @@
+.appbar {
+    background-color: white;
+    padding: 15px;
+    padding-left: 45px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flight-search-page {
+    background-color: rgb(220, 83, 28);
+    padding: 40px;
+    min-height: 100vh;
+}
+
+h3 {
+    font-weight: bold;
+    color: rgb(76, 69, 69);
+
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.search-card {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.trip-options {
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    accent-color: rgb(55, 125, 223);
+    margin-right: 5px;
+}
+
+label:has(input[type="radio"]) {
+    color: gray;
+    margin-right: 20px;
+}
+
+label:has(input[type="radio"]:checked) {
+    color: #196ec4;
+    font-weight: bold;
+}
+
+.radio-label input {
+    margin-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 5px 0;
+    height: 150px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    flex: 1;
+    padding: 10px 20px;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.input-group:hover {
+    background-color: #f4f9ff;
+}
+
+.input-group.last,
+.input-group:last-child {
+    border-right: none;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+option {
+    font-size: 15px;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.airport-text,
+.date-input,
+.passenger-input {
+    width: 100%;
+    height: 90px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 26px;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: #000;
+}
+
+select.airport-text {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:disabled {
+    background-color: transparent;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+button {
+    background-color: rgb(218, 74, 34);
+    color: white;
+    text-align: center;
+    height: 60px;
+    width: 200px;
+    border-radius: 30px;
+    border: 0px;
+    display: block;
+    margin: 20px auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background-color: rgb(239, 112, 77);
+}
+
+button:active {
+    transform: translateY(0);
+    border-color: rgb(191, 42, 0);
+}

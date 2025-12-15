@@ -1,0 +1,122 @@
+[
+  {
+    "city": "Delhi",
+    "airportName": "Indira Gandhi International Airport",
+    "code": "DEL"
+  },
+  {
+    "city": "Mumbai",
+    "airportName": "Chhatrapati Shivaji Maharaj International Airport",
+    "code": "BOM"
+  },
+  {
+    "city": "Bengaluru",
+    "airportName": "Kempegowda International Airport",
+    "code": "BLR"
+  },
+  {
+    "city": "Chennai",
+    "airportName": "Chennai International Airport",
+    "code": "MAA"
+  },
+  {
+    "city": "Hyderabad",
+    "airportName": "Rajiv Gandhi International Airport",
+    "code": "HYD"
+  },
+  {
+    "city": "Kolkata",
+    "airportName": "Netaji Subhas Chandra Bose International Airport",
+    "code": "CCU"
+  },
+  {
+    "city": "Pune",
+    "airportName": "Pune International Airport",
+    "code": "PNQ"
+  },
+  {
+    "city": "Ahmedabad",
+    "airportName": "Sardar Vallabhbhai Patel International Airport",
+    "code": "AMD"
+  },
+  {
+    "city": "Jaipur",
+    "airportName": "Jaipur International Airport",
+    "code": "JAI"
+  },
+  {
+    "city": "Kochi",
+    "airportName": "Cochin International Airport",
+    "code": "COK"
+  },
+  {
+    "city": "Trivandrum",
+    "airportName": "Trivandrum International Airport",
+    "code": "TRV"
+  },
+  {
+    "city": "Coimbatore",
+    "airportName": "Coimbatore International Airport",
+    "code": "CJB"
+  },
+  {
+    "city": "Madurai",
+    "airportName": "Madurai International Airport",
+    "code": "IXM"
+  },
+  {
+    "city": "Tiruchirappalli",
+    "airportName": "Tiruchirappalli International Airport",
+    "code": "TRZ"
+  },
+  {
+    "city": "Mangaluru",
+    "airportName": "Mangaluru International Airport",
+    "code": "IXE"
+  },
+  {
+    "city": "Goa",
+    "airportName": "Dabolim Airport",
+    "code": "GOI"
+  },
+  {
+    "city": "Goa",
+    "airportName": "Manohar International Airport",
+    "code": "GOX"
+  },
+  {
+    "city": "Nagpur",
+    "airportName": "Dr. Babasaheb Ambedkar International Airport",
+    "code": "NAG"
+  },
+  {
+    "city": "Indore",
+    "airportName": "Devi Ahilyabai Holkar Airport",
+    "code": "IDR"
+  },
+  {
+    "city": "Bhopal",
+    "airportName": "Raja Bhoj Airport",
+    "code": "BHO"
+  },
+  {
+    "city": "Lucknow",
+    "airportName": "Chaudhary Charan Singh International Airport",
+    "code": "LKO"
+  },
+  {
+    "city": "Varanasi",
+    "airportName": "Lal Bahadur Shastri International Airport",
+    "code": "VNS"
+  },
+  {
+    "city": "Patna",
+    "airportName": "Jay Prakash Narayan International Airport",
+    "code": "PAT"
+  },
+  {
+    "city": "Bhubaneswar",
+    "airportName": "Biju Patnaik International Airport",
+    "code": "BBI"
+  }
+]
