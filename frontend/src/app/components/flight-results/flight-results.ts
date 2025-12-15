@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FlightService } from '../../services/flight';
 import { switchMap, map, finalize } from 'rxjs';
+import { FlightList } from '../flight-list/flight-list';
 
 @Component({
   selector: 'app-flight-results',
-  imports: [CommonModule],
+  imports: [CommonModule, FlightList],
   templateUrl: './flight-results.html',
   styleUrl: './flight-results.css',
 })

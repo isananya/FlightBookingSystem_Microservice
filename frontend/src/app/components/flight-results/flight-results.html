@@ -1,14 +1,81 @@
-<h2>Flight Search Results</h2>
 
-<div *ngIf="searchParams" class="summary">
-  <p><b>From:</b> {{ searchParams['source'] }}</p>
-  <p><b>To:</b> {{ searchParams['dest'] }}</p>
-  <p><b>Departure:</b> {{ searchParams['departureDate'] }}</p>
-  <p><b>Passengers:</b> {{ searchParams['passengers'] }}</p>
+ <div class="results-header">
+    <h3>FlightBooking</h3>
+    <br>
+    <div class="header-item">
+        <span class="label">TRIP TYPE</span>
+        <div class="value">
+            {{ searchParams['returnDate'] ? 'Round Trip' : 'One Way' }}
+        </div>
+    </div>
+
+    <div class="header-item">
+        <span class="label">FROM</span>
+        <div class="value">{{ searchParams['source'] }}</div>
+    </div>
+
+    <div class="swap-icon">⇄</div>
+
+    <div class="header-item">
+        <span class="label">TO</span>
+        <div class="value">{{ searchParams['dest'] }}</div>
+    </div>
+
+    <div class="header-item">
+        <span class="label">DEPART</span>
+        <div class="value">
+            {{ searchParams['departureDate'] }} 
+        </div>
+    </div>
+
+    <div class="header-item" [class.disabled-box]="!searchParams['returnDate']">
+        <span class="label">RETURN</span>
+        <div class="value">
+            <span *ngIf="searchParams['returnDate']">{{ searchParams['returnDate'] }}</span>
+            <span *ngIf="!searchParams['returnDate']" class="placeholder-text">Tap to add return</span>
+        </div>
+    </div>
+
+    <div class="header-item">
+        <span class="label">PASSENGERS & CLASS</span>
+        <div class="value">
+            {{ searchParams['passengers'] }} Traveller(s)
+        </div>
+    </div>
 </div>
 
-<hr />
+<div class="results-layout">
+  <p class="error" *ngIf="error">
+  Error: {{ error }}
+</p>
 
+<div *ngIf="loading" class="loading">
+  <p>Searching for flights...</p>
+</div>
+
+<div
+  *ngIf="!loading && !error && (!results?.departure || results.departure.length === 0)"
+>
+  <p>No flights found for this search criteria.</p>
+</div>
+
+  <div class="flight-column" *ngIf="!loading">
+    <app-flight-list
+      title="Departure Flights"
+      [flights]="results?.departure">
+    </app-flight-list>
+  </div>
+
+  <div class="flight-column" *ngIf="!loading && results?.return?.length">
+    <app-flight-list
+      title="Return Flights"
+      [flights]="results?.return">
+    </app-flight-list>
+  </div>
+
+</div>
+
+<!-- 
 <p style="color:red; font-weight: bold;" *ngIf="error">Error: {{ error }}</p>
 
 <div *ngIf="loading" style="text-align: center; padding: 20px;">
@@ -37,7 +104,8 @@
     <p>Date: {{ flight.departureDate }}</p>
     <p>Price: ₹{{ flight.basePrice }}</p>
   </div>
-</div>
+</div> -->
+
 <!-- <h2>Flight Search Results</h2>
 
 <ng-container *ngIf="results$ | async as data; else loading">

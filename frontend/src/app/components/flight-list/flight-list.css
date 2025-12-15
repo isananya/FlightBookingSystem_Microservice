@@ -1,0 +1,101 @@
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: #f5f7fa;
+    padding: 20px;    
+}
+
+.flight-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px 15px 20px;
+    max-width: 900px;
+    border: 1px solid #d3cece;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.airline {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+}
+
+.flight-number {
+    font-size: 13px;
+    color: #666;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.time-block {
+    text-align: center;
+}
+
+.time {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+}
+
+.airport {
+    font-size: 12px;
+    color: #666;
+}
+
+.duration {
+    font-size: 13px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.flight-meta {
+    font-size: 13px;
+    color: #555;
+    margin-top: 4px;
+}
+
+.flight-right {
+    text-align: right;
+    min-width: 140px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+}
+
+.per-person {
+    font-size: 12px;
+    color: #666;
+}
+
+.cta-btn {
+    margin-top: 35px;
+    margin-bottom: 0px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    background: #2276e3;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background: #1b63c1;
+}

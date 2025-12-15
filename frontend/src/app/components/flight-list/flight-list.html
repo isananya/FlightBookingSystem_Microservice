@@ -1,0 +1,62 @@
+<div class="flight-card" *ngFor="let flight of flights">
+
+    <!-- LEFT SIDE -->
+    <div class="flight-left">
+
+        <div class="airline">
+            {{ flight.airlineName }}
+        </div>
+
+        <div class="flight-number">
+            {{ flight.flightNumber }}
+        </div>
+
+        <div class="route">
+            <div class="time-block">
+                <div class="time">
+                    {{ flight.departureTime | slice:0:5 }}
+                </div>
+                <div class="airport">
+                    {{ flight.sourceAirport }}
+                </div>
+            </div>
+
+            ←
+
+            <div class="duration">
+                {{ formatDuration(flight.duration) }}
+            </div>
+
+            →
+
+            <div class="time-block">
+                <div class="time">
+                    {{ flight.arrivalTime | slice:0:5 }}
+                </div>
+                <div class="airport">
+                    {{ flight.destinationAirport }}
+                </div>
+            </div>
+        </div>
+
+        <div class="flight-meta">
+            {{ flight.departureDate | date:'EEE, dd MMM yyyy' }}
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flight-right">
+        <div class="price">
+            ₹ {{ flight.basePrice }}
+        </div>
+        <div class="per-person">
+            per adult
+        </div>
+
+        <button class="cta-btn">
+            Select
+        </button>
+    </div>
+
+</div>
