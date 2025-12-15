@@ -35,18 +35,16 @@ export class FlightSearch {
     }
 
     const queryParams: any = {
-      sourceAirport: this.sourceAirport,
-      destinationAirport: this.destinationAirport,
+      source: this.sourceAirport,
+      dest: this.destinationAirport,
       departureDate: this.departureDate,
-      passengerCount: this.passengerCount,
+      passengers: this.passengerCount,
       roundTrip: this.tripType === 'ROUND_TRIP'
     };
 
     if (this.tripType === 'ROUND_TRIP') {
       queryParams.returnDate = this.returnDate;
     }
-
-    this.error = '';
 
     this.router.navigate(['/results'], { queryParams });
 

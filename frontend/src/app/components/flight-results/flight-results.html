@@ -1,1 +1,95 @@
-<p>flight-results works!</p>
+<h2>Flight Search Results</h2>
+
+<div *ngIf="searchParams" class="summary">
+  <p><b>From:</b> {{ searchParams['source'] }}</p>
+  <p><b>To:</b> {{ searchParams['dest'] }}</p>
+  <p><b>Departure:</b> {{ searchParams['departureDate'] }}</p>
+  <p><b>Passengers:</b> {{ searchParams['passengers'] }}</p>
+</div>
+
+<hr />
+
+<p style="color:red; font-weight: bold;" *ngIf="error">Error: {{ error }}</p>
+
+<div *ngIf="loading" style="text-align: center; padding: 20px;">
+  <p>Searching for flights...</p>
+</div>
+
+<div *ngIf="!loading && !error && (!results?.departure || results?.departure?.length === 0)">
+  <p>No flights found for this search criteria.</p>
+</div>
+
+<div *ngIf="!loading && results?.departure">
+  <h3>Departure Flights</h3>
+  <div class="card" *ngFor="let flight of results?.departure">
+    <h4>{{ flight.airlineName }} ({{ flight.flightNumber }})</h4>
+    <p>{{ flight.sourceAirport }} → {{ flight.destinationAirport }}</p>
+    <p>Date: {{ flight.departureDate }}</p>
+    <p>Price: ₹{{ flight.basePrice }}</p>
+  </div>
+</div>
+
+<div *ngIf="!loading && results?.return">
+  <h3>Return Flights</h3>
+  <div class="card" *ngFor="let flight of results?.return">
+    <h4>{{ flight.airlineName }} ({{ flight.flightNumber }})</h4>
+    <p>{{ flight.sourceAirport }} → {{ flight.destinationAirport }}</p>
+    <p>Date: {{ flight.departureDate }}</p>
+    <p>Price: ₹{{ flight.basePrice }}</p>
+  </div>
+</div>
+<!-- <h2>Flight Search Results</h2>
+
+<ng-container *ngIf="results$ | async as data; else loading">
+
+  <div class="summary">
+    <p><b>From:</b> {{ data.params['source'] }}</p>
+    <p><b>To:</b> {{ data.params['dest'] }}</p>
+    <p><b>Departure:</b> {{ data.params['departureDate'] }}</p>
+
+    <p *ngIf="data.params['roundTrip'] === 'true'">
+      <b>Return:</b> {{ data.params['returnDate'] }}
+    </p>
+
+    <p><b>Passengers:</b> {{ data.params['passengers'] }}</p>
+  </div>
+
+  <hr />
+
+  <div *ngIf="data.res?.departure?.length">
+    <h3>Departure Flights ({{ data.res.departureCount }})</h3>
+
+    <div class="card" *ngFor="let flight of data.res.departure">
+      <h4>{{ flight.airlineName }} ({{ flight.flightNumber }})</h4>
+      <p>{{ flight.sourceAirport }} → {{ flight.destinationAirport }}</p>
+      <p>Date: {{ flight.departureDate }}</p>
+      <p>Seats Available: {{ flight.availableSeats }}</p>
+      <p>Price: ₹{{ flight.basePrice }}</p>
+    </div>
+  </div>
+
+  <p *ngIf="data.res?.departureCount === 0">
+    No departure flights available.
+  </p>
+
+  <div *ngIf="data.res?.['return']?.length">
+    <h3>Return Flights ({{ data.res.returnCount }})</h3>
+
+    <div class="card" *ngFor="let flight of data.res['return']">
+      <h4>{{ flight.airlineName }} ({{ flight.flightNumber }})</h4>
+      <p>{{ flight.sourceAirport }} → {{ flight.destinationAirport }}</p>
+      <p>Date: {{ flight.departureDate }}</p>
+      <p>Seats Available: {{ flight.availableSeats }}</p>
+      <p>Price: ₹{{ flight.basePrice }}</p>
+    </div>
+  </div>
+
+  <p *ngIf="data.res?.returnCount === 0 && data.params['roundTrip'] === 'true'">
+    No return flights available.
+  </p>
+
+</ng-container>
+
+<ng-template #loading>
+  <p>Loading flights...</p>
+</ng-template> -->
