@@ -1,0 +1,70 @@
+.signup-page {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/images/auth_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signup-box {
+    width: 35%;
+    /* height: 450px; */
+    box-shadow: 0px 4px 8px 0px gray, 0px 6px 12px 0px gray;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    margin: 20px;
+    border-radius: 20px;
+    display: inline;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+select {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+button {
+    background-color: rgb(218, 74, 34);
+    color: white;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    /* margin: 10px; */
+    border-radius: 20px;
+    border: 0px;
+    /* justify-self: center; */
+    display: block;
+    margin: 10px auto;
+}
+
+p{
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+
+a{
+    font-weight: bold;
+}
