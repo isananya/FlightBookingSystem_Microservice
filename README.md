@@ -2,6 +2,21 @@
 
 This project is an implementation of a flight booking platform built on a microservices architecture. It creates a separation of concerns by isolating User management, Flight Inventory and Booking Operations into independent units. 
 
+## **Frontend Screenshots**
+
+### Sign Up page
+<img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/1779c99d-b3cb-4b00-8770-c5cbf7dccf5a" />
+
+### Login page
+<img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/841a54e7-e507-4d10-a88b-274cbc4c8be2" />
+
+### Flight Search page
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/b8fea3e3-a125-47d1-a88a-36e139e0e1a2" />
+
+### Flight Search Results
+<img width="1915" height="998" alt="image" src="https://github.com/user-attachments/assets/215a2ff6-edca-4d72-8ea3-2cde96630592" />
+
+
 ## **Architecture Diagram**
 
 <img width="1375" height="574" alt="image" src="https://github.com/user-attachments/assets/64ae6a44-451a-4aad-8a92-b4def23ff003" />
