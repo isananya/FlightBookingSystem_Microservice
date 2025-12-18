@@ -12,14 +12,14 @@ export class FlightList {
   @Input() flights: any[] | null = [];
 
   formatDuration(duration: string): string {
-  const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
-  if (!match) return '';
+    const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
+    if (!match) return '';
 
-  const hours = match[1] ? `${match[1]}h` : '';
-  const minutes = match[2] ? ` ${match[2]}m` : '';
+    const hours = match[1] ? `${match[1]}h` : '';
+    const minutes = match[2] ? ` ${match[2]}m` : '';
 
-  return `${hours}${minutes}`.trim();
-}
+    return `${hours}${minutes}`.trim();
+  }
 }
 
 
