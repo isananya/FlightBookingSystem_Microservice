@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FlightService } from '../../services/flight';
 import { finalize } from 'rxjs';
 import { FlightList } from '../flight-list/flight-list';
@@ -47,7 +47,8 @@ export class FlightResults implements OnInit{
   constructor(
     private route: ActivatedRoute,
     private flightService: FlightService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -106,6 +107,18 @@ export class FlightResults implements OnInit{
   }
 
   book() {
+    this.router.navigate(["/book"],{
+      queryParams: {
+        depId: this.selectedDepartureId,
+        retId: this.selectedRetFlight ? this.selectedReturnId : null,
+        count: this.searchParams["passengers"],
+        round: this.searchParams["roundTrip"]
+      },
+      state: {
+        departureFlight: this.selectedDepFlight,
+        returnFlight: this.selectedRetFlight
+      }
+    });
      console.log("Booking initiated");
   }
 }

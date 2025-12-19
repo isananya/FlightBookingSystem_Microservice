@@ -4,9 +4,11 @@
   <div class="avatar" (click)="toggle($event)">A</div>
 </div>
 
-<div class="dropdown-menu" *ngIf="isOpen">
-  <div class="menu-item">Profile</div>
-  <div class="menu-item">Booking History</div>
-  <div class="menu-divider"></div>
-  <div class="menu-item logout" (click)="logout()">Logout</div>
+<div class="container" *ngIf="isOpen">
+  <div class="dropdown-menu">
+    <div class="menu-item">Profile</div>
+    <div class="menu-item">Booking History</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item logout" (click)="logout()">Logout</div>
+  </div>
 </div>

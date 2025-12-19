@@ -1,0 +1,24 @@
+<h2>Traveller Details</h2>
+
+<form (ngSubmit)="confirmBooking()">
+
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="request.emailId" required>
+    <br><br>
+    <h3>Passenger Details</h3><br>
+    <input name="firstName" placeholder="first name" [(ngModel)]="request.passengers[0].firstName" required>
+    <input name="lastName" placeholder="last name" [(ngModel)]="request.passengers[0].lastName" required>
+    <br><br>
+    <input name="age" placeholder="age" [(ngModel)]="request.passengers[0].age" required>
+    <br><br>
+    <input name="departureSeatNumber" placeholder="seat number" [(ngModel)]="request.passengers[0].departureSeatNumber"
+        required>
+    <br><br>
+    <input name="gender" placeholder="gender" [(ngModel)]="request.passengers[0].gender"
+        required>
+    <br><br>
+    <input name="mealOption" placeholder="meal option" [(ngModel)]="request.passengers[0].mealOption" required>
+
+    <button type="submit">BOOK</button>
+
+</form>
