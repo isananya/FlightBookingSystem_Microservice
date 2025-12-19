@@ -84,18 +84,29 @@ body {
     color: #666;
 }
 
-.cta-btn {
-    margin-top: 35px;
-    margin-bottom: 0px;
-    padding: 8px 14px;
-    border-radius: 6px;
-    border: none;
-    background: #2276e3;
-    color: white;
-    font-size: 13px;
-    cursor: pointer;
+.flight-card.active-card {
+    border: 2px solid #ef5350;
+    background-color: #fffdfd;
 }
 
-.cta-btn:hover {
-    background: #1b63c1;
+.radio-outer {
+    height: 24px;
+    width: 24px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.active-card .radio-outer {
+    border-color: #ef5350;
+}
+
+.radio-inner {
+    height: 14px;
+    width: 14px;
+    background-color: #ef5350;
+    border-radius: 50%;
 }

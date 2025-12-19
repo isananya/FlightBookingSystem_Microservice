@@ -62,15 +62,23 @@
   <div class="flight-column" *ngIf="!loading">
     <app-flight-list
       title="Departure Flights"
-      [flights]="results?.departure">
+      [flights]="results?.departure"
+      [selectedId]="selectedDepartureId" 
+      (flightSelected)="onDepartureSelect($event)">
     </app-flight-list>
   </div>
 
   <div class="flight-column" *ngIf="!loading && results?.return?.length">
     <app-flight-list
       title="Return Flights"
-      [flights]="results?.return">
+      [flights]="results?.return"
+      [selectedId]="selectedReturnId"
+      (flightSelected)="onReturnSelect($event)">
     </app-flight-list>
   </div>
 
+</div>
+
+<div class="footer-action" *ngIf="(selectedDepartureId && !results?.return?.length) || (selectedDepartureId && selectedReturnId)">
+    <button class="book-btn">BOOK NOW</button>
 </div>

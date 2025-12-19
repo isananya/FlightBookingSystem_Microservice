@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,17 @@ import { CommonModule } from '@angular/common';
 export class FlightList {
   @Input() title = '';
   @Input() flights: any[] | null = [];
+  @Input() selectedId: number | null = null;
+
+  @Output() flightSelected = new EventEmitter<number | null>();
+
+  selectFlight(id: number) {
+    if (this.selectedId === id) {
+      this.flightSelected.emit(null);
+    } else {
+      this.flightSelected.emit(id);
+    }
+  }
 
   formatDuration(duration: string): string {
     const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
@@ -20,6 +31,7 @@ export class FlightList {
 
     return `${hours}${minutes}`.trim();
   }
+
 }
 
 

@@ -17,6 +17,33 @@ export class FlightResults implements OnInit{
   loading = true;
   error = '';
 
+  selectedDepartureId: number | null = null;
+  selectedReturnId: number | null = null;
+  selectedDepFlight: any = null;
+  selectedRetFlight: any = null;
+
+  onDepartureSelect(id: number | null) {
+    this.selectedDepartureId = id;
+
+    if (id !== null && this.results?.departure) {
+      this.selectedDepFlight = this.results.departure.find((f: any) => f.id === id);
+    } else {
+      this.selectedDepFlight = null;
+    }
+    
+    console.log("Selected Dep Flight:", this.selectedDepFlight);
+  }
+
+  onReturnSelect(id: number | null) {
+    this.selectedReturnId = id;
+
+    if (id !== null && this.results?.return) {
+      this.selectedRetFlight = this.results.return.find((f: any) => f.id === id);
+    } else {
+      this.selectedRetFlight = null;
+    }
+  }
+
   constructor(
     private route: ActivatedRoute,
     private flightService: FlightService,

@@ -1,4 +1,6 @@
-<div class="flight-card" *ngFor="let flight of flights">
+<div class="flight-card" *ngFor="let flight of flights" 
+    [class.active-card]="flight.id === selectedId"
+    (click)="selectFlight(flight.id)">
 
     <div class="flight-left">
 
@@ -46,15 +48,15 @@
 
     <div class="flight-right">
         <div class="price">
-            ₹ {{ flight.basePrice }}
+            Rs {{ flight.basePrice }}
         </div>
         <div class="per-person">
             per adult
         </div>
 
-        <button class="cta-btn">
-            Select
-        </button>
+        <div class="radio-outer">
+            <div class="radio-inner" *ngIf="flight.id === selectedId"></div>
+        </div>
     </div>
 
 </div>
