@@ -1,0 +1,59 @@
+.appbar {
+  height: 64px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ef5350;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #ef5350;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 64px;
+  right: 30px;
+  width: 160px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  z-index: 2000;
+}
+
+.menu-item {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: #f5f5f5;
+}
+
+.menu-divider {
+  height: 1px;
+  background: #eee;
+}
+
+.logout {
+  color: red;
+}

@@ -1,78 +1,68 @@
-
- <div class="results-header">
-    <h3>FlightBooking</h3>
-    <br>
-    <div class="header-item">
-        <span class="label">TRIP TYPE</span>
-        <div class="value">
-            {{ searchParams['returnDate'] ? 'Round Trip' : 'One Way' }}
-        </div>
+<div class="results-header">
+  <br>
+  <div class="header-item">
+    <span class="label">TRIP TYPE</span>
+    <div class="value">
+      {{ searchParams['returnDate'] ? 'Round Trip' : 'One Way' }}
     </div>
+  </div>
 
-    <div class="header-item">
-        <span class="label">FROM</span>
-        <div class="value">{{ searchParams['source'] }}</div>
+  <div class="header-item">
+    <span class="label">FROM</span>
+    <div class="value">{{ searchParams['source'] }}</div>
+  </div>
+
+  <div class="swap-icon">⇄</div>
+
+  <div class="header-item">
+    <span class="label">TO</span>
+    <div class="value">{{ searchParams['dest'] }}</div>
+  </div>
+
+  <div class="header-item">
+    <span class="label">DEPART</span>
+    <div class="value">
+      {{ searchParams['departureDate'] }}
     </div>
+  </div>
 
-    <div class="swap-icon">⇄</div>
-
-    <div class="header-item">
-        <span class="label">TO</span>
-        <div class="value">{{ searchParams['dest'] }}</div>
+  <div class="header-item" [class.disabled-box]="!searchParams['returnDate']">
+    <span class="label">RETURN</span>
+    <div class="value">
+      <span *ngIf="searchParams['returnDate']">{{ searchParams['returnDate'] }}</span>
+      <span *ngIf="!searchParams['returnDate']" class="placeholder-text">Tap to add return</span>
     </div>
+  </div>
 
-    <div class="header-item">
-        <span class="label">DEPART</span>
-        <div class="value">
-            {{ searchParams['departureDate'] }} 
-        </div>
+  <div class="header-item">
+    <span class="label">PASSENGERS</span>
+    <div class="value">
+      {{ searchParams['passengers'] }} Traveller(s)
     </div>
-
-    <div class="header-item" [class.disabled-box]="!searchParams['returnDate']">
-        <span class="label">RETURN</span>
-        <div class="value">
-            <span *ngIf="searchParams['returnDate']">{{ searchParams['returnDate'] }}</span>
-            <span *ngIf="!searchParams['returnDate']" class="placeholder-text">Tap to add return</span>
-        </div>
-    </div>
-
-    <div class="header-item">
-        <span class="label">PASSENGERS</span>
-        <div class="value">
-            {{ searchParams['passengers'] }} Traveller(s)
-        </div>
-    </div>
+  </div>
 </div>
 
 <div class="results-layout">
   <p class="error" *ngIf="error">
-  Error: {{ error }}
-</p>
+    Error: {{ error }}
+  </p>
 
-<div *ngIf="loading" class="loading">
-  <p>Searching for flights...</p>
-</div>
+  <div *ngIf="loading" class="loading">
+    <p>Searching for flights...</p>
+  </div>
 
-<div
-  *ngIf="!loading && !error && (!results?.departure || results.departure.length === 0)"
->
-  <p>No flights found for this search criteria.</p>
-</div>
+  <div *ngIf="!loading && !error && (!results?.departure || results.departure.length === 0)">
+    <p>No flights found for this search criteria.</p>
+  </div>
 
   <div class="flight-column" *ngIf="!loading">
-    <app-flight-list
-      title="Departure Flights"
-      [flights]="results?.departure"
-      [selectedId]="selectedDepartureId" 
+    <app-flight-list title="Departure Flights" [flights]="results?.departure" [selectedId]="selectedDepartureId"
       (flightSelected)="onDepartureSelect($event)">
     </app-flight-list>
   </div>
 
   <div class="flight-column" *ngIf="!loading && results?.return?.length">
-    <app-flight-list
-      title="Return Flights"
-      [flights]="results?.return"
-      [selectedId]="selectedReturnId"
+    <app-flight-list title="Return Flights" [flights]="results?.return" [selectedId]="selectedReturnId"
       (flightSelected)="onReturnSelect($event)">
     </app-flight-list>
   </div>
@@ -81,36 +71,34 @@
 
 <div class="sticky-footer" *ngIf="selectedDepFlight">
 
-    <div class="selection-summary">
-      
-      <div class="summary-item">
-        <span class="summary-label">Departure</span>
-        <span class="summary-value">
-          {{ selectedDepFlight.airlineName }} ({{ selectedDepFlight.flightNumber }})
-        </span>
-      </div>
+  <div class="selection-summary">
 
-      <div class="summary-item" *ngIf="results?.return?.length > 0">
-        <span class="summary-label">Return</span>
-        
-        <span class="summary-value" *ngIf="selectedRetFlight">
-          {{ selectedRetFlight.airlineName }} ({{ selectedRetFlight.flightNumber }})
-        </span>
-        <span class="summary-value placeholder" *ngIf="!selectedRetFlight">
-          Select a return flight...
-        </span>
-      </div>
-
-      <div class="total-price">
-        Total: ₹ {{ calculateTotal() }}
-      </div>
-
+    <div class="summary-item">
+      <span class="summary-label">Departure</span>
+      <span class="summary-value">
+        {{ selectedDepFlight.airlineName }} ({{ selectedDepFlight.flightNumber }})
+      </span>
     </div>
 
-    <button class="book-btn" 
-            [disabled]="results?.return?.length > 0 && !selectedRetFlight"
-            (click)="book()">
-      BOOK NOW
-    </button>
+    <div class="summary-item" *ngIf="results?.return?.length > 0">
+      <span class="summary-label">Return</span>
+
+      <span class="summary-value" *ngIf="selectedRetFlight">
+        {{ selectedRetFlight.airlineName }} ({{ selectedRetFlight.flightNumber }})
+      </span>
+      <span class="summary-value placeholder" *ngIf="!selectedRetFlight">
+        Select a return flight...
+      </span>
+    </div>
+
+    <div class="total-price">
+      Total: ₹ {{ calculateTotal() }}
+    </div>
+
+  </div>
+
+  <button class="book-btn" [disabled]="results?.return?.length > 0 && !selectedRetFlight" (click)="book()">
+    BOOK NOW
+  </button>
 
 </div>
