@@ -79,6 +79,38 @@
 
 </div>
 
-<div class="footer-action" *ngIf="(selectedDepartureId && !results?.return?.length) || (selectedDepartureId && selectedReturnId)">
-    <button class="book-btn">BOOK NOW</button>
+<div class="sticky-footer" *ngIf="selectedDepFlight">
+
+    <div class="selection-summary">
+      
+      <div class="summary-item">
+        <span class="summary-label">Departure</span>
+        <span class="summary-value">
+          {{ selectedDepFlight.airlineName }} ({{ selectedDepFlight.flightNumber }})
+        </span>
+      </div>
+
+      <div class="summary-item" *ngIf="results?.return?.length > 0">
+        <span class="summary-label">Return</span>
+        
+        <span class="summary-value" *ngIf="selectedRetFlight">
+          {{ selectedRetFlight.airlineName }} ({{ selectedRetFlight.flightNumber }})
+        </span>
+        <span class="summary-value placeholder" *ngIf="!selectedRetFlight">
+          Select a return flight...
+        </span>
+      </div>
+
+      <div class="total-price">
+        Total: ₹ {{ calculateTotal() }}
+      </div>
+
+    </div>
+
+    <button class="book-btn" 
+            [disabled]="results?.return?.length > 0 && !selectedRetFlight"
+            (click)="book()">
+      BOOK NOW
+    </button>
+
 </div>

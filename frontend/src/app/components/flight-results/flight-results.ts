@@ -43,7 +43,7 @@ export class FlightResults implements OnInit{
       this.selectedRetFlight = null;
     }
   }
-
+  
   constructor(
     private route: ActivatedRoute,
     private flightService: FlightService,
@@ -92,5 +92,20 @@ export class FlightResults implements OnInit{
           }
         });
     });
+  }
+
+  calculateTotal(): number {
+    let total = 0;
+    if (this.selectedDepFlight) {
+      total += this.selectedDepFlight.basePrice;
+    }
+    if (this.selectedRetFlight) {
+      total += this.selectedRetFlight.basePrice;
+    }
+    return total * this.searchParams['passengers'];
+  }
+
+  book() {
+     console.log("Booking initiated");
   }
 }
