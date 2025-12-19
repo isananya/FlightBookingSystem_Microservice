@@ -60,6 +60,7 @@ public class ScheduleService {
         Flight flight = schedule.getFlight();
         
         ScheduleResponseDTO dto = new ScheduleResponseDTO();
+		dto.setId(schedule.getId());
         dto.setDepartureDate(schedule.getDepartureDate());
         dto.setBasePrice(schedule.getBasePrice());
         dto.setAirlineName(schedule.getAirlineName());

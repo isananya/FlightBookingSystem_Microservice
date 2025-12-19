@@ -37,7 +37,7 @@ public class BookingController {
 	@PostMapping()
 	public ResponseEntity<String> saveBooking(@RequestBody @Valid BookingRequestDTO request){
 		String pnr = bookingService.addBooking(request);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Booking Successful! PNR : "+pnr);
+		return ResponseEntity.status(HttpStatus.CREATED).body(pnr);
 	}
 	
 	@GetMapping("/history/{emailId}")

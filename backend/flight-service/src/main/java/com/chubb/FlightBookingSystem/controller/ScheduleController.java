@@ -40,15 +40,15 @@ public class ScheduleController {
 	}
 	
 	@PostMapping("/inventory")
-	public ResponseEntity<String> saveSchedule(@RequestBody @Valid ScheduleRequestDTO scheduleDto) {
+	public ResponseEntity<Integer> saveSchedule(@RequestBody @Valid ScheduleRequestDTO scheduleDto) {
 		Schedule schedule = scheduleService.addSchedule(scheduleDto);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Schedule added!!");
+		return ResponseEntity.status(HttpStatus.CREATED).body(schedule.getId());
 	}
 	
 	@PostMapping("/route")
 	public ResponseEntity<String> saveFlight(@RequestBody @Valid Flight flight){
 		flightService.addFlight(flight);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Flight details added!!");
+		return ResponseEntity.status(HttpStatus.CREATED).body(flight.getFlightNumber());
 	}
 	
 	@GetMapping("/{id}")

@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ScheduleResponseDTO {
+    private int id;
 	private String airlineName; 
     private LocalDate departureDate;
     private float basePrice;
