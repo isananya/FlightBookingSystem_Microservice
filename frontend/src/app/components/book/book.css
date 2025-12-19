@@ -1,0 +1,100 @@
+.container {
+    background-color: #d7dfed;
+    padding: 40px;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.booking-container {
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+.card-header {
+    font-weight: 700;
+    color: #ef5350;
+    /* Red header text */
+    text-transform: uppercase;
+    font-size: 14px;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* GRID LAYOUT (2 Columns) */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* FORM ELEMENTS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #ef5350;
+    outline: none;
+}
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* BUTTON */
+.pay-btn {
+    background-color: #ef5350;
+    color: white;
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(239, 83, 80, 0.3);
+}
+
+.pay-btn:hover {
+    background-color: #d32f2f;
+}

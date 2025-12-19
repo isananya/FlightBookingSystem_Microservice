@@ -1,24 +1,76 @@
-<h2>Traveller Details</h2>
+<div class="container">
+    <div class="booking-container">
 
-<form (ngSubmit)="confirmBooking()">
+        <h2>Traveller Details</h2>
 
-    <label>Email:</label>
-    <input type="email" name="email" [(ngModel)]="request.emailId" required>
-    <br><br>
-    <h3>Passenger Details</h3><br>
-    <input name="firstName" placeholder="first name" [(ngModel)]="request.passengers[0].firstName" required>
-    <input name="lastName" placeholder="last name" [(ngModel)]="request.passengers[0].lastName" required>
-    <br><br>
-    <input name="age" placeholder="age" [(ngModel)]="request.passengers[0].age" required>
-    <br><br>
-    <input name="departureSeatNumber" placeholder="seat number" [(ngModel)]="request.passengers[0].departureSeatNumber"
-        required>
-    <br><br>
-    <input name="gender" placeholder="gender" [(ngModel)]="request.passengers[0].gender"
-        required>
-    <br><br>
-    <input name="mealOption" placeholder="meal option" [(ngModel)]="request.passengers[0].mealOption" required>
+        <form (ngSubmit)="confirmBooking()">
 
-    <button type="submit">BOOK</button>
+            <div class="card contact-card">
+                <div class="card-header">Contact Information</div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" [(ngModel)]="email" placeholder="name@example.com" required
+                        class="full-width">
+                </div>
+            </div>
 
-</form>
+            <div class="card passenger-card" *ngFor="let p of passengers; let i = index">
+
+                <div class="card-header">Passenger {{ i + 1 }}</div>
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="firstName{{i}}" [(ngModel)]="p.firstName" placeholder="First Name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName{{i}}" [(ngModel)]="p.lastName" placeholder="Last Name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" name="age{{i}}" [(ngModel)]="p.age" placeholder="Age" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select name="gender{{i}}" [(ngModel)]="p.gender" required>
+                            <option value="MALE">Male</option>
+                            <option value="FEMALE">Female</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Meal Preference</label>
+                        <select name="mealOption{{i}}" [(ngModel)]="p.mealOption" required>
+                            <option value="VEG">Veg</option>
+                            <option value="NONVEG">Non-Veg</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Departure Seat Number</label>
+                        <input type="text" name="depSeat{{i}}" [(ngModel)]="p.departureSeatNumber"
+                            placeholder="e.g. 12A" required>
+                    </div>
+
+                    <div class="form-group" *ngIf="isRoundTrip">
+                        <label>Return Seat Number</label>
+                        <input type="text" name="retSeat{{i}}" [(ngModel)]="p.returnSeatNumber" placeholder="e.g. 14C"
+                            [required]="isRoundTrip">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-action">
+                <button type="submit" class="pay-btn">CONFIRM & BOOK</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
