@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { BookingResponse } from '../../models/booking';
 import { FlightService } from '../../services/flight';
 import { AuthService } from '../../services/auth';
@@ -15,9 +15,15 @@ export class BookingHistory {
   isLoading: boolean = true;
   userEmail: string = '';
 
+  showModal: boolean = false;
+  showErrorModal: boolean = false;
+  
+  pnrToCancel: string | null = null;
+
   constructor(
     private flightService: FlightService,
-    private authService: AuthService
+    private authService: AuthService,
+    private cd: ChangeDetectorRef,
   ) { }
 
   ngOnInit() {
@@ -33,6 +39,7 @@ export class BookingHistory {
       next: (data) => {
         this.bookings = data;
         this.isLoading = false;
+        this.cd.detectChanges();
       },
       error: (err) => {
         console.error('Error fetching bookings', err);
@@ -41,20 +48,33 @@ export class BookingHistory {
     });
   }
 
-  cancelBooking(pnr: String) {
-    if (!confirm('Are you sure you want to cancel this booking?')) {
-      return;
-    }
+  openCancelModal(pnr: string) {
+    this.pnrToCancel = pnr;
+    this.showModal = true;
+  }
 
-    this.flightService.cancelBooking(pnr).subscribe({
+  closeModal() {
+    this.showModal = false;
+    this.pnrToCancel = null;
+  }
+
+  onConfirmCancel() {
+    if (!this.pnrToCancel) return;
+
+    this.flightService.cancelBooking(this.pnrToCancel).subscribe({
       next: () => {
-        alert('Booking Cancelled Successfully');
+        this.closeModal();
         this.loadBookings();
       },
       error: (err) => {
+        this.closeModal();
+        this.showErrorModal = true;
         console.error('Cancellation failed', err);
-        alert('Could not cancel booking.');
       }
     });
+  }
+
+  closeErrorModal() {
+    this.showErrorModal = false;
   }
 }

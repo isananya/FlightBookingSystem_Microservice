@@ -1,58 +1,110 @@
-<div style="padding: 20px;">
+<div class="history-page">
+    <div class="booking-container">
   
-  <h2>My Booking History</h2>
-
-  <div *ngIf="isLoading">Loading bookings...</div>
-
-  <div *ngIf="!isLoading && bookings.length === 0">
-    No bookings found.
+  <div class="header">
+    <h2>My Booking History</h2>
+    <p class="subtitle">Manage your past and upcoming trips</p>
   </div>
 
-  <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: left;" *ngIf="bookings.length > 0">
-    <thead>
-      <tr style="background-color: #f0f0f0;">
-        <th>ID</th>
-        <th>PNR</th>
-        <th>Trip Type</th> 
-        <th>From</th>
-        <th>To</th>
-        <th>Departure Date</th>
-        <th>Arrival Date</th>
-        <th>Passengers</th>
-        <th>Total Amount</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let b of bookings">
-        <td>{{ b.id }}</td>
-        <td><strong>{{ b.pnr }}</strong></td>
-        
-        <td>{{ b.roundTrip ? 'Round Trip' : 'One Way' }}</td>
-        
-        <td>{{ b.sourceAirport }}</td>
-        <td>{{ b.destinationAirport }}</td>
-        <td>{{ b.departureDate }}</td>
-        
-        <td>{{ b.arrivalDate ? b.arrivalDate : '-' }}</td>
-        
-        <td>{{ b.passengerCount }}</td>
-        <td>₹ {{ b.totalAmount }}</td>
-        
-        <td [style.color]="b.status === 'CANCELLED' ? 'red' : 'green'">
-          <strong>{{ b.status }}</strong>
-        </td>
+  <div *ngIf="isLoading" class="state-message">
+    <div class="spinner"></div>
+    <p>Loading your journeys...</p>
+  </div>
 
-        <td>
-          <button 
-            (click)="cancelBooking(b.pnr)" 
-            [disabled]="b.status === 'CANCELLED'">
-            Cancel
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div *ngIf="!isLoading && bookings.length === 0" class="state-message empty">
+    <p>No bookings found.</p>
+    <button class="action-btn book-btn" routerLink="/">Book a Flight</button>
+  </div>
 
+  <div class="table-wrapper" *ngIf="bookings.length > 0">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>PNR</th>
+          <th>Trip Type</th> 
+          <th>From</th>
+          <th>To</th>
+          <th>Departure Date</th>
+          <th>Arrival Date</th>
+          <th>Passenger(s)</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let b of bookings">
+          <td class="text-muted">{{ b.id }}</td>
+          <td class="font-bold">{{ b.pnr }}</td>
+          
+          <td>
+            <span class="trip-tag">{{ b.roundTrip ? 'Round Trip' : 'One Way' }}</span>
+          </td>
+          
+          <td class="airport-code">{{ b.sourceAirport }}</td>
+          <td class="airport-code">{{ b.destinationAirport }}</td>
+          <td>{{ b.departureDate }}</td>
+          
+          <td>{{ b.arrivalDate ? b.arrivalDate : '-' }}</td>
+          
+          <td>{{ b.passengerCount }}</td>
+          <td class="font-bold">₹ {{ b.totalAmount }}</td>
+          
+          <td>
+            <span class="status-badge" 
+                  [ngClass]="{
+                    'status-cancelled': b.status === 'CANCELLED',
+                    'status-confirmed': b.status !== 'CANCELLED'
+                  }">
+              {{ b.status }}
+            </span>
+          </td>
+
+          <td>
+            <button 
+              class="action-btn cancel-btn"
+              (click)="openCancelModal(b.pnr)" 
+              [disabled]="b.status === 'CANCELLED'">
+              Cancel
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Confirm Cancellation</h3>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to cancel PNR: <strong>{{ pnrToCancel }}</strong>?</p>
+      </div>
+      <div class="modal-actions">
+        <button class="modal-btn secondary" (click)="closeModal()">No, Keep it</button>
+        <button class="modal-btn danger" (click)="onConfirmCancel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showErrorModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Cancellation Failed</h3>
+      </div>
+      <div class="modal-body">
+        <p>Unable to cancel this booking.</p>
+        <p class="error-text">
+          A 24-hour cancellation restriction applies to this flight.
+        </p>
+      </div>
+      <div class="modal-actions single-action">
+        <button class="modal-btn secondary" (click)="closeErrorModal()">OK, Understood</button>
+      </div>
+    </div>
+  </div>
+
+</div>
 </div>
