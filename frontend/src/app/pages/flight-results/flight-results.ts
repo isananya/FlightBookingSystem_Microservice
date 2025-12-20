@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FlightService } from '../../services/flight';
 import { finalize } from 'rxjs';
-import { FlightList } from '../flight-list/flight-list';
+import { FlightList } from '../../components/flight-list/flight-list';
 
 @Component({
   selector: 'app-flight-results',

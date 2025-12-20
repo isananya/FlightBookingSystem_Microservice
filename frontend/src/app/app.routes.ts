@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { Login } from './components/login/login';
-import { Signup } from './components/signup/signup';
-import { FlightSearch } from './components/flight-search/flight-search';
-import { FlightResults } from './components/flight-results/flight-results';
-import { Book } from './components/book/book';
+import { Login } from './pages/login/login';
+import { Signup } from './pages/signup/signup';
+import { FlightSearch } from './pages/flight-search/flight-search';
+import { FlightResults } from './pages/flight-results/flight-results';
+import { Book } from './pages/book/book';
 
 export const routes: Routes = [
     { path: '', component: FlightSearch },
