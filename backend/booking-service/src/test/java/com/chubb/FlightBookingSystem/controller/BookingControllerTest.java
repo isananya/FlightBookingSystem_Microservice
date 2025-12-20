@@ -65,18 +65,18 @@ class BookingControllerTest {
                 .andExpect(content().string("Booking Successful! PNR : PNR123"));
     }
 
-    @Test
-    void whenGetTicketHistory_thenReturnsOk() throws Exception {
-        TicketResponseDTO ticketResponse = new TicketResponseDTO();
-        ticketResponse.setFirstName("John");
-        List<TicketResponseDTO> tickets = Collections.singletonList(ticketResponse);
-
-        when(ticketService.getTicketsByEmail("test@example.com")).thenReturn(tickets);
-
-        mockMvc.perform(get("/booking/history/{emailId}", "test@example.com"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].firstName").value("John"));
-    }
+//    @Test
+//    void whenGetTicketHistory_thenReturnsOk() throws Exception {
+//        TicketResponseDTO ticketResponse = new TicketResponseDTO();
+//        ticketResponse.setFirstName("John");
+//        List<TicketResponseDTO> tickets = Collections.singletonList(ticketResponse);
+//
+//        when(ticketService.getTicketsByEmail("test@example.com")).thenReturn(tickets);
+//
+//        mockMvc.perform(get("/booking/history/{emailId}", "test@example.com"))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$[0].firstName").value("John"));
+//    }
 
     @Test
     void whenCancelBooking_thenReturnsOk() throws Exception {

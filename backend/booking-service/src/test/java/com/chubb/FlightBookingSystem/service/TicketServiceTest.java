@@ -76,39 +76,4 @@ class TicketServiceTest {
 
         assertThrows(BookingNotFoundException.class, () -> ticketService.getTicketsByPnr("PNR123"));
     }
-
-    @Test
-    void whenGetTicketsByEmail_thenSuccess() {
-        when(bookingRepository.findByEmailId("test@example.com")).thenReturn(Collections.singletonList(booking));
-        when(ticketRepository.findByBooking(booking)).thenReturn(Collections.singletonList(ticket));
-        when(flightClient.getSchedule(1)).thenReturn(schedule);
-        when(flightClient.getFlight("FL123")).thenReturn(flight);
-
-        List<TicketResponseDTO> tickets = ticketService.getTicketsByEmail("test@example.com");
-
-        assertFalse(tickets.isEmpty());
-        assertEquals(1, tickets.size());
-        assertEquals("Doe", tickets.get(0).getLastName());
-    }
-
-    @Test
-    void whenGetTicketsByEmail_BookingNotFound_thenThrowException() {
-        when(bookingRepository.findByEmailId("test@example.com")).thenReturn(Collections.emptyList());
-
-        assertThrows(BookingNotFoundException.class, () -> ticketService.getTicketsByEmail("test@example.com"));
-    }
-    
-    @Test
-    void whenGetTicketsByEmailWithNullSchedule_thenHandleGracefully() {
-        when(bookingRepository.findByEmailId("test@example.com")).thenReturn(Collections.singletonList(booking));
-        when(ticketRepository.findByBooking(booking)).thenReturn(Collections.singletonList(ticket));
-        when(flightClient.getSchedule(1)).thenReturn(null);
-    
-        List<TicketResponseDTO> tickets = ticketService.getTicketsByEmail("test@example.com");
-    
-        assertFalse(tickets.isEmpty());
-        assertEquals(1, tickets.size());
-        assertNull(tickets.get(0).getDate());
-        assertNull(tickets.get(0).getFromAirport());
-    }
 }

@@ -47,7 +47,7 @@ public class TicketService {
         return mapTicketsToResponse(tickets);
     }
     
-    public List<BookingResponseDTO> getTicketsByEmail(String emailId) {
+    public List<BookingResponseDTO> getBookingsByEmail(String emailId) {
     	List<Booking> bookings = bookingRepository.findByEmailId(emailId);
 
         if (bookings.isEmpty()) {

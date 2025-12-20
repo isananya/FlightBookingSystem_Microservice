@@ -43,7 +43,7 @@ public class BookingController {
 	
 	@GetMapping("/history/{emailId}")
 	public ResponseEntity<List<BookingResponseDTO>> getTicketHistory(@PathVariable String emailId) {
-	    List<BookingResponseDTO> bookings = ticketService.getTicketsByEmail(emailId);
+	    List<BookingResponseDTO> bookings = ticketService.getBookingsByEmail(emailId);
 	    return ResponseEntity.ok(bookings);
 	}
 	
