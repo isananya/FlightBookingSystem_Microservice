@@ -1,35 +1,36 @@
-import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth';
 
 @Component({
   selector: 'app-app-bar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './app-bar.html',
   styleUrls: ['./app-bar.css']
 })
-export class AppBar {
-  isOpen = false;
+export class AppBar implements OnInit{
 
-  toggle(event: MouseEvent) {
-    console.log(this.isOpen)
-    this.isOpen = !this.isOpen;
-  }
+  isLoggedIn: boolean = false;
+  userEmail: string = '';
 
-  close() {
-    this.isOpen = false;
+  constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit() {
+    this.authService.currentUserEmail$.subscribe(email => {
+      if (email) {
+        this.isLoggedIn = true;
+        this.userEmail = email.split('@')[0];
+      } else {
+        this.isLoggedIn = false;
+        this.userEmail = '';
+      }
+    });
   }
 
   logout() {
-    this.close();
+    this.authService.logout();
     this.router.navigate(['/login']);
-  }
-
-  constructor(private router: Router) {}
-
-  @HostListener('document:click')
-  onDocumentClick() {
-    this.close();
   }
 }
