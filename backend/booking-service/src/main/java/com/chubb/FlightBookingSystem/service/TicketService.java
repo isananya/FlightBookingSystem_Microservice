@@ -1,11 +1,13 @@
 package com.chubb.FlightBookingSystem.service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.chubb.FlightBookingSystem.dto.BookingResponseDTO;
 import com.chubb.FlightBookingSystem.dto.FlightDTO;
 import com.chubb.FlightBookingSystem.dto.ScheduleDTO;
 import com.chubb.FlightBookingSystem.dto.TicketResponseDTO;
@@ -13,6 +15,7 @@ import com.chubb.FlightBookingSystem.exceptions.BookingNotFoundException;
 import com.chubb.FlightBookingSystem.feign.FlightClient;
 import com.chubb.FlightBookingSystem.model.Booking;
 import com.chubb.FlightBookingSystem.model.Ticket;
+import com.chubb.FlightBookingSystem.model.Ticket.TicketStatus;
 import com.chubb.FlightBookingSystem.repository.BookingRepository;
 import com.chubb.FlightBookingSystem.repository.TicketRepository;
 
@@ -44,18 +47,16 @@ public class TicketService {
         return mapTicketsToResponse(tickets);
     }
     
-    public List<TicketResponseDTO> getTicketsByEmail(String emailId) {
-        List<Booking> bookings = bookingRepository.findByEmailId(emailId);
+    public List<BookingResponseDTO> getTicketsByEmail(String emailId) {
+    	List<Booking> bookings = bookingRepository.findByEmailId(emailId);
+
         if (bookings.isEmpty()) {
             throw new BookingNotFoundException(emailId);
         }
 
-        List<Ticket> tickets = new ArrayList<>();
-        for (Booking booking : bookings) {
-            tickets.addAll(ticketRepository.findByBooking(booking));
-        }
-
-        return mapTicketsToResponse(tickets);
+        return bookings.stream()
+                .map(this::mapToBookingResponseDTO)
+                .toList();
     }
 
     private List<TicketResponseDTO> mapTicketsToResponse(List<Ticket> tickets) {
@@ -84,4 +85,40 @@ public class TicketService {
                 );
             }).toList();
     }
+    
+    private BookingResponseDTO mapToBookingResponseDTO(Booking booking) {
+
+        ScheduleDTO departureSchedule = flightClient.getSchedule(booking.getDepartureScheduleId());
+        
+        ScheduleDTO returnSchedule = null;
+        if (booking.isRoundTrip() && booking.getReturnScheduleId() != null) {
+            returnSchedule = flightClient.getSchedule(booking.getReturnScheduleId());
+        }
+
+        HashSet<Ticket> tickets = new HashSet<>(
+                ticketRepository.findByBooking(booking)
+        );
+        
+        TicketStatus status = tickets.iterator().next().getStatus();
+
+        return new BookingResponseDTO(
+                booking.getId(),
+                booking.getPnr(),
+                booking.isRoundTrip(),
+                
+                flightClient.getFlight(departureSchedule.getFlightNumber()).getSourceAirport(),
+                flightClient.getFlight(departureSchedule.getFlightNumber()).getDestinationAirport(),
+                departureSchedule.getDepartureDate(),
+
+                returnSchedule != null
+                        ? returnSchedule.getDepartureDate()
+                        : null,
+
+                booking.getPassengerCount(),
+                status,
+                booking.getTotalAmount(),
+                tickets
+        );
+    }
+
 }

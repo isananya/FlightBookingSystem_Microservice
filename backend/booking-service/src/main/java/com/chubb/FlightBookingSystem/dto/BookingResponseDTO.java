@@ -1,8 +1,10 @@
 package com.chubb.FlightBookingSystem.dto;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 
 import com.chubb.FlightBookingSystem.model.Ticket;
+import com.chubb.FlightBookingSystem.model.Ticket.TicketStatus;
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -18,17 +20,13 @@ public class BookingResponseDTO {
 	private String pnr;
 	private boolean roundTrip;
 	
-	private String departureSourceAirport;
-	private String departureDestinationAirport;
-	private String arrivalSourceAirport;
-	private String arrivalDestinationAirport;
+	private String sourceAirport;
+	private String destinationAirport;
+	private LocalDate departureDate ;
+	private LocalDate arrivalDate;
+	private int passengerCount;
+	 private TicketStatus status;
 	
 	private float totalAmount;
     private HashSet<Ticket> ticketSet;
-    
-    public enum Gender {
-        MALE,
-        FEMALE,
-        OTHER
-    }
 }

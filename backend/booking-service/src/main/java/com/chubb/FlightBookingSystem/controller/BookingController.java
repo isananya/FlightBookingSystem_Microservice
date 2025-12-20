@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.chubb.FlightBookingSystem.dto.BookingRequestDTO;
+import com.chubb.FlightBookingSystem.dto.BookingResponseDTO;
 import com.chubb.FlightBookingSystem.dto.TicketResponseDTO;
 import com.chubb.FlightBookingSystem.model.Booking;
 import com.chubb.FlightBookingSystem.service.BookingService;
@@ -41,9 +42,9 @@ public class BookingController {
 	}
 	
 	@GetMapping("/history/{emailId}")
-	public ResponseEntity<List<TicketResponseDTO>> getTicketHistory(@PathVariable String emailId) {
-	    List<TicketResponseDTO> tickets = ticketService.getTicketsByEmail(emailId);
-	    return ResponseEntity.ok(tickets);
+	public ResponseEntity<List<BookingResponseDTO>> getTicketHistory(@PathVariable String emailId) {
+	    List<BookingResponseDTO> bookings = ticketService.getTicketsByEmail(emailId);
+	    return ResponseEntity.ok(bookings);
 	}
 	
 	@DeleteMapping("/cancel/{pnr}")
