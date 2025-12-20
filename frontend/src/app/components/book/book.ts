@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FlightService } from '../../services/flight';
 import { BookingRequest, Passenger } from '../../models/booking';
+import { AuthService } from '../../services/auth';
 
 @Component({
   selector: 'app-book',
@@ -20,10 +21,12 @@ export class Book implements OnInit {
   passengers: Passenger[] = [];
   error = '';
 
-  constructor(private flightService: FlightService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private flightService: FlightService, private router: Router, 
+    private route: ActivatedRoute, private authService: AuthService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
+      this.email = this.authService.getEmail();
       this.passengerCount = +params['count'] || 1;
       this.isRoundTrip = params['round'] === 'true';
       this.depId = +params['depId'];
