@@ -1,0 +1,58 @@
+<div style="padding: 20px;">
+  
+  <h2>My Booking History</h2>
+
+  <div *ngIf="isLoading">Loading bookings...</div>
+
+  <div *ngIf="!isLoading && bookings.length === 0">
+    No bookings found.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: left;" *ngIf="bookings.length > 0">
+    <thead>
+      <tr style="background-color: #f0f0f0;">
+        <th>ID</th>
+        <th>PNR</th>
+        <th>Trip Type</th> 
+        <th>From</th>
+        <th>To</th>
+        <th>Departure Date</th>
+        <th>Arrival Date</th>
+        <th>Passengers</th>
+        <th>Total Amount</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of bookings">
+        <td>{{ b.id }}</td>
+        <td><strong>{{ b.pnr }}</strong></td>
+        
+        <td>{{ b.roundTrip ? 'Round Trip' : 'One Way' }}</td>
+        
+        <td>{{ b.sourceAirport }}</td>
+        <td>{{ b.destinationAirport }}</td>
+        <td>{{ b.departureDate }}</td>
+        
+        <td>{{ b.arrivalDate ? b.arrivalDate : '-' }}</td>
+        
+        <td>{{ b.passengerCount }}</td>
+        <td>₹ {{ b.totalAmount }}</td>
+        
+        <td [style.color]="b.status === 'CANCELLED' ? 'red' : 'green'">
+          <strong>{{ b.status }}</strong>
+        </td>
+
+        <td>
+          <button 
+            (click)="cancelBooking(b.pnr)" 
+            [disabled]="b.status === 'CANCELLED'">
+            Cancel
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

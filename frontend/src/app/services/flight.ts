@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
-import { BookingRequest } from '../models/booking';
+import { BookingRequest, BookingResponse } from '../models/booking';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +22,19 @@ export class FlightService {
     return this.http.post(
       environment.apiGatewayUrl + '/booking',
       params
+    );
+  }
+
+  getBookings(email: string): Observable<BookingResponse[]> {
+    return this.http.get<BookingResponse[]>(
+      environment.apiGatewayUrl+"/booking/history/"+email
+    );
+  }
+
+  cancelBooking(pnr: String): Observable<any> {
+    return this.http.delete(
+      environment.apiGatewayUrl+"/booking/cancel/"+pnr, 
+      { responseType: 'text' }
     );
   }
 }

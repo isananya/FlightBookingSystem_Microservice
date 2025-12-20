@@ -16,3 +16,16 @@ export interface BookingRequest {
   passengerCount: number;
   passengers: Passenger[];
 }
+
+export interface BookingResponse {
+  id: number;
+  pnr: string;
+  roundTrip: boolean;
+  sourceAirport: string;
+  destinationAirport: string;
+  departureDate: string; 
+  arrivalDate: string;
+  passengerCount: number;
+  totalAmount: number;
+  status: string;
+}
