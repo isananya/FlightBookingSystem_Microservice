@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FlightService } from '../../services/flight';
@@ -8,6 +8,7 @@ import { AuthService } from '../../services/auth';
 
 @Component({
   selector: 'app-book',
+  standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './book.html',
   styleUrl: './book.css',
@@ -20,9 +21,16 @@ export class Book implements OnInit {
   email: string = '';
   passengers: Passenger[] = [];
   error = '';
+  showSuccessModal: boolean = false;
+  pnr:String='';
 
-  constructor(private flightService: FlightService, private router: Router, 
-    private route: ActivatedRoute, private authService: AuthService) { }
+  constructor(
+    private flightService: FlightService, 
+    private router: Router, 
+    private route: ActivatedRoute, 
+    private authService: AuthService,
+    private cd: ChangeDetectorRef
+  ) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -60,16 +68,29 @@ export class Book implements OnInit {
     if (!this.isRoundTrip) {
       request.passengers.forEach(p => delete p.returnSeatNumber);
     }
-    this.flightService.bookFlight(request).subscribe(
-      {
-        next: (response) => {
-          console.log(response);
-          alert("booking confirmed")
-        },
-        error: () => {
-          this.error = 'Booking not successful'
+    
+    this.flightService.bookFlight(request).subscribe({
+      next: (response: any) => {
+        this.pnr = response; 
+        this.showSuccessModal = true;
+        this.cd.detectChanges();
+      },
+      error: (err) => {
+        if (err.status === 201 || err.status === 200) {
+          this.pnr = err.error.text || 'Confirmed';
+          this.showSuccessModal = true;
+          this.cd.detectChanges();
+        } else {
+          console.error(err);
+          this.error = 'Booking failed';
+          alert('Booking failed. Please check your details.');
         }
       }
-    )
+    });
+  }
+
+  closeModal() {
+    this.showSuccessModal = false;
+    this.router.navigate(['/']);
   }
 }

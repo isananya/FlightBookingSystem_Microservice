@@ -21,7 +21,8 @@ export class FlightService {
   bookFlight(params: BookingRequest){
     return this.http.post(
       environment.apiGatewayUrl + '/booking',
-      params
+      params,
+      { responseType: 'text' }
     );
   }
 

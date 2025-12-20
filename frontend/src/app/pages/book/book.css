@@ -1,98 +1,187 @@
 .container {
-    background-color: #d7dfed;
-    padding: 40px;
-    min-height: 100vh;
-    min-width: 100%;
+  background-color: #d7dfed;
+  padding: 40px;
+  min-height: 100vh;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .booking-container {
-    background-color: white;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 h2 {
-    color: #333;
-    margin-bottom: 20px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    padding: 25px;
-    margin-bottom: 25px;
-    border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #e0e0e0;
 }
 
 .card-header {
-    font-weight: 700;
-    color: #ef5350;
-    text-transform: uppercase;
-    font-size: 14px;
-    border-bottom: 2px solid #f5f5f5;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  font-weight: 700;
+  color: #ef5350;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-bottom: 2px solid #f5f5f5;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #666;
-    margin-bottom: 6px;
-    text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 6px;
+  text-transform: uppercase;
 }
 
 input,
 select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: border 0.2s;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 input:focus,
 select:focus {
-    border-color: #ef5350;
-    outline: none;
+  border-color: #ef5350;
+  outline: none;
 }
 
 .full-width {
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #e9ecef; 
-    cursor: not-allowed;
+  width: 100%;
+  background-color: #e9ecef; 
+  cursor: not-allowed;
+}
+
+.footer-action {
+  margin-top: 30px;
 }
 
 .pay-btn {
-    background-color: #ef5350;
-    color: white;
-    width: 100%;
-    padding: 16px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(239, 83, 80, 0.3);
+  background-color: #ef5350;
+  color: white;
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(239, 83, 80, 0.3);
+  transition: background-color 0.2s;
 }
 
 .pay-btn:hover {
-    background-color: #d32f2f;
+  background-color: #d32f2f;
+}
+
+.pay-btn:disabled {
+  background-color: #ffcdd2;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-header h3 {
+  margin: 0 0 15px 0;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #e8f5e9;
+  color: #e51919;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 auto 15px auto;
+}
+
+.modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-btn.success {
+  background-color: #e51919;
+  color: white;
+}
+
+.modal-btn.success:hover {
+  background-color: #ec4545;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
