@@ -1,11 +1,12 @@
 <div class="appbar">
-  
+
   <div class="logo" routerLink="/">FlightBooking</div>
 
   <div class="nav-actions">
 
     <div *ngIf="isLoggedIn" class="action-group">
       <span class="welcome-text">Hi, {{ userEmail }}</span>
+      <button class="nav-btn" *ngIf="isAdmin" routerLink="/inventory">Manage Inventory</button>
       <button class="nav-btn" routerLink="/booking-history">My Bookings</button>
       <button class="nav-btn primary-btn" (click)="logout()">Logout</button>
     </div>

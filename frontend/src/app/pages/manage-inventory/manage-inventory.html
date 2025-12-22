@@ -1,1 +1,99 @@
-<p>manage-inventory works!</p>
+<div class="inventory-container">
+  <h2>Manage Inventory</h2>
+
+  <div class="tabs">
+    <button [class.active]="activeTab === 'flight'" (click)="showFlightForm()">Add Flight (Route)</button>
+    <button [class.active]="activeTab === 'schedule'" (click)="showScheduleForm()">Add Schedule (Date)</button>
+  </div>
+
+  <div class="form-section" *ngIf="activeTab === 'flight'">
+    <h3>Add Flight Route</h3>
+    <form (ngSubmit)="onAddFlight()">
+      
+      <div class="form-group">
+        <label>Flight Number</label>
+        <input type="text" [(ngModel)]="flightObj.flightNumber" name="fNum" placeholder="e.g. AI-204" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Source Airport</label>
+          <select [(ngModel)]="flightObj.sourceAirport" name="src" required>
+            <option value="" disabled selected>Select Source</option>
+            <option *ngFor="let airport of airports" [value]="airport.code">
+              {{ airport.city }} ({{ airport.code }})
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Destination Airport</label>
+          <select [(ngModel)]="flightObj.destinationAirport" name="dest" required>
+            <option value="" disabled selected>Select Destination</option>
+            <option *ngFor="let airport of airports" [value]="airport.code">
+              {{ airport.city }} ({{ airport.code }})
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Departure Time (HH:mm)</label>
+          <input type="time" [(ngModel)]="flightObj.departureTime" name="depTime" required>
+        </div>
+        <div class="form-group">
+          <label>Arrival Time (HH:mm)</label>
+          <input type="time" [(ngModel)]="flightObj.arrivalTime" name="arrTime" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Duration Hours</label>
+          <input type="number" [(ngModel)]="durationHours" name="durH" min="0" required placeholder="0">
+        </div>
+        <div class="form-group">
+          <label>Duration Minutes</label>
+          <input type="number" [(ngModel)]="durationMinutes" name="durM" min="0" max="59" required placeholder="0">
+        </div>
+      </div>
+
+      <button type="submit" class="action-btn">Save Flight</button>
+    </form>
+  </div>
+
+  <div class="form-section" *ngIf="activeTab === 'schedule'">
+    <h3>Schedule a Flight</h3>
+    <form (ngSubmit)="onAddSchedule()">
+
+      <div class="form-group">
+        <label>Flight Number</label>
+        <input type="text" [(ngModel)]="scheduleObj.flightNumber" name="sFNum" placeholder="Must match Flight ID above" required>
+      </div>
+
+      <div class="form-group">
+        <label>Airline Name</label>
+        <input type="text" [(ngModel)]="scheduleObj.airlineName" name="airline" placeholder="e.g. Indigo" required>
+      </div>
+
+      <div class="form-group">
+        <label>Departure Date</label>
+        <input type="date" [(ngModel)]="scheduleObj.departureDate" name="depDate" [min]="minDate" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Total Seats</label>
+          <input type="number" [(ngModel)]="scheduleObj.totalSeats" name="seats" required min="1">
+        </div>
+        <div class="form-group">
+          <label>Base Price (₹)</label>
+          <input type="number" [(ngModel)]="scheduleObj.basePrice" name="price" required min="0">
+        </div>
+      </div>
+
+      <button type="submit" class="action-btn">Save Schedule</button>
+    </form>
+  </div>
+</div>

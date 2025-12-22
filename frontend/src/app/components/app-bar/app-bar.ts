@@ -14,10 +14,15 @@ export class AppBar implements OnInit{
 
   isLoggedIn: boolean = false;
   userEmail: string = '';
+  isAdmin: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
+    this.authService.currentUserRole$.subscribe(role => {
+      this.isAdmin = role === 'ROLE_ADMIN';
+    });
+    
     this.authService.currentUserEmail$.subscribe(email => {
       if (email) {
         this.isLoggedIn = true;
@@ -31,6 +36,6 @@ export class AppBar implements OnInit{
 
   logout() {
     this.authService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 }

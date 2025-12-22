@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { BookingRequest, BookingResponse } from '../models/booking';
+import { FlightModel, ScheduleRequestDTO } from '../models/inventory';
 
 @Injectable({
   providedIn: 'root',
@@ -35,6 +36,22 @@ export class FlightService {
   cancelBooking(pnr: String): Observable<any> {
     return this.http.delete(
       environment.apiGatewayUrl+"/booking/cancel/"+pnr, 
+      { responseType: 'text' }
+    );
+  }
+
+  addFlight(flight: FlightModel): Observable<string> {
+    return this.http.post(
+      environment.apiGatewayUrl+"/schedule/route", 
+      flight, 
+      { responseType: 'text' }
+    );
+  }
+
+  addSchedule(schedule: ScheduleRequestDTO): Observable<string> {
+    return this.http.post(
+      environment.apiGatewayUrl+"/schedule/inventory",
+      schedule, 
       { responseType: 'text' }
     );
   }
