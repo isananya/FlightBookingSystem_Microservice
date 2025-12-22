@@ -140,7 +140,7 @@ public class BookingService {
 			flightClient.addSeats(request.getReturnScheduleId(),bookedSeats2);
 		}
 		
-//		bookingEventPublisher.publishBookingCreated(booking.getPnr(), booking.getEmailId());
+		bookingEventPublisher.publishBookingCreated(booking.getPnr(), booking.getEmailId());
 		
 		return booking.getPnr();
 		
@@ -174,7 +174,7 @@ public class BookingService {
 	    
 	  
 	    booking.setTotalAmount(0); 
-//	    bookingEventPublisher.publishBookingCancelled(booking.getPnr(), booking.getEmailId());
+	    bookingEventPublisher.publishBookingCancelled(booking.getPnr(), booking.getEmailId());
 	    bookingRepository.save(booking);
 	}
 }
