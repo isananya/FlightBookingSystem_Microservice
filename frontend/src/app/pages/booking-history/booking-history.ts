@@ -3,10 +3,11 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { BookingResponse } from '../../models/booking';
 import { FlightService } from '../../services/flight';
 import { AuthService } from '../../services/auth';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-booking-history',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './booking-history.html',
   styleUrl: './booking-history.css',
 })

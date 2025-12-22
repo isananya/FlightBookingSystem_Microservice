@@ -8,6 +8,7 @@
       <span class="welcome-text">Hi, {{ userEmail }}</span>
       <button class="nav-btn" *ngIf="isAdmin" routerLink="/inventory">Manage Inventory</button>
       <button class="nav-btn" routerLink="/booking-history">My Bookings</button>
+      <button class="nav-btn" routerLink="/change-password">Change Password</button>
       <button class="nav-btn primary-btn" (click)="logout()">Logout</button>
     </div>
 

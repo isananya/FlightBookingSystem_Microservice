@@ -6,6 +6,7 @@ import { FlightResults } from './pages/flight-results/flight-results';
 import { Book } from './pages/book/book';
 import { BookingHistory } from './pages/booking-history/booking-history';
 import { ManageInventory } from './pages/manage-inventory/manage-inventory';
+import { ChangePassword } from './pages/change-password/change-password';
 
 export const routes: Routes = [
     { path: '', component: FlightSearch },
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'signup', component: Signup },
     { path: 'book', component: Book },
     { path: 'booking-history', component:BookingHistory},
-    { path: 'inventory', component:ManageInventory}
+    { path: 'inventory', component:ManageInventory},
+    { path: 'change-password', component: ChangePassword}
 ];
