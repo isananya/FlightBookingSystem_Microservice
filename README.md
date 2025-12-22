@@ -18,6 +18,9 @@ This project is an implementation of a flight booking platform built on a micros
 ### User Login
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/26486756-0894-47c8-9af3-f95458e67b9e" />
 
+### Change Password Page
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/696dd999-d83e-496f-9b4a-6b35f75dab6a" />
+
 ### Flight Search Results
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/6cd6c0c0-c808-49c8-9114-f8fac4f619e8" />
 
