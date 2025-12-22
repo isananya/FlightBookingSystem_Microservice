@@ -8,13 +8,32 @@ This project is an implementation of a flight booking platform built on a micros
 <img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/1779c99d-b3cb-4b00-8770-c5cbf7dccf5a" />
 
 ### Login page
-<img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/841a54e7-e507-4d10-a88b-274cbc4c8be2" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/54b27b1e-461e-4249-9207-4e8fc17e21e2" />
 
-### Flight Search page
-<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/b8fea3e3-a125-47d1-a88a-36e139e0e1a2" />
+### Admin Login
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/c9fff16f-5df7-48e1-b98f-4fb0b21d7150" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/6b747719-e83c-423c-9ee4-2170c40113b7" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/c44adadb-e690-45b6-b5ee-630ab02a9440" />
+
+### User Login
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/26486756-0894-47c8-9af3-f95458e67b9e" />
 
 ### Flight Search Results
-<img width="1915" height="998" alt="image" src="https://github.com/user-attachments/assets/215a2ff6-edca-4d72-8ea3-2cde96630592" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/6cd6c0c0-c808-49c8-9114-f8fac4f619e8" />
+
+### Booking Page
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/4dd0aef5-d8fd-41c6-a1d2-971c8753344f" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/8808eaf4-053e-449e-954e-d1a0f470b60b" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/1e3ad06c-76a0-4964-8ae4-bab221a18691" />
+
+### Booking History Page
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/d1b79c91-81dc-4cd2-80aa-70e0d227936c" />
+
+### Cancel Booking
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/1d8ad6a4-0f4e-41a3-b5e7-0c1ef6e79be2" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/63061349-d6ea-417b-8893-dcdaf2a04e8f" />
+24HRS RESTRICTION
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/e44db20f-c3b2-4359-9c02-ff5f9c39c775" />
 
 
 ## **Architecture Diagram**
