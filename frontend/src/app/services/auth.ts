@@ -18,7 +18,7 @@ export class AuthService {
   private userNameSubject = new BehaviorSubject<string | null>(localStorage.getItem('userName'));
   public currentUserName$ = this.userNameSubject.asObservable();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(data: any) {
     return this.http.post<any>(`${this.baseUrl}/login`, data).pipe(
@@ -31,8 +31,8 @@ export class AuthService {
   }
 
   signup(data: any) {
-    return this.http.post(`${this.baseUrl}/signup`, data, { 
-      responseType: 'text' 
+    return this.http.post(`${this.baseUrl}/signup`, data, {
+      responseType: 'text'
     });
   }
 
@@ -40,19 +40,24 @@ export class AuthService {
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userRole');
     localStorage.removeItem('userName');
-    
+
     this.userEmailSubject.next(null);
     this.userRoleSubject.next(null);
     this.userNameSubject.next(null);
-    
+
     this.http.post(`${this.baseUrl}/logout`, {}).subscribe();
+  }
+
+  changePassword(data: any) {
+    return this.http.put(
+      `${this.baseUrl}/password`, data);
   }
 
   private setUser(email: string, role: string, name: string) {
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userRole', role);
     localStorage.setItem('userName', name || '');
-    
+
     this.userEmailSubject.next(email);
     this.userRoleSubject.next(role);
     this.userNameSubject.next(name || '');

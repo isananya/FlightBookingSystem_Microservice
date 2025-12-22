@@ -20,17 +20,15 @@ export class ManageInventory implements OnInit{
 durationHours: number = 0;
   durationMinutes: number = 0;
 
-  // 1. FLIGHT MODEL (Matches Backend)
   flightObj: FlightModel = {
     flightNumber: '',
     sourceAirport: '',
     destinationAirport: '',
     departureTime: '',
     arrivalTime: '',
-    duration: '' // Will be calculated
+    duration: '' 
   };
 
-  // 2. SCHEDULE MODEL (Matches Backend)
   scheduleObj: ScheduleRequestDTO = {
     flightNumber: '',
     airlineName: '',
@@ -49,17 +47,14 @@ durationHours: number = 0;
   showFlightForm() { this.activeTab = 'flight'; }
   showScheduleForm() { this.activeTab = 'schedule'; }
 
-  // --- SUBMIT FLIGHT ---
   onAddFlight() {
     if (this.flightObj.sourceAirport === this.flightObj.destinationAirport) {
       alert("Source and Destination cannot be the same.");
       return;
     }
 
-    // 1. Format Duration to ISO-8601 (e.g., PT2H30M)
     const isoDuration = `PT${this.durationHours}H${this.durationMinutes}M`;
     
-    // 2. Format Times (Append :00 for seconds if needed)
     const payload: FlightModel = {
       ...this.flightObj,
       duration: isoDuration,
@@ -70,7 +65,6 @@ durationHours: number = 0;
     this.flightService.addFlight(payload).subscribe({
       next: () => {
         alert('Flight Route Created Successfully!');
-        // Reset Form
         this.flightObj = { flightNumber: '', sourceAirport: '', destinationAirport: '', departureTime: '', arrivalTime: '', duration: '' };
         this.durationHours = 0;
         this.durationMinutes = 0;
@@ -79,15 +73,12 @@ durationHours: number = 0;
     });
   }
 
-  // --- SUBMIT SCHEDULE ---
   onAddSchedule() {
-    // 1. Auto-set available seats to equal total seats
     this.scheduleObj.availableSeats = this.scheduleObj.totalSeats;
 
     this.flightService.addSchedule(this.scheduleObj).subscribe({
       next: () => {
         alert('Schedule Published Successfully!');
-        // Reset specific fields
         this.scheduleObj.departureDate = '';
         this.scheduleObj.basePrice = 0;
         this.scheduleObj.totalSeats = 0;
