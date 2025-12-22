@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.chubb.FlightBookingSystem.dto.PasswordChangeRequest;
 import com.chubb.FlightBookingSystem.dto.SignupRequest;
+import com.chubb.FlightBookingSystem.exceptions.PasswordMismatchException;
+import com.chubb.FlightBookingSystem.exceptions.UserNotFoundException;
 import com.chubb.FlightBookingSystem.model.Role;
 import com.chubb.FlightBookingSystem.model.User;
 import com.chubb.FlightBookingSystem.repository.UserRepository;
@@ -38,10 +40,10 @@ public class AuthService {
 
 	public void changePassword(String email, PasswordChangeRequest request) {
 
-		User user = userRepo.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
+		User user = userRepo.findByEmail(email).orElseThrow(() -> new UserNotFoundException("User not found"));
 
 		if (!encoder.matches(request.getCurrentPassword(), user.getPassword())) {
-			throw new IllegalArgumentException("Current password is incorrect");
+			throw new PasswordMismatchException("Current password is incorrect");
 		}
 
 		user.setPassword(encoder.encode(request.getNewPassword()));
