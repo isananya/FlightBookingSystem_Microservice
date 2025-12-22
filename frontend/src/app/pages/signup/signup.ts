@@ -14,7 +14,7 @@ export class Signup {
   name = '';
   email = '';
   password = '';
-  role = '';
+  // role = '';
   error = '';
 
   constructor(private authService: AuthService, private router: Router) { }
@@ -24,7 +24,7 @@ export class Signup {
       name: this.name,
       email: this.email,
       password: this.password,
-      role: this.role
+      // role: this.role
     }).subscribe({
       next: () => {
         this.authService.login({
