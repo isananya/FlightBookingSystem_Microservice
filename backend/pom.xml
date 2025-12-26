@@ -22,6 +22,8 @@
 		<module>config-server</module>
 		<module>eureka-server</module>
 		<module>flight-service</module>
+		<module>email-service</module>
+		<module>user-service</module>
 	</modules>
 
 	<properties>
