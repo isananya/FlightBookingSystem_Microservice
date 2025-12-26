@@ -78,7 +78,7 @@ durationHours: number = 0;
 
     this.flightService.addSchedule(this.scheduleObj).subscribe({
       next: () => {
-        alert('Schedule Published Successfully!');
+        alert('Schedule Created Successfully!');
         this.scheduleObj.departureDate = '';
         this.scheduleObj.basePrice = 0;
         this.scheduleObj.totalSeats = 0;

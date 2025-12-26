@@ -1,90 +1,127 @@
 <div class="container">
-  <div class="booking-container">
+  
+  <div class="booking-layout">
 
-    <h2>Traveller Details</h2>
-
-    <form (ngSubmit)="confirmBooking()" #bookForm="ngForm">
-
-      <div class="card contact-card">
-        <div class="card-header">Contact Information</div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" [(ngModel)]="email" readonly required class="full-width">
-        </div>
-      </div>
-
-      <div class="card passenger-card" *ngFor="let p of passengers; let i = index">
-        <div class="card-header">Passenger {{ i + 1 }}</div>
-        <div class="form-grid">
-
+    <div class="passenger-section">
+      <h2>Traveller Details</h2>
+      <form #bookForm="ngForm">
+        <div class="card contact-card">
+          <div class="card-header">Contact Information</div>
           <div class="form-group">
-            <label>First Name</label>
-            <input type="text" name="firstName{{i}}" [(ngModel)]="p.firstName" placeholder="First Name" required>
-          </div>
-
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" name="lastName{{i}}" [(ngModel)]="p.lastName" placeholder="Last Name" required>
-          </div>
-
-          <div class="form-group">
-            <label>Age</label>
-            <input type="number" name="age{{i}}" [(ngModel)]="p.age" placeholder="Age" required>
-          </div>
-
-          <div class="form-group">
-            <label>Gender</label>
-            <select name="gender{{i}}" [(ngModel)]="p.gender" required>
-              <option value="MALE">Male</option>
-              <option value="FEMALE">Female</option>
-              <option value="OTHER">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Meal Preference</label>
-            <select name="mealOption{{i}}" [(ngModel)]="p.mealOption" required>
-              <option value="VEG">Veg</option>
-              <option value="NONVEG">Non-Veg</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Departure Seat Number</label>
-            <input type="text" name="depSeat{{i}}" [(ngModel)]="p.departureSeatNumber" placeholder="e.g. 12A" required>
-          </div>
-
-          <div class="form-group" *ngIf="isRoundTrip">
-            <label>Return Seat Number</label>
-            <input type="text" name="retSeat{{i}}" [(ngModel)]="p.returnSeatNumber" placeholder="e.g. 14C" [required]="isRoundTrip">
+            <label>Email Address</label>
+            <input type="email" name="email" [(ngModel)]="email" readonly required class="full-width">
           </div>
         </div>
+
+        <div class="card passenger-card" *ngFor="let p of passengers; let i = index">
+          <div class="card-header">Passenger {{ i + 1 }}</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="firstName{{i}}" [(ngModel)]="p.firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="lastName{{i}}" [(ngModel)]="p.lastName" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" name="age{{i}}" [(ngModel)]="p.age" placeholder="Age" required>
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <select name="gender{{i}}" [(ngModel)]="p.gender" required>
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Meal Preference</label>
+              <select name="mealOption{{i}}" [(ngModel)]="p.mealOption" required>
+                <option value="VEG">Veg</option>
+                <option value="NONVEG">Non-Veg</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Departure Seat</label>
+              <input type="text" name="depSeat{{i}}" [ngModel]="selectedSeatsOutbound[i]" placeholder="Select on Map" readonly required class="full-width">
+            </div>
+            <div class="form-group" *ngIf="isRoundTrip">
+              <label>Return Seat</label>
+              <input type="text" name="retSeat{{i}}" [ngModel]="selectedSeatsReturn[i]" placeholder="Select on Map" readonly required class="full-width">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="seat-section">
+      
+      <div class="maps-row">
+        
+        <div class="seat-map-card">
+          <h3>Select Outbound Seats</h3>
+          <p class="instruction">Selected: {{ selectedSeatsOutbound.length }} / {{ passengerCount }}</p>
+          
+          <div class="legend">
+            <span><div class="dot grey"></div> Free</span>
+            <span><div class="dot green"></div> You</span>
+            <span><div class="dot red"></div> Taken</span>
+          </div>
+  
+          <div class="plane-body">
+            <div *ngFor="let r of rows" class="plane-row">
+              <div *ngFor="let c of colsLeft" class="seat" [class.selected]="isSelected(r+c, 'outbound')" (click)="toggleSeat(r+c, 'outbound')">{{ r }}{{ c }}</div>
+              <div class="aisle-gap"></div>
+              <div *ngFor="let c of colsRight" class="seat" [class.selected]="isSelected(r+c, 'outbound')" (click)="toggleSeat(r+c, 'outbound')">{{ r }}{{ c }}</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="seat-map-card" *ngIf="isRoundTrip">
+          <h3>Select Return Seats</h3>
+          <p class="instruction">Selected: {{ selectedSeatsReturn.length }} / {{ passengerCount }}</p>
+          
+          <div class="legend">
+            <span><div class="dot grey"></div> Free</span>
+            <span><div class="dot green"></div> You</span>
+            <span><div class="dot red"></div> Taken</span>
+          </div>
+          
+          <div class="plane-body">
+            <div *ngFor="let r of rows" class="plane-row">
+              <div *ngFor="let c of colsLeft" class="seat" [class.selected]="isSelected(r+c, 'return')" (click)="toggleSeat(r+c, 'return')">{{ r }}{{ c }}</div>
+              <div class="aisle-gap"></div>
+              <div *ngFor="let c of colsRight" class="seat" [class.selected]="isSelected(r+c, 'return')" (click)="toggleSeat(r+c, 'return')">{{ r }}{{ c }}</div>
+            </div>
+          </div>
+        </div>
+
+      </div> <div class="footer-action">
+        <button 
+          type="button" 
+          class="pay-btn" 
+          (click)="confirmBooking()" 
+          [disabled]="!bookForm?.valid || !isSeatSelectionComplete">
+          CONFIRM & BOOK
+        </button>
       </div>
 
-      <div class="footer-action">
-        <button type="submit" class="pay-btn" [disabled]="!bookForm.valid">CONFIRM & BOOK</button>
-      </div>
-
-    </form>
-
+    </div>
   </div>
 </div>
 
 <div class="modal-overlay" *ngIf="showSuccessModal">
   <div class="modal-content">
-    <div class="modal-header">
-      <h3 style="color: #e51919;">Booking Confirmed!</h3>
-    </div>
-    
+    <div class="modal-header"><h3 style="color: #e51919;">Booking Confirmed!</h3></div>
     <div class="modal-body">
       <div class="success-icon">✓</div>
       <p>Your flight has been booked successfully.</p>
+      <p *ngIf="pnr">PNR: <b>{{pnr}}</b></p>
     </div>
-    
     <div class="modal-actions single-action">
-      <button class="modal-btn success" (click)="closeModal()">
-        Go to Home
-      </button>
+      <button class="modal-btn success" (click)="closeModal()">Go to Home</button>
     </div>
   </div>
 </div>
